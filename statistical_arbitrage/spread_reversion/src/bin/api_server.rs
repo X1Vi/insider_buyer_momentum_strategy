@@ -174,31 +174,55 @@ async fn insiders_cached(app: &App) -> Arc<Vec<insider::Record>> {
         return arc;
     }
 
-    eprintln!("(api) refreshing NSE buyer disclosures {start}..{end}; 6s between requests");
-    let fetched = insider::fetch_window(&app.http, start, end, true).await;
-    let recs = match fetched {
-        Ok(records) if !records.is_empty() => {
-            let saved = InsiderDiskCache {
-                fetched_at: unix_now(),
-                start,
-                end,
-                records: records.clone(),
-            };
-            if let Err(err) = write_json_atomic(&path, &saved) {
-                eprintln!("WARN: could not write NSE cache: {err}");
+    // Stale but present: serve the stale cache IMMEDIATELY and refresh in the
+    // background, so an HTTP request never blocks on the slow NSE crawl.
+    if let Some(saved) = disk.as_ref() {
+        eprintln!("(api) NSE cache stale ({} disclosures); serving stale + refreshing in background",
+                  saved.records.len());
+        let arc = Arc::new(saved.records.clone());
+        *guard = Some(arc.clone());
+        drop(guard);
+        let app2 = app.clone();
+        let bg_path = path.clone();
+        tokio::spawn(async move {
+            eprintln!("(api) background NSE refresh {start}..{end}; 6s between requests");
+            match insider::fetch_window(&app2.http, start, end, true).await {
+                Ok(records) if !records.is_empty() => {
+                    let saved = InsiderDiskCache {
+                        fetched_at: unix_now(),
+                        start,
+                        end,
+                        records: records.clone(),
+                    };
+                    if let Err(err) = write_json_atomic(&bg_path, &saved) {
+                        eprintln!("WARN: could not write NSE cache: {err}");
+                    }
+                    *app2.cache.lock().await = Some(Arc::new(records));
+                    eprintln!("(api) background NSE refresh complete");
+                }
+                Ok(_) => eprintln!("WARN: background NSE refresh empty; keeping stale cache"),
+                Err(err) => eprintln!("WARN: background NSE refresh failed: {err}; keeping stale cache"),
             }
-            records
-        }
-        Ok(_) | Err(_) if disk.is_some() => {
-            eprintln!("WARN: NSE refresh failed/empty; using stale disk cache");
-            disk.unwrap().records
-        }
-        Ok(_) => Vec::new(),
+        });
+        return arc;
+    }
+
+    // No cache at all: must block once on the fetch.
+    eprintln!("(api) no NSE cache; fetching {start}..{end}; 6s between requests");
+    let recs = match insider::fetch_window(&app.http, start, end, true).await {
+        Ok(records) => records,
         Err(err) => {
-            eprintln!("WARN: NSE refresh failed and no cache exists: {err}");
+            eprintln!("WARN: NSE fetch failed and no cache exists: {err}");
             Vec::new()
         }
     };
+    let saved = InsiderDiskCache {
+        fetched_at: unix_now(),
+        start,
+        end,
+        records: recs.clone(),
+    };
+    let _ = write_json_atomic(&path, &saved);
     eprintln!("(api) cached {} disclosures", recs.len());
     let arc = Arc::new(recs);
     *guard = Some(arc.clone());
@@ -327,9 +351,9 @@ async fn prices_cached(app: &App, symbol: &str, range: &str) -> PriceResult {
         .cache_dir
         .join(format!("price_{}_{}.json", safe_symbol, range));
     let disk: Option<PriceDiskCache> = read_json(&path);
-    if let Some(saved) = disk.as_ref().filter(|saved| {
-        fresh(saved.fetched_at) && !(app.groww.is_some() && saved.source != "groww")
-    }) {
+    // Any fresh cache is usable, including the Yahoo fallback. (Do not force a
+    // Groww refetch when a Groww client merely exists — its token may be dead.)
+    if let Some(saved) = disk.as_ref().filter(|saved| fresh(saved.fetched_at)) {
         let result = PriceResult {
             bars: Arc::new(saved.bars.clone()),
             source: saved.source.clone(),
