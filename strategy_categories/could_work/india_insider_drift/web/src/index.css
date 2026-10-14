@@ -1,0 +1,150 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+body {
+  margin: 0;
+  background: #0f1216;
+  color: #e6e6e6;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.sub {
+  color: #8b97a3;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+select,
+button {
+  background: #1a1f26;
+  color: #e6e6e6;
+  border: 1px solid #2a313a;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+.card {
+  background: #161b21;
+  border: 1px solid #232a33;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 18px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th,
+td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid #232a33;
+}
+th {
+  color: #8b97a3;
+  font-weight: 500;
+}
+.err {
+  color: #ff6b6b;
+}
+.badge {
+  display: inline-block;
+  background: #1f2a1f;
+  color: #9ad29a;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+.clusterBadge {
+  background: #2a2440;
+  color: #c4b5fd;
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #232a33;
+}
+.tabs button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: #8b97a3;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.tabs button.active {
+  color: #e6e6e6;
+  border-bottom-color: #1a9850;
+}
+.rowHead:hover {
+  color: #fff;
+}
+.filterInput {
+  background: #1a1f26;
+  color: #e6e6e6;
+  border: 1px solid #2a313a;
+  border-radius: 6px;
+  padding: 7px 10px;
+}
+.tableScroll { overflow-x: auto; }
+.inline { margin-bottom: 0; }
+.positive { color: #9ad29a; }
+.status {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 11px;
+  background: #252b33;
+  color: #aeb8c2;
+}
+.status-ready { background: #123d27; color: #8ee0aa; }
+.status-near-breakout { background: #3a3215; color: #ebd27a; }
+.status-waiting-rise { background: #222f3e; color: #8fc3e8; }
+.status-below-trend { background: #3a2020; color: #e7a0a0; }
+.sourceBadge {
+  color: #8fc3e8;
+  border: 1px solid #294158;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+.buyerCell { min-width: 210px; max-width: 330px; }
+.buyerCell summary { cursor: pointer; }
+.buyerDetails {
+  margin-top: 7px;
+  display: grid;
+  gap: 7px;
+  color: #9aa8b5;
+  font-size: 11px;
+}
+.star {
+  background: transparent;
+  border: none;
+  color: #6b7681;
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.star:hover { color: #ffd166; }
+.star.on { color: #ffd166; }

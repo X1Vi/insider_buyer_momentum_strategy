@@ -1,0 +1,90 @@
+VOLUME-SURGE + BREAKOUT SCREENER  (READ-ONLY, Groww quotes)
+filter: price > 20d high  AND  volume >= 3x 20d avg   |  cache: 2026-09-10
+SYMBOL            LIVE    252d%  distHi%   >50  >200    dBRK  dSURGE    lBRK    volx    MOM  TRIG
+------------------------------------------------------------------------------------------------------
+SBIN           1009.00    24.0%     0.0%     Y     Y       Y       n       Y 1443.0x    up  LIVE
+INDUSINDBK      997.80   -34.7%   -34.8%     Y     Y       Y       n       Y 149.7x  down  LIVE
+JSWSTEEL       1310.10    21.0%    -1.5%     Y     Y       n       n       Y 106.4x    up  LIVE
+TATASTEEL       188.08    14.3%    -5.5%     Y     Y       n       n       Y 17698.6x    up  LIVE
+HINDALCO       1021.90     9.8%    -7.4%     Y     Y       n       n       Y 414.5x    up  LIVE
+COALINDIA       433.45   -19.3%   -20.9%     n     n       n       n       Y 5447.5x  down  LIVE
+NESTLEIND      1389.90   -45.7%   -48.4%     Y     n       n       n       Y  91.4x  down  LIVE
+MAFANG          229.00    51.6%     0.0%     Y     Y       Y       n       n 2869.7x STRONG  LIVE
+AXISBANK       1253.80     9.3%     0.0%     Y     Y       Y       n       n 566.5x    up  LIVE
+HCLTECH        1213.50    -8.8%   -18.0%     Y     Y       Y       n       n 593.1x  down  LIVE
+TCS            2208.80   -21.4%   -29.5%     Y     n       Y       n       n 301.1x  down  LIVE
+RELIANCE       1276.00   -42.4%   -42.6%     Y     Y       Y       n       n 1646.7x  down  LIVE
+BAJAJFINSV     1934.30    21.6%    -3.5%     Y     Y       n       n       n  36.0x    up      
+KOTAKBANK       413.50    19.2%    -7.4%     Y     Y       n       n       n 398.1x    up      
+SP500               --    18.7%    -1.0%     Y     Y       n       n       ?     --    up      
+ICICIBANK      1388.40     8.9%    -7.8%     n     Y       n       n       n 732.5x    up      
+BANKBEES        585.98     5.1%    -7.8%     n     n       n       n       n 181.3x    up      
+SETFNIFBK       581.43     5.1%    -7.7%     n     n       n       n       n   3.4x    up      
+NIFTYBEES       267.69    -2.9%    -9.6%     n     n       n       n       n 8066.0x  down      
+SETFNIF50       252.93    -3.2%    -9.6%     n     n       n       n       n 2300.4x  down      
+HINDUNILVR     1939.50    -7.0%    -8.6%     n     Y       n       n       n  59.3x  down      
+ITC             261.45   -15.8%   -17.9%     n     n       n       n       n 21337.5x  down      
+HDFCBANK        688.20   -41.2%   -50.5%     n     n       n       n       n 8256.4x  down      
+WIPRO           167.03   -55.3%   -58.6%     n     n       n       n       n 16903.9x  down      
+
+ACTIVE TRIGGERS (breakout, high-volume momentum):
+  SBIN        252d +24%  distHi +0%  (live price > 20d high)
+  INDUSINDBK  252d -35%  distHi -35%  (live price > 20d high)
+  JSWSTEEL    252d +21%  distHi -2%  (live price > 20d high)
+  TATASTEEL   252d +14%  distHi -6%  (live price > 20d high)
+  HINDALCO    252d +10%  distHi -7%  (live price > 20d high)
+  COALINDIA   252d -19%  distHi -21%  (live price > 20d high)
+  NESTLEIND   252d -46%  distHi -48%  (live price > 20d high)
+  MAFANG      252d +52%  distHi +0%  (daily)
+  AXISBANK    252d +9%  distHi +0%  (daily)
+  HCLTECH     252d -9%  distHi -18%  (daily)
+  TCS         252d -21%  distHi -29%  (daily)
+  RELIANCE    252d -42%  distHi -43%  (daily)
+
+NOTE: read-only screening — identify candidates, decide/place any trade manually.
+NOTE: live quotes cached to backtesting/data/live_quotes.json; use --refresh to refetch. Survivorship bias present (current large caps/ETFs only).
+VOLUME-SURGE + BREAKOUT SCREENER  (READ-ONLY, Groww quotes)
+filter: price > 20d high  AND  volume >= 3x 20d avg   |  cache: 2026-09-10
+SYMBOL            LIVE    252d%  distHi%   >50  >200    dBRK  dSURGE    lBRK    volx    MOM  TRIG
+------------------------------------------------------------------------------------------------------
+MAFANG          230.85    51.6%     0.0%     Y     Y       Y       n       Y 3545.8x STRONG  LIVE
+SBIN           1010.20    24.0%     0.0%     Y     Y       Y       n       Y 1973.5x    up  LIVE
+INDUSINDBK      995.10   -34.7%   -34.8%     Y     Y       Y       n       Y 343.8x  down  LIVE
+JSWSTEEL       1303.70    21.0%    -1.5%     Y     Y       n       n       Y 205.0x    up  LIVE
+TATASTEEL       186.65    14.3%    -5.5%     Y     Y       n       n       Y 58806.0x    up  LIVE
+HINDALCO       1015.00     9.8%    -7.4%     Y     Y       n       n       Y 867.5x    up  LIVE
+COALINDIA       433.05   -19.3%   -20.9%     n     n       n       n       Y 8968.7x  down  LIVE
+NESTLEIND      1386.60   -45.7%   -48.4%     Y     n       n       n       Y 153.7x  down  LIVE
+AXISBANK       1250.90     9.3%     0.0%     Y     Y       Y       n       n 863.2x    up  LIVE
+HCLTECH        1212.30    -8.8%   -18.0%     Y     Y       Y       n       n 696.7x  down  LIVE
+TCS            2203.90   -21.4%   -29.5%     Y     n       Y       n       n 388.0x  down  LIVE
+RELIANCE       1274.30   -42.4%   -42.6%     Y     Y       Y       n       n 2266.6x  down  LIVE
+BAJAJFINSV     1935.00    21.6%    -3.5%     Y     Y       n       n       n 103.8x    up      
+KOTAKBANK       413.60    19.2%    -7.4%     Y     Y       n       n       n 783.8x    up      
+SP500               --    18.7%    -1.0%     Y     Y       n       n       ?     --    up      
+ICICIBANK      1388.30     8.9%    -7.8%     n     Y       n       n       n 1138.8x    up      
+BANKBEES        585.55     5.1%    -7.8%     n     n       n       n       n 288.4x    up      
+SETFNIFBK       581.21     5.1%    -7.7%     n     n       n       n       n   4.4x    up      
+NIFTYBEES       267.53    -2.9%    -9.6%     n     n       n       n       n 10546.2x  down      
+SETFNIF50       252.85    -3.2%    -9.6%     n     n       n       n       n 3057.1x  down      
+HINDUNILVR     1938.10    -7.0%    -8.6%     n     Y       n       n       n  88.0x  down      
+ITC             259.75   -15.8%   -17.9%     n     n       n       n       n 26745.2x  down      
+HDFCBANK        687.90   -41.2%   -50.5%     n     n       n       n       n 11696.1x  down      
+WIPRO           166.89   -55.3%   -58.6%     n     n       n       n       n 19270.4x  down      
+
+ACTIVE TRIGGERS (breakout, high-volume momentum):
+  MAFANG      252d +52%  distHi +0%  (live price > 20d high)
+  SBIN        252d +24%  distHi +0%  (live price > 20d high)
+  INDUSINDBK  252d -35%  distHi -35%  (live price > 20d high)
+  JSWSTEEL    252d +21%  distHi -2%  (live price > 20d high)
+  TATASTEEL   252d +14%  distHi -6%  (live price > 20d high)
+  HINDALCO    252d +10%  distHi -7%  (live price > 20d high)
+  COALINDIA   252d -19%  distHi -21%  (live price > 20d high)
+  NESTLEIND   252d -46%  distHi -48%  (live price > 20d high)
+  AXISBANK    252d +9%  distHi +0%  (daily)
+  HCLTECH     252d -9%  distHi -18%  (daily)
+  TCS         252d -21%  distHi -29%  (daily)
+  RELIANCE    252d -42%  distHi -43%  (daily)
+
+NOTE: read-only screening — identify candidates, decide/place any trade manually.
+NOTE: live quotes cached to backtesting/data/live_quotes.json; use --refresh to refetch. Survivorship bias present (current large caps/ETFs only).

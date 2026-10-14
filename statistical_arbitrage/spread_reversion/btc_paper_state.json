@@ -1,0 +1,10 @@
+{
+  "symbol": "BTCUSDT",
+  "cash": 1000.0,
+  "initial_cash": 1000.0,
+  "position": null,
+  "realised_pnl": 0.0,
+  "total_fees": 0.0,
+  "trades": [],
+  "last_bar_open_time": 1789257600000
+}

@@ -1,0 +1,96 @@
+================================================================================
+NSE BREAKOUT-MOMENTUM STRATEGY — CHATGPT PROMPT + ENTRY/EXIT GUIDE
+(companion to src/bin/volume_screener.rs — READ-ONLY, paper trading only)
+================================================================================
+
+--------------------------------------------------------------------------------
+PART A — COPY-PASTE PROMPT FOR CHATGPT
+--------------------------------------------------------------------------------
+You are a quantitative strategist. I run a NSE (India) breakout-momentum strategy
+and want your independent, HONEST analysis. Do NOT flatter the strategy — actively
+look for why it might fail.
+
+## Strategy definition
+- Universe: NSE CASH large-cap stocks and ETFs (e.g., SBIN, JSWSTEEL, MAFANG, BANKBEES).
+- Signal (daily bars): a "high-volume upside breakout" = on day t,
+    close[t] > the highest close/high of the prior 20 days  AND
+    volume[t] >= 3x the average volume of the prior 20 days.
+- Thesis: after such a breakout, a stock in a confirmed uptrend tends to make
+  further higher highs (momentum continuation).
+- Trend filter: only take signals with positive 1-year (252-trading-day) return and
+  price above its 50- and 200-day moving averages. NO signals on falling stocks.
+- Entry: buy the breakout close, or a pullback retest of the broken 20-day high.
+- Stop: below the breakout level (the 20-day high now support).
+- Exit: trailing stop behind each new higher high; exit if price closes back below the
+  20-day high; exit if no new high within 20 days.
+
+## Data I can give you
+Daily OHLCV (open, high, low, close, volume) for each symbol, 2023-2026.
+Columns: ts,open,high,low,close,volume.
+
+## What I need from you
+1. Backtest this signal on the data with STRICT no-look-ahead: signal on day t uses
+   only data <= t; outcomes measured on t+1..t+20. Deduplicate consecutive signals
+   (gap >= 10 days between trades). Report per symbol AND pooled: number of trades,
+   hit-rate (share that reached a higher high), mean #higher highs, average forward
+   20-day return, win rate, and equity curve.
+2. SPLIT the sample in half (train/test by time) and report both. If the effect
+   disappears out-of-sample, say so plainly.
+3. Compare signal days against a CONTROL: all non-signal days. If the breakout adds
+   no edge over random days, say so.
+4. BIAS CHECK — explicitly flag each:
+   - survivorship bias (my universe is today's large caps; delisted names are absent),
+   - small sample sizes per name,
+   - in-sample strategy development on the same data,
+   - costs: assume ~0.1% per side; does the edge survive fees?
+   - market regime: 2023-2026 was mostly a bull market — how would this behave in a bear/choppy market?
+5. RANK the symbols by highest odds of continuing to higher highs, using momentum,
+   downside resilience, forward return, and penalizing tiny samples. Give a clear
+   #1 pick with reasoning.
+6. For the #1 pick give concrete: entry trigger level, entry zone, stop level, and
+   exit rule, expressed as chart levels an investor can draw on the daily chart.
+7. Tell me the biggest reason this strategy is likely to underperform, and one
+   concrete improvement.
+
+Rules: be rigorous, quantify everything, and explicitly state uncertainty. If a
+conclusion is weak or the data insufficient, say "not enough evidence" rather than guess.
+
+--------------------------------------------------------------------------------
+PART B — WHEN TO TAKE ENTRY AND EXIT
+--------------------------------------------------------------------------------
+
+ENTRY — only when the setup is confirmed:
+1. Uptrend confirmed: 1-year momentum > 0, price above 50 & 200 SMA.
+   (Skip breakouts on falling stocks — they are the low-odds trap.)
+2. Breakout trigger: live price breaks ABOVE the 20-day high (the screener's
+   TRADEABLE TODAY / lBRK flag).
+3. Optional confirmation: volume >= 3x the 20-day average (adds confidence,
+   but the breakout itself is the edge).
+
+How to enter (pick one):
+- Breakout-day close: simplest — buy the confirmation, but you buy near the high
+  so risk is wider.
+- Pullback retest (better reward/risk): wait for price to pull back to the broken
+  20-day high (now support) and enter there.
+
+STOP (set before entry):
+- Below the breakout level (the 20-day high, now support) or below the breakout
+  bar's low — whichever is tighter.
+- Keep risk small: ~1-2% of the account per trade. If the stop distance is >~5%,
+  the trade is too late/too wide — skip it.
+
+EXIT — the trade works while it keeps making higher highs:
+- Trailing stop: ratchet the stop up behind each new higher high (e.g. trail at
+  the 10-day low, or ~2-3x ATR below the latest swing high). Exit when price
+  breaks that trailing support (the higher-high streak ends).
+- Breakout-failure exit: if price closes back BELOW the 20-day high, exit.
+- Time exit: if no meaningful new high within ~20 days, the signal failed — exit.
+- Optional target: take partial profit on a big volume blow-off, let the rest ride.
+
+HONEST CAVEATS (repeat these to yourself):
+- The edge is modest BEFORE costs; fees/slippage can eat it.
+- Works in trending markets, fails in chop/bears.
+- Per-name sample sizes are tiny; a "100% hit rate" on 5 trades is luck, not truth.
+- Survivorship bias inflates results (current large caps only).
+- Paper-trade first. Size small. No single backtest number justifies risk.
+================================================================================

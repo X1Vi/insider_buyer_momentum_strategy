@@ -1,0 +1,10 @@
+/target
+.env
+.venv/
+__pycache__/
+*.pyc
+# Contains hardcoded Groww API credentials - do not commit
+get_access_token.py
+.hl_cache/
+# Bulk Hyperliquid market data/cache - not part of spread-reversion repo
+backtesting/hyperliquid/

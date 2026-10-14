@@ -1,0 +1,16 @@
+# dependencies / build artifacts
+node_modules/
+dist/
+target/
+*.log
+
+# regenerable price cache (keep the small insider JSONs so a clone has data)
+strategy_categories/could_work/india_insider_drift/data/app_cache/price_*.json
+strategy_categories/could_work/india_insider_drift/data/app_logs/
+strategy_categories/could_work/india_insider_drift/data/raw/
+
+# python / misc
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
