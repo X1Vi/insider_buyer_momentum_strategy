@@ -9,6 +9,8 @@ import MountedCharts from "./MountedCharts.jsx";
 // stock (☆) to add it to the list and render its chart below.
 export default function Scan({ onPick }) {
   const [recent, setRecent] = usePersistentState("scan_recent", 60);
+  // Cluster filter: minimum distinct insiders buying within 30 days.
+  const [clusterMin, setClusterMin] = usePersistentState("scan_cluster_min", 0);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
@@ -31,7 +33,9 @@ export default function Scan({ onPick }) {
     };
   }, [recent]);
 
-  const rows = data?.rows || [];
+  const rows = (data?.rows || []).filter(
+    (r) => clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin
+  );
 
   return (
     <div>
@@ -44,8 +48,17 @@ export default function Scan({ onPick }) {
             <option value={90}>last 3 months</option>
           </select>
         </label>
+        <label>
+          recent cluster (1 month):{" "}
+          <select value={clusterMin} onChange={(e) => setClusterMin(Number(e.target.value))}>
+            <option value={0}>any</option>
+            <option value={2}>≥2 insiders / 30d</option>
+            <option value={3}>≥3 insiders / 30d</option>
+            <option value={5}>≥5 insiders / 30d</option>
+          </select>
+        </label>
         <span className="badge">
-          {data?.momentum_count || 0} momentum / {data?.count || 0} scanned
+          {rows.length} shown · {data?.momentum_count || 0} momentum / {data?.count || 0} scanned
         </span>
         {data?.anchor && <span className="sub inline">newest signal {data.anchor}</span>}
         {loading && <span className="sub inline">scanning… (priced via Groww, cached 24h)</span>}
@@ -59,6 +72,7 @@ export default function Scan({ onPick }) {
               <th>mount</th>
               <th>Symbol</th>
               <th>last buy</th>
+              <th title="distinct insiders buying within 30 days">30d cluster</th>
               <th>close</th>
               <th>1m</th>
               <th>3m</th>
@@ -86,6 +100,15 @@ export default function Scan({ onPick }) {
                   <strong>{r.symbol}</strong>
                 </td>
                 <td>{r.last_buy}</td>
+                <td>
+                  {(r.distinct_buyers_30d || 0) >= 2 ? (
+                    <span className="badge clusterBadge" title={`${r.distinct_buyers_30d} insiders / 30d · Rs${Math.round((r.cluster_value_inr || 0) / 1e5)}L`}>
+                      {r.distinct_buyers_30d}/30d
+                    </span>
+                  ) : (
+                    <span className="sub">{r.distinct_buyers_30d || 0}</span>
+                  )}
+                </td>
                 <td>{r.close != null ? Number(r.close).toFixed(1) : "—"}</td>
                 <td>{pct(r.ret1m)}</td>
                 <td className={r.ret3m >= 0 ? "positive" : ""}>{pct(r.ret3m)}</td>
@@ -101,7 +124,7 @@ export default function Scan({ onPick }) {
             ))}
             {!loading && rows.length === 0 && (
               <tr>
-                <td colSpan={12} className="sub">
+                <td colSpan={13} className="sub">
                   No recent buyers in this window.
                 </td>
               </tr>

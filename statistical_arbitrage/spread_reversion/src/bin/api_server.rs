@@ -690,9 +690,42 @@ async fn scan(State(app): State<App>, Query(q): Query<ScanQ>) -> Json<Value> {
         let Some((score, trend)) = momentum_row(sym, prices.bars.as_ref()) else {
             continue;
         };
+        // Recent cluster: distinct buyers within 30 days of the newest disclosure.
+        let symbol_buys: Vec<&insider::Record> = buys
+            .iter()
+            .copied()
+            .filter(|r| r.sym().eq_ignore_ascii_case(sym))
+            .collect();
+        let latest_disc = symbol_buys
+            .iter()
+            .filter_map(|r| insider::parse_nse_date(r.disc_date()))
+            .max();
+        let (distinct_buyers_30d, cluster_value_inr) = match latest_disc {
+            Some(ld) => {
+                let start = ld - ChronoDuration::days(30);
+                let cluster: Vec<&&insider::Record> = symbol_buys
+                    .iter()
+                    .filter(|r| {
+                        insider::parse_nse_date(r.disc_date())
+                            .is_some_and(|d| d >= start && d <= ld)
+                    })
+                    .collect();
+                let mut buyers: Vec<String> = cluster
+                    .iter()
+                    .map(|r| r.buyer().trim().to_uppercase())
+                    .filter(|n| !n.is_empty())
+                    .collect();
+                buyers.sort();
+                buyers.dedup();
+                (buyers.len(), cluster.iter().map(|r| r.value()).sum::<f64>())
+            }
+            None => (0usize, 0.0f64),
+        };
         rows.push((score, json!({
             "symbol": sym,
             "last_buy": last_buy.to_string(),
+            "distinct_buyers_30d": distinct_buyers_30d,
+            "cluster_value_inr": cluster_value_inr,
             "close": trend["close"],
             "ema50": trend["ema50"],
             "ema200": trend["ema200"],
