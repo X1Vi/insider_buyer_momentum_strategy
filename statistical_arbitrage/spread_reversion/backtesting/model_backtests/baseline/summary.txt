@@ -1,0 +1,44 @@
+=== baseline — ML WATCH backtest (bias-hardened) ===
+events: 113   T2 base: 43%   symbols: 18
+split: newest 22 events (arm>=1007) = FINAL UNTOUCHED TEST; rest = walk-forward validation
+look-ahead guard: training requires arm+OBS+10 < fold boundary (no label leakage)
+gates: raw prob >= 0.5  &  EV > 0.0  (fixed a priori, not tuned on test)
+mechanical trade: LONG A/SHORT B, exit z>=0 / stop 5% notional / max 30d
+
+--- walk-forward VALIDATION (all events except final test) ---
+  walk-forward folds: 0   (events arm<1007 only train, never validate; validated events below)
+--- VALIDATION ---
+  events: 91   T2 win: 44%   signals(raw>=0.5): 91
+  trades taken: 19   net: Rs -4,166   win%: 53%   avg: Rs -219
+  exits: {'ZERO': np.int64(10), 'STOP': np.int64(6), 'TIME': np.int64(3)}   avg hold: 21d
+  per-pair:
+    COALINDIA   /KOTAKBANK    n=1  net=Rs    +970  win=100%
+    HINDALCO    /SBIN         n=1  net=Rs    +562  win=100%
+    JSWSTEEL    /RELIANCE     n=2  net=Rs    +503  win=100%
+    HCLTECH     /ITC          n=1  net=Rs    +443  win=100%
+    BAJAJFINSV  /NESTLEIND    n=1  net=Rs    +118  win=100%
+    ITC         /NESTLEIND    n=1  net=Rs     +75  win=100%
+    HCLTECH     /TCS          n=1  net=Rs     +31  win=100%
+    BAJAJFINSV  /COALINDIA    n=1  net=Rs    -116  win=0%
+    ITC         /TATASTEEL    n=2  net=Rs    -533  win=50%
+    JSWSTEEL    /WIPRO        n=1  net=Rs    -572  win=0%
+    ICICIBANK   /NESTLEIND    n=2  net=Rs    -782  win=50%
+    RELIANCE    /TATASTEEL    n=1  net=Rs  -1,038  win=0%
+    RELIANCE    /WIPRO        n=1  net=Rs  -1,134  win=0%
+    COALINDIA   /SBIN         n=1  net=Rs  -1,143  win=0%
+    HCLTECH     /HINDUNILVR   n=2  net=Rs  -1,550  win=0%
+
+--- FINAL TEST ---
+  events: 22   T2 win: 41%   signals(raw>=0.5): 22
+  trades taken: 4   net: Rs -514   win%: 50%   avg: Rs -128
+  exits: {'STOP': np.int64(2), 'ZERO': np.int64(2)}   avg hold: 18d
+  per-pair:
+    AXISBANK    /INDUSINDBK   n=1  net=Rs  +1,016  win=100%
+    JSWSTEEL    /NESTLEIND    n=1  net=Rs    +875  win=100%
+    NESTLEIND   /TATASTEEL    n=1  net=Rs  -1,080  win=0%
+    COALINDIA   /WIPRO        n=1  net=Rs  -1,325  win=0%
+
+--- bias controls ---
+  look-ahead: training label windows end before the test period (arm+OBS+10<boundary)
+  overfitting: quarterly walk-forward validation + final untouched test; early stopping for trees; thresholds fixed a priori
+  survivorship: all symbols used, no pair dropped for performance (caveat: today's large-cap universe; no point-in-time membership data)

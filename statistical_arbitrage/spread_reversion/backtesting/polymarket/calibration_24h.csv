@@ -1,0 +1,973 @@
+id,event,cat,vol,y,p,H,q,resid
+2304331,sweden-parliamentary-election-3rd-place,,112453.46722799996,0,0.001,24,Will the Moderate Party (M) win the third most seats in the 2026 Swedish parliamentary election?,-0.001
+2304330,sweden-parliamentary-election-3rd-place,,66361.91157699999,1,0.9995,24,Will the Sweden Democrats (SD) win the third most seats in the 2026 Swedish parliamentary election?,0.0004999999999999449
+2304229,sweden-parliamentary-election-2nd-place,,185909.34962200004,1,0.9985,24,Will the Moderate Party (M) win the second most seats in the 2026 Swedish parliamentary election?,0.0014999999999999458
+2304228,sweden-parliamentary-election-2nd-place,,308770.2777059999,0,0.002,24,Will the Sweden Democrats (SD) win the second most seats in the 2026 Swedish parliamentary election?,-0.002
+3561916,sweden-parliamentary-election-liberals-win-seats-20260812164320900,,249199.57508300003,1,0.9995,24,Sweden Parliamentary Election: Liberals Win Seats?,0.0004999999999999449
+3679416,chi1-ccu-cdh-2026-08-30-halftime-result,,63037.27027600001,1,0.99,24,CD Coquimbo Unido vs. CD Huachipato: Draw at halftime?,0.010000000000000009
+3679235,chi1-ccu-cdh-2026-08-30,,34504.320338,0,0.162,24,Will CD Coquimbo Unido win on 2026-08-30?,-0.162
+2436390,will-tido-parties-win-a-majority-in-the-2026-swedish-parliamentary-elections-20260603233725849,,26192.829599000008,0,0.0475,24,Will Tidö parties win a majority in the 2026 Swedish parliamentary elections?,-0.0475
+3586889,col1-onc-cdt-2026-08-27,,119925.345096,1,0.465,24,Will Once Caldas win on 2026-08-27?,0.5349999999999999
+3586893,col1-onc-cdt-2026-08-27,,61835.55059099999,0,0.245,24,Will CD Tolima win on 2026-08-27?,-0.245
+2587815,bank-of-brazil-decision-in-september-20260616232552895,,47635.854383,0,0.0055,24,Will the Bank of Brazil make no change to the target for the Selic rate at the September meeting?,-0.0055
+2587816,bank-of-brazil-decision-in-september-20260616232552895,,85643.83952600003,1,0.9925,24,Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the September meeting?,0.007499999999999951
+2252245,fed-decision-in-september-762,,42158279.47949003,1,0.885,24,Will the Fed increase interest rates by 25 bps after the September 2026 meeting?,0.11499999999999999
+2118801,fed-decisions-jun-sep,,349718.241711,0,0.085,24,Will the Fed Pause–Pause–Pause in the next three decisions (Jun–Jul–Sep)?,-0.085
+2118802,fed-decisions-jun-sep,,104255.456572,0,0.003,24,Will the Fed Pause–Pause–Cut in the next three decisions (Jun–Jul–Sep)?,-0.003
+2118805,fed-decisions-jun-sep,,384947.0772410001,1,0.91,24,Will the Fed decide differently in the next three decisions (Jun–Jul–Sep)?,0.08999999999999997
+2252242,fed-decision-in-september-762,,19739407.147785,0,0.0005,24,Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?,-0.0005
+2252243,fed-decision-in-september-762,,56255118.64173399,0,0.0015,24,Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?,-0.0015
+2252244,fed-decision-in-september-762,,56435144.72298711,0,0.095,24,Will there be no change in Fed interest rates after the September 2026 meeting?,-0.095
+2252246,fed-decision-in-september-762,,33434867.86186301,0,0.0095,24,Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?,-0.0095
+2954816,2026-bangsamoro-parliament-election-party-winner-20260715164930563,,57994.439740000016,0,0.145,24,Will United Bangsamoro Justice Party (UBJP) win the most seats in the 2026 BARMM Parliamentary Elections?,-0.145
+3404410,spacex-starship-flight-test-14,,47474.66315600001,0,0.0005,24,Will SpaceX Starship Flight Test 14 launch by September 15?,-0.0005
+3502075,trump-declassifies-new-ufo-files-byptptpt-20260810145949434,,56621.42886500001,0,0.027,24,Trump declassifies new UFO files by September 15?,-0.027
+3741669,russia-x-ukraine-any-diplomatic-meeting-byptptpt-20260819,,98840.94661800002,0,0.0305,24,"Will Russia and Ukraine hold any diplomatic meeting by September 15, 2026?",-0.0305
+906891,rhode-island-governor-republican-primary-winner,,63773.90368299999,1,0.989,24,Will Aaron Guckian win the 2026 Rhode Island Governor Republican primary election?,0.01100000000000001
+906892,rhode-island-governor-republican-primary-winner,,69560.792384,0,0.0005,24,Will Elaine Pelino win the 2026 Rhode Island Governor Republican primary election?,-0.0005
+3780617,mex-pue-tol-2026-09-04,,46215.69415800001,0,0.195,24,Will Club Puebla win on 2026-09-04?,-0.195
+3780618,mex-pue-tol-2026-09-04,,30446.879223999997,0,0.215,24,Will Club Puebla vs. Deportivo Toluca FC end in a draw?,-0.215
+3780619,mex-pue-tol-2026-09-04,,195300.99963900002,1,0.595,24,Will Deportivo Toluca FC win on 2026-09-04?,0.405
+1427557,delaware-republican-senate-primary-winner,,58329.610560999994,0,0.126,24,Will John Shulli be the Republican nominee for Senate in Delaware?,-0.126
+3441286,scop-fal-hmi-2026-08-22,,68008.86278600001,0,0.515,24,Will Heart of Midlothian FC win on 2026-08-22?,-0.515
+3441261,scop-hib-kil-2026-08-22,,30383.87395400001,1,0.16,24,Will Kilmarnock FC win on 2026-08-22?,0.84
+1901217,lol-lck-cl-2026-winner,,29228.656582999996,1,0.6245,24,Will T1 Esports Academy win LCK CL 2026?,0.37549999999999994
+3251526,how-many-emmys-will-the-pitt-win-20260730202918,,30709.995217000003,1,0.355,24,"Will ""The Pitt"" win 2 or 3 awards at the Emmys?",0.645
+1895229,pro-football-where-will-dexter-lawrence-play-week-1,,80072.70000000003,0,0.0005,24,Will Dexter Lawrence play for the Pittsburgh Steelers in Week 1 of the 2026-27 NFL regular season?,-0.0005
+1895230,pro-football-where-will-dexter-lawrence-play-week-1,,27489.969999999998,0,0.0005,24,Will Dexter Lawrence play for the San Francisco 49ers in Week 1 of the 2026-27 NFL regular season?,-0.0005
+1895212,pro-football-where-will-dexter-lawrence-play-week-1,,180681.026666,0,0.001,24,Will Dexter Lawrence play for the Las Vegas Raiders in Week 1 of the 2026-27 NFL regular season?,-0.001
+3702042,us-announces-end-of-iranian-blockade-byptptpt-20260713152715080,,1759862.6388520016,0,0.0045,24,"US announces end of Iranian blockade by September 14, 2026?",-0.0045
+3008078,which-streaming-service-will-win-the-most-emmys-20260710203956416,,39596.517938,0,0.105,24,Will HBO Max win the most Emmys?,-0.105
+3008079,which-streaming-service-will-win-the-most-emmys-20260710203956416,,29333.284221999995,0,0.0015,24,Will Netflix win the most Emmys?,-0.0015
+3008080,which-streaming-service-will-win-the-most-emmys-20260710203956416,,45040.51989500001,1,0.876,24,Will Apple TV win the most Emmys?,0.124
+3251520,how-many-emmys-will-widows-bay-win-20260730202918,,25746.684007000003,0,0.205,24,"Will ""Widow's Bay"" win 2 or 3 awards at the Emmys?",-0.205
+3251521,how-many-emmys-will-widows-bay-win-20260730202918,,25942.093850999998,0,0.615,24,"Will ""Widow's Bay"" win 4 or 5 awards at the Emmys?",-0.615
+3251500,how-many-emmys-will-dtf-st-louis-win-20260730202918,,85716.466517,1,0.9985,24,"Will ""DTF St. Louis"" win 0 or 1 awards at the Emmys?",0.0014999999999999458
+3251501,how-many-emmys-will-dtf-st-louis-win-20260730202918,,56052.37264699999,0,0.001,24,"Will ""DTF St. Louis"" win 2 or 3 awards at the Emmys?",-0.001
+3212516,how-many-emmys-will-hacks-win-20260720191814491,,60580.83818199999,0,0.605,24,"Will ""Hacks"" win 2 or 3 awards at the Emmys?",-0.605
+3212517,how-many-emmys-will-hacks-win-20260720191814491,,31157.881863999995,0,0.04,24,"Will ""Hacks"" win 4 or 5 awards at the Emmys?",-0.04
+3251507,how-many-emmys-will-beef-win-20260730202918,,42823.78774900001,1,0.5835,24,"Will ""Beef"" win 0 or 1 awards at the Emmys?",0.4165
+2870636,emmys-2026-outstanding-comedy-series,,61589.634072,1,0.845,24,Will “Widow’s Bay” win Emmys 2026: Outstanding comedy series?,0.15500000000000003
+2870637,emmys-2026-outstanding-comedy-series,,30811.463588000006,0,0.1515,24,Will “Hacks” win Emmys 2026: Outstanding comedy series?,-0.1515
+2870649,emmys-2026-outstanding-drama-series,,45857.759293,1,0.953,24,Will “The Pitt” win Emmys 2026: Outstanding drama series?,0.04700000000000004
+2871922,emmys-2026-outstanding-limited-or-anthology-series-20260710152711971,,30991.737845000003,1,0.925,24,Will “DTF St. Louis” win Emmys 2026: Outstanding limited or anthology series?,0.07499999999999996
+2865402,emmys-2026-outstanding-variety-series,,155028.60098799996,0,0.0525,24,Will “Jimmy Kimmel Live!” win Emmys 2026: Outstanding variety series?,-0.0525
+2865403,emmys-2026-outstanding-variety-series,,56946.567806999985,0,0.1085,24,Will “Last Week Tonight With John Oliver” win Emmys 2026: Outstanding variety series?,-0.1085
+2865404,emmys-2026-outstanding-variety-series,,97585.017937,1,0.685,24,Will “The Late Show With Stephen Colbert” win Emmys 2026: Outstanding variety series?,0.31499999999999995
+2865405,emmys-2026-outstanding-variety-series,,58323.46914499999,0,0.0255,24,Will “Saturday Night Live” win Emmys 2026: Outstanding variety series?,-0.0255
+2865401,emmys-2026-outstanding-variety-series,,42011.565279999995,0,0.087,24,Will “The Daily Show” win Emmys 2026: Outstanding variety series?,-0.087
+2871896,emmys-2026-outstanding-lead-actress-in-a-limited-or-anthology-series-or-movie-20260710152217843,,26837.687400000003,0,0.355,24,Outstanding lead actress in a limited or anthology series or movie?,-0.355
+2865508,emmys-2026-outstanding-lead-actor-in-a-comedy-series,,31048.106192,1,0.948,24,Will Matthew Rhys – “Widow’s Bay” win Emmys 2026: Outstanding lead actor in a comedy series?,0.052000000000000046
+2870614,emmys-2026-outstanding-realitycompetition-series,,32556.336900999995,1,0.9595,24,Will “The Traitors” win Emmys 2026: Outstanding reality/competition series?,0.04049999999999998
+2871900,emmys-2026-outstanding-lead-actor-in-a-limited-or-anthology-series-or-movie-20260710152618149,,26448.715305,0,0.06,24,Will Riz Ahmed – “Bait” win Emmys 2026: Outstanding lead actor in a limited or anthology series or movie?,-0.06
+2865658,emmys-2026-outstanding-supporting-actress-in-a-drama-series,,32190.91701,0,0.735,24,Will Katherine LaNasa – “The Pitt” win Emmys 2026: Outstanding supporting actress in a drama series?,-0.735
+2865515,emmys-2026-outstanding-lead-actress-in-a-comedy-series,,42125.088337999994,1,0.9155,24,Will Jean Smart – “Hacks” win Emmys 2026: Outstanding lead actress in a comedy series?,0.08450000000000002
+2865495,emmys-2026-outstanding-supporting-actress-in-a-comedy-series,,28986.850635000003,1,0.8305,24,Will Kate O’Flynn – “Widow’s Bay” win Emmys 2026: Outstanding supporting actress in a comedy series?,0.16949999999999998
+811719,sweden-parliamentary-election-winner,,468372.7761100001,1,0.9915,24,Will the Swedish Social Democratic Party (S) win the most seats in the 2026 Swedish parliamentary election?,0.008499999999999952
+811720,sweden-parliamentary-election-winner,,723630.0079300004,0,0.007,24,Will the Sweden Democrats (SD) win the most seats in the 2026 Swedish parliamentary election?,-0.007
+811721,sweden-parliamentary-election-winner,,495908.98123899987,0,0.003,24,Will the Moderate Party (M) win the most seats in the 2026 Swedish parliamentary election?,-0.003
+811727,sweden-parliamentary-election-winner,,36235.049562,0,0.0005,24,Will the Citizens' Coalition (MED) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+811722,sweden-parliamentary-election-winner,,43212.243862000025,0,0.0005,24,Will the Centre Party (C) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+811723,sweden-parliamentary-election-winner,,39067.896605999995,0,0.0005,24,Will the Left Party (V) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+811724,sweden-parliamentary-election-winner,,37250.335688,0,0.0005,24,Will the Christian Democrats (KD) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+2304227,sweden-parliamentary-election-2nd-place,,51065.50676900001,0,0.008,24,Will the Swedish Social Democratic Party (S) win the second most seats in the 2026 Swedish parliamentary election?,-0.008
+811725,sweden-parliamentary-election-winner,,154852.201581,0,0.0005,24,Will the Green Party (MP) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+811726,sweden-parliamentary-election-winner,,37804.456999,0,0.0005,24,Will the Liberals (L) win the most seats in the 2026 Swedish parliamentary election?,-0.0005
+1088476,2026-mens-us-open-winner-tennis,,1557485.7704349998,0,0.423,24,Will Ben Shelton win the 2026 Men's US Open?,-0.423
+1088475,2026-mens-us-open-winner-tennis,,2524800.2272429992,1,0.578,24,Will Alexander Zverev win the 2026 Men's US Open?,0.42200000000000004
+1088652,2026-womens-us-open-winner-tennis,,599229.076238,0,0.57,24,Will Aryna Sabalenka win the 2026 Women’s US Open?,-0.57
+1088656,2026-womens-us-open-winner-tennis,,785070.2368779997,1,0.431,24,Will Elena Rybakina win the 2026 Women’s US Open?,0.569
+2712383,chi-wsz-hen-2026-07-11,,76515.89606700001,0,0.41,24,Will Henan FC win on 2026-07-11?,-0.41
+2723702,chi-jin-tie-2026-07-12,,33601.539536,1,0.515,24,Will Tianjin Jinmen Hu FC win on 2026-07-12?,0.485
+1088490,2026-mens-us-open-winner-tennis,,1033659.8084790002,0,0.083,24,Will Frances Tiafoe win the 2026 Men's US Open?,-0.083
+3701624,when-will-trump-announce-a-new-white-house-press-secretary,,45116.600284,0,0.0295,24,"Next White House Press Secretary announced by September 11, 2026?",-0.0295
+1088502,2026-mens-us-open-winner-tennis,,774381.4976909999,0,0.058,24,Will Karen Khachanov win the 2026 Men's US Open?,-0.058
+3539668,august-inflation-us-monthly-1786474662954,,28210.704544,0,0.125,24,Will monthly inflation increase by 0.5% or more in August?,-0.125
+3539674,august-inflation-us-annual-1786474662954,,45449.59950399999,1,0.46,24,Will annual inflation be 3.4% in August?,0.54
+2661522,bank-of-russia-decision-in-september-20260623013858993,,83848.625315,0,0.195,24,Will the Bank of Russia decrease the key rate after the September Meeting?,-0.195
+2661523,bank-of-russia-decision-in-september-20260623013858993,,116484.48071899997,1,0.775,24,Will the Bank of Russia make no change to the key rate after the September Meeting?,0.22499999999999998
+2661524,bank-of-russia-decision-in-september-20260623013858993,,362707.5818449999,0,0.0265,24,Will the Bank of Russia increase the key rate after the September Meeting?,-0.0265
+1088654,2026-womens-us-open-winner-tennis,,356816.666397,0,0.244,24,Will Coco Gauff win the 2026 Women’s US Open?,-0.244
+1088661,2026-womens-us-open-winner-tennis,,343098.56457600015,0,0.1255,24,Will Jessica Pegula win the 2026 Women’s US Open?,-0.1255
+2587795,ecb-interest-rates-september-2026-20260616222636097,,42418.682826,0,0.0005,24,Will the ECB announce a 25 bps decrease at the September 2026 meeting?,-0.0005
+2587796,ecb-interest-rates-september-2026-20260616222636097,,246074.4957,0,0.0045,24,Will the ECB announce no change at the September 2026 meeting?,-0.0045
+2587797,ecb-interest-rates-september-2026-20260616222636097,,193824.06017400004,1,0.9955,24,Will the ECB announce a 25 bps increase at the September 2026 meeting?,0.0044999999999999485
+2587798,ecb-interest-rates-september-2026-20260616222636097,,103742.09280399999,0,0.0015,24,Will the ECB announce a 50+ bps increase at the September 2026 meeting?,-0.0015
+696293,tush-push-banned-for-2026-nfl-season,,416929.20859299996,0,0.0015,24,Tush Push banned for 2026 NFL Season?,-0.0015
+3752064,rhode-island-attorney-general-democratic-primary-winner,,57053.472844000025,1,0.86,24,Will Kim Ahern be the Rhode Island Attorney General Democratic nominee?,0.14
+3752066,rhode-island-attorney-general-democratic-primary-winner,,30349.580937,0,0.14,24,Will Keith Hoffmann be the Rhode Island Attorney General Democratic nominee?,-0.14
+906867,rhode-island-governor-democratic-primary-winner,,42498.931076,1,0.9935,24,Will Helena Foulkes win the 2026 Rhode Island Governor Democratic primary election?,0.00649999999999995
+906868,rhode-island-governor-democratic-primary-winner,,25688.020862,0,0.0015,24,Will Dan McKee win the 2026 Rhode Island Governor Democratic primary election?,-0.0015
+3195077,who-will-win-the-democratic-nomination-for-providence-rhode-island-mayor-20260727182320462,,56483.114794,1,0.77,24,Will David Morales be the Democratic nominee for Mayor of Providence?,0.22999999999999998
+3195078,who-will-win-the-democratic-nomination-for-providence-rhode-island-mayor-20260727182320462,,37396.27013,0,0.21,24,Will Brett Smiley be the Democratic nominee for Mayor of Providence?,-0.21
+904739,will-aaron-rodgers-retire-before-next-season,,172844.38156100002,0,0.0055,24,Will Aaron Rodgers retire before next season?,-0.0055
+992020,will-travis-kelce-retire-before-next-season,,47157.79812399999,0,0.0095,24,Will Travis Kelce retire before next season?,-0.0095
+1088509,2026-mens-us-open-winner-tennis,,512725.98619399976,0,0.017,24,Will Alexander Blockx win the 2026 Men's US Open?,-0.017
+1088655,2026-womens-us-open-winner-tennis,,301301.2471250001,0,0.0795,24,Will Mirra Andreeva win the 2026 Women’s US Open?,-0.0795
+3441272,scop-joh-cel-2026-08-22,,29951.61379,1,0.665,24,Will Celtic FC win on 2026-08-22?,0.33499999999999996
+3441290,scop-ran-stm-2026-08-22,,112498.429385,1,0.735,24,Will Rangers FC win on 2026-08-22?,0.265
+1088659,2026-womens-us-open-winner-tennis,,710542.770684,0,0.0405,24,Will Qinwen Zheng win the 2026 Women’s US Open?,-0.0405
+3461638,cze1-fkj-fbo-2026-08-23,,37888.25881699999,1,0.465,24,Will FK Jablonec win on 2026-08-23?,0.5349999999999999
+3204390,0-ships-transit-hormuz-on-any-date-byptpt-20260626172559966,,123419.24530800003,0,0.0585,24,0 ships transit Hormuz on any date by August 31?,-0.0585
+2774056,strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320,,18063387.164730005,0,0.0005,24,Strait of Hormuz traffic returns to normal by August 31?,-0.0005
+2911874,bab-el-mandeb-strait-effectively-closed-by,,2558815.7553530005,0,0.0015,24,Bab el-Mandeb Strait effectively closed by August 31?,-0.0015
+1088472,2026-mens-us-open-winner-tennis,,2578417.790125,0,0.565,24,Will Carlos Alcaraz win the 2026 Men's US Open?,-0.565
+704169,nh-01-democratic-primary-winner,,159596.0390409999,0,0.825,24,Will Maura Sullivan be the Democratic nominee for NH-01?,-0.825
+704170,nh-01-democratic-primary-winner,,118778.80040700003,1,0.165,24,Will Stefany Shaheen be the Democratic nominee for NH-01?,0.835
+704171,nh-01-democratic-primary-winner,,53839.84664500001,0,0.018,24,Will Carleigh Beriont be the Democratic nominee for NH-01?,-0.018
+1088666,2026-womens-us-open-winner-tennis,,182312.354446,0,0.0235,24,Will Emma Navarro win the 2026 Women’s US Open?,-0.0235
+706184,new-hampshire-democratic-senate-primary-winner,,105492.24657299994,1,0.979,24,Will Chris Pappas be the Democratic nominee for Senate in New Hampshire?,0.02100000000000002
+706183,new-hampshire-democratic-senate-primary-winner,,128808.53090900002,0,0.018,24,Will Karishma Manzur be the Democratic nominee for Senate in New Hampshire?,-0.018
+1088556,2026-mens-us-open-winner-tennis,,466808.724989,0,0.0135,24,Will Alex Michelsen win the 2026 Men's US Open?,-0.0135
+960186,nh-01-republican-primary-winner,,75015.65452499999,1,0.845,24,Will Anthony DiLorenzo be the Republican Nominee for NH-01?,0.15500000000000003
+960188,nh-01-republican-primary-winner,,63272.622771,0,0.16,24,Will Hollie Noveletsky be the Republican Nominee for NH-01?,-0.16
+1088670,2026-womens-us-open-winner-tennis,,170725.56633899998,0,0.0515,24,Will Linda Noskova win the 2026 Women’s US Open?,-0.0515
+3450026,ere-nec-exc-2026-08-22,,116293.42531499999,0,0.615,24,Will NEC win on 2026-08-22?,-0.615
+3450030,ere-nec-exc-2026-08-22,,35315.010838999995,0,0.175,24,Will SBV Excelsior win on 2026-08-22?,-0.175
+1088498,2026-mens-us-open-winner-tennis,,358201.923831,0,0.0015,24,Will Luciano Darderi win the 2026 Men's US Open?,-0.0015
+3702025,us-announces-end-of-iranian-blockade-byptptpt-20260713152715080,,1780251.9985849985,0,0.0055,24,"US announces end of Iranian blockade by September 7, 2026?",-0.0055
+1088496,2026-mens-us-open-winner-tennis,,523578.0913270002,0,0.0315,24,Will Learner Tien win the 2026 Men's US Open?,-0.0315
+1088694,2026-womens-us-open-winner-tennis,,98865.09055800003,0,0.0255,24,Will Iva Jovic win the 2026 Women’s US Open?,-0.0255
+3270651,col1-llf-cdt-2026-08-14,,53470.69190899999,0,0.315,24,Will Llaneros FC win on 2026-08-14?,-0.315
+1088499,2026-mens-us-open-winner-tennis,,337039.2861179999,0,0.0085,24,Will Francisco Cerundolo win the 2026 Men's US Open?,-0.0085
+1088658,2026-womens-us-open-winner-tennis,,130663.80243399991,0,0.04,24,Will Naomi Osaka win the 2026 Women’s US Open?,-0.04
+1088653,2026-womens-us-open-winner-tennis,,138180.37799500008,0,0.145,24,Will Iga Swiatek win the 2026 Women’s US Open?,-0.145
+1088680,2026-womens-us-open-winner-tennis,,538976.4802920001,0,0.0115,24,Will Anastasia Potapova win the 2026 Women’s US Open?,-0.0115
+3764763,best-ai-model-on-september-7,,31679.649643,1,0.98,24,"Will any other model be the best AI model on September 7, 2026?",0.020000000000000018
+3748549,sachsen-anhalt-parliamentary-election-spd-vote-share,,76035.35233099999,0,0.5,24,Will SPD win between 7% and 9% of all valid second votes?,-0.5
+3748550,sachsen-anhalt-parliamentary-election-spd-vote-share,,59413.957540999974,1,0.116,24,Will SPD win at least 9% of all valid second votes?,0.884
+3748408,sachsen-anhalt-parliamentary-election-afd-vote-share,,56040.563729999994,0,0.195,24,Will AfD win between 39% and 42% of all valid second votes?,-0.195
+3748409,sachsen-anhalt-parliamentary-election-afd-vote-share,,123466.35772500007,1,0.515,24,Will AfD win between 42% and 45% of all valid second votes?,0.485
+3748553,sachsen-anhalt-parliamentary-election-grune-vote-share,,88390.64448399996,0,0.445,24,Will Grüne win between 5% and 7% of all valid second votes?,-0.445
+3748554,sachsen-anhalt-parliamentary-election-grune-vote-share,,123590.59180899999,1,0.3685,24,Will Grüne win at least 7% of all valid second votes?,0.6315
+3748557,sachsen-anhalt-parliamentary-election-bsw-vote-share,,50740.42921500001,1,0.11,24,Will BSW win between 5% and 7% of all valid second votes?,0.89
+3748556,sachsen-anhalt-parliamentary-election-bsw-vote-share,,58595.79791899997,0,0.645,24,Will BSW win between 3% and 5% of all valid second votes?,-0.645
+3748410,sachsen-anhalt-parliamentary-election-afd-vote-share,,78439.98177,0,0.11,24,Will AfD win at least 45% of all valid second votes?,-0.11
+3748423,sachsen-anhalt-parliamentary-election-linke-vote-share,,52907.519137,1,0.049,24,Will Linke win less than 9% of all valid second votes?,0.951
+3748407,sachsen-anhalt-parliamentary-election-afd-vote-share,,116607.49476399999,0,0.165,24,Will AfD win less than 39% of all valid second votes?,-0.165
+3748551,sachsen-anhalt-parliamentary-election-grune-vote-share,,26958.389079,0,0.0005,24,Will Grüne win less than 3% of all valid second votes?,-0.0005
+3748552,sachsen-anhalt-parliamentary-election-grune-vote-share,,94914.71628400001,0,0.26,24,Will Grüne win between 3% and 5% of all valid second votes?,-0.26
+3748548,sachsen-anhalt-parliamentary-election-spd-vote-share,,55700.895978000015,0,0.38,24,Will SPD win between 5% and 7% of all valid second votes?,-0.38
+3748412,sachsen-anhalt-parliamentary-election-cdu-vote-share,,26117.983779,0,0.415,24,Will CDU win between 20% and 23% of all valid second votes?,-0.415
+3748547,sachsen-anhalt-parliamentary-election-spd-vote-share,,30370.099840000017,0,0.0115,24,Will SPD win less than 5% of all valid second votes?,-0.0115
+3093329,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,30692.151610999994,0,0.01,24,Will AfD win fewer than 34 seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.01
+3093330,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,97135.01932399998,0,0.0775,24,Will AfD win 34-37 seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0775
+3093331,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,94492.296682,1,0.735,24,Will AfD win 38-41 seats in the 2026 Sachsen-Anhalt parliamentary elections?,0.265
+3093332,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,90476.96976199998,0,0.16,24,Will AfD win 42-45 seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.16
+3093333,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,56248.84768,0,0.0095,24,Will AfD win 46-49 seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0095
+3093334,sachsen-anhalt-parliamentary-elections-afd-of-seats-20260722230807017,,53993.700487999995,0,0.0015,24,Will AfD win 50 or more seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0015
+1545032,sachsen-anhalt-parliamentary-elections-2nd-place,,94088.82239399999,1,0.9955,24,Will CDU win the second most seats in the 2026 Sachsen-Anhalt parliamentary elections?,0.0044999999999999485
+1545037,sachsen-anhalt-parliamentary-elections-2nd-place,,25526.755310000004,0,0.0005,24,Will SPD win the second most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+2244513,will-afd-win-an-absolute-majority-of-seats-in-sachsen-anhalt,,1377255.6813739997,0,0.17,24,Will AfD win an absolute majority of seats in Sachsen-Anhalt?,-0.17
+1363963,sachsen-anhalt-parliamentary-election-winner,,527082.6452730001,0,0.0025,24,Will CDU win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0025
+1363964,sachsen-anhalt-parliamentary-election-winner,,141735.4221,1,0.9975,24,Will AfD win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,0.0024999999999999467
+1363965,sachsen-anhalt-parliamentary-election-winner,,124095.31151300001,0,0.0005,24,Will SPD win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+1363966,sachsen-anhalt-parliamentary-election-winner,,56850.54042499999,0,0.0005,24,Will The Greens win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+1363967,sachsen-anhalt-parliamentary-election-winner,,47106.481249,0,0.0005,24,Will The Left win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+1363968,sachsen-anhalt-parliamentary-election-winner,,27385.379730999997,0,0.0005,24,Will FDP win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+1363969,sachsen-anhalt-parliamentary-election-winner,,36802.613689000005,0,0.0005,24,Will BSW win the most seats in the 2026 Sachsen-Anhalt parliamentary elections?,-0.0005
+1088697,2026-womens-us-open-winner-tennis,,89438.157344,0,0.0095,24,Will Anna Kalinskaya win the 2026 Women’s US Open?,-0.0095
+2865361,emmys-2026-outstanding-guest-actor-in-a-comedy-series,,34311.363762,1,0.395,24,Will Rob Reiner – “The Bear” win Emmys 2026: Outstanding guest actor in a comedy series?,0.605
+2871882,emmys-2026-outstanding-supporting-actress-in-a-limited-or-anthology-series-or-movie-20260710151841405,,28182.193152999997,1,0.835,24,Will Linda Cardellini – “DTF St. Louis” win Emmys 2026: Outstanding supporting actress in a limited or anthology series or movie?,0.16500000000000004
+2865352,emmys-2026-outstanding-guest-actress-in-a-comedy-series,,45381.226553,1,0.4445,24,Will Betty Gilpin – “Widow’s Bay” win Emmys 2026: Outstanding guest actress in a comedy series?,0.5555
+2865355,emmys-2026-outstanding-guest-actress-in-a-comedy-series,,50682.396743,0,0.4105,24,Will Kaitlin Olson – “Hacks” win Emmys 2026: Outstanding guest actress in a comedy series?,-0.4105
+1088534,2026-mens-us-open-winner-tennis,,405948.418511,0,0.01,24,Will Stefanos Tsitsipas win the 2026 Men's US Open?,-0.01
+1088695,2026-womens-us-open-winner-tennis,,68582.930147,0,0.0055,24,Will Sorana Cirstea win the 2026 Women’s US Open?,-0.0055
+2865330,emmys-2026-outstanding-guest-actress-in-a-drama-series,,40504.010941,1,0.5395,24,Will Shailene Woodley – “Paradise” win Emmys 2026: Outstanding guest actress in a drama series?,0.4605
+2865335,emmys-2026-outstanding-guest-actor-in-a-drama-series,,46260.931677,0,0.42,24,Will Colman Domingo – “Euphoria” win Emmys 2026: Outstanding guest actor in a drama series?,-0.42
+1088478,2026-mens-us-open-winner-tennis,,1074795.726049,0,0.0625,24,Will Daniil Medvedev win the 2026 Men's US Open?,-0.0625
+1088506,2026-mens-us-open-winner-tennis,,313207.3371089999,0,0.005,24,Will Tomas Martin Etcheverry win the 2026 Men's US Open?,-0.005
+1088500,2026-mens-us-open-winner-tennis,,393546.8161220002,0,0.0115,24,Will Tommy Paul win the 2026 Men's US Open?,-0.0115
+1088693,2026-womens-us-open-winner-tennis,,82270.009843,0,0.0375,24,Will Marta Kostyuk win the 2026 Women’s US Open?,-0.0375
+3418172,f1-italian-grand-prix-winner-2026-09-06,,116182.498383,0,0.06,24,Will Pierre Gasly win the 2026 F1 Italian Grand Prix?,-0.06
+3418177,f1-italian-grand-prix-winner-2026-09-06,,39337.542804,0,0.18,24,Will Charles Leclerc win the 2026 F1 Italian Grand Prix?,-0.18
+3418182,f1-italian-grand-prix-winner-2026-09-06,,80509.45264499998,0,0.05,24,Will Lando Norris win the 2026 F1 Italian Grand Prix?,-0.05
+3418184,f1-italian-grand-prix-winner-2026-09-06,,361422.37121099985,1,0.05,24,Will Kimi Antonelli win the 2026 F1 Italian Grand Prix?,0.95
+3418185,f1-italian-grand-prix-winner-2026-09-06,,187912.60565199997,0,0.0455,24,Will Max Verstappen win the 2026 F1 Italian Grand Prix?,-0.0455
+3418194,f1-italian-grand-prix-winner-2026-09-06,,63844.174275,0,0.115,24,Will Lewis Hamilton win the 2026 F1 Italian Grand Prix?,-0.115
+3418199,f1-italian-grand-prix-winner-2026-09-06,,168871.17787099996,0,0.505,24,Will George Russell win the 2026 F1 Italian Grand Prix?,-0.505
+3418198,f1-italian-grand-prix-winner-2026-09-06,,49231.522195,0,0.044,24,Will Oscar Piastri win the 2026 F1 Italian Grand Prix?,-0.044
+3602088,f1-italian-grand-prix-driver-podium-2026-09-06,,32993.905287,1,0.19,24,Will Kimi Antonelli finish on the podium at the 2026 F1 Italian Grand Prix?,0.81
+1088718,2026-womens-us-open-winner-tennis,,94520.22515099999,0,0.0035,24,Will Taylor Townsend win the 2026 Women’s US Open?,-0.0035
+2865363,emmys-2026-outstanding-variety-special-live,,53688.569158,1,0.9005,24,Will The Super Bowl LX Halftime Show starring Bad Bunny win Emmys 2026: Outstanding variety special (live)?,0.09950000000000003
+1088481,2026-mens-us-open-winner-tennis,,594617.5094169998,0,0.024,24,Will Jakub Mensik win the 2026 Men's US Open?,-0.024
+1088505,2026-mens-us-open-winner-tennis,,292029.6414229999,0,0.0015,24,Will Alejandro Tabilo win the 2026 Men's US Open?,-0.0015
+1088687,2026-womens-us-open-winner-tennis,,400415.70394100004,0,0.029,24,Will Alexandra Eala win the 2026 Women’s US Open?,-0.029
+1088512,2026-mens-us-open-winner-tennis,,114208.623333,0,0.0015,24,Will Zizou Bergs win the 2026 Men's US Open?,-0.0015
+1088689,2026-womens-us-open-winner-tennis,,106948.940995,0,0.007,24,Will Elise Mertens win the 2026 Women’s US Open?,-0.007
+3782996,bra-bra-bah-2026-09-05,,38641.39279,1,0.265,24,Will EC Bahia win on 2026-09-05?,0.735
+3782985,bra-bra-bah-2026-09-05,,503679.4480489999,0,0.465,24,Will Red Bull Bragantino win on 2026-09-05?,-0.465
+1088686,2026-womens-us-open-winner-tennis,,95767.90222499998,0,0.001,24,Will Marie Bouzkova win the 2026 Women’s US Open?,-0.001
+1088487,2026-mens-us-open-winner-tennis,,587375.1895039998,0,0.014,24,Will Flavio Cobolli win the 2026 Men's US Open?,-0.014
+3418239,f1-italian-grand-prix-driver-pole-position-2026-09-05,,37845.58731200001,0,0.375,24,Will George Russell get pole position at the 2026 F1 Italian Grand Prix?,-0.375
+1088477,2026-mens-us-open-winner-tennis,,702861.7156900001,0,0.106,24,Will Taylor Fritz win the 2026 Men's US Open?,-0.106
+3784942,spl-ith-nsr-2026-09-05,,94337.02590000007,0,0.625,24,Will Al Nassr Saudi Club win on 2026-09-05?,-0.625
+3784940,spl-ith-nsr-2026-09-05,,30819.103758000005,1,0.19,24,Will Al Ittihad Saudi Club win on 2026-09-05?,0.81
+3789631,sea-rom-ata-2026-09-05,,64117.881308,0,0.245,24,Will AS Roma vs. Atalanta BC end in a draw?,-0.245
+3789632,sea-rom-ata-2026-09-05,,226106.7855939999,0,0.185,24,Will Atalanta BC win on 2026-09-05?,-0.185
+3789719,sea-rom-ata-2026-09-05-exact-score,,27354.545650000004,0,0.075,24,Exact Score: AS Roma 0 - 0 Atalanta BC?,-0.075
+3789630,sea-rom-ata-2026-09-05,,904436.318935,1,0.565,24,Will AS Roma win on 2026-09-05?,0.43500000000000005
+1088660,2026-womens-us-open-winner-tennis,,92923.179765,0,0.0065,24,Will Madison Keys win the 2026 Women’s US Open?,-0.0065
+3784937,spl-taa-fat-2026-09-05,,51081.867053000016,0,0.53,24,Will Al Taawoun Saudi Club win on 2026-09-05?,-0.53
+3785544,nor-bra-lil-2026-09-05,,29268.181988999993,1,0.245,24,Will Lillestrøm SK win on 2026-09-05?,0.755
+1088657,2026-womens-us-open-winner-tennis,,160706.53508,0,0.0325,24,Will Amanda Anisimova win the 2026 Women’s US Open?,-0.0325
+3779111,ere-nec-fey-2026-09-05,,54601.91038099997,1,0.415,24,Will Feyenoord Rotterdam win on 2026-09-05?,0.585
+3789627,sea-int-nap-2026-09-05,,137347.29575099994,0,0.245,24,Will FC Internazionale Milano vs. SSC Napoli end in a draw?,-0.245
+3789628,sea-int-nap-2026-09-05,,271464.7126989999,0,0.165,24,Will SSC Napoli win on 2026-09-05?,-0.165
+3789626,sea-int-nap-2026-09-05,,1247839.5336510004,1,0.595,24,Will FC Internazionale Milano win on 2026-09-05?,0.405
+3791912,fl1-rcl-lor-2026-09-05,,152517.30863899994,0,0.665,24,Will Racing Club de Lens win on 2026-09-05?,-0.665
+3791916,fl1-rcl-lor-2026-09-05,,25904.547340999994,0,0.205,24,Will Racing Club de Lens vs. FC Lorient end in a draw?,-0.205
+3791922,fl1-rcl-lor-2026-09-05,,105922.79571199999,1,0.135,24,Will FC Lorient win on 2026-09-05?,0.865
+3789146,ufc-lui13-mat34-2026-09-05,,30680.470777000006,0,0.22,24,Fight to Go the Distance?,-0.22
+3786993,chi-sha-xin-2026-09-05,,76430.79719200001,0,0.605,24,Will Shandong Taishan FC win on 2026-09-05?,-0.605
+3786995,chi-sha-xin-2026-09-05,,26476.563437999997,0,0.195,24,Will Shenzhen Xinpengcheng FC win on 2026-09-05?,-0.195
+3791911,bun-hof-dor-2026-09-05,,336655.679698,0,0.335,24,Will TSG 1899 Hoffenheim win on 2026-09-05?,-0.335
+3791915,bun-hof-dor-2026-09-05,,66809.627339,0,0.245,24,Will TSG 1899 Hoffenheim vs. BV Borussia 09 Dortmund end in a draw?,-0.245
+3791919,bun-hof-dor-2026-09-05,,367616.83836999943,1,0.425,24,Will BV Borussia 09 Dortmund win on 2026-09-05?,0.575
+3786990,chi-ygb-hai-2026-09-05,,41235.45100300002,1,0.665,24,Will Dalian Yingbo FC win on 2026-09-05?,0.33499999999999996
+3786982,chi-shp-bgu-2026-09-05,,67119.67445000002,0,0.425,24,Will Shanghai Haigang FC win on 2026-09-05?,-0.425
+3791928,elc-lin-sot-2026-09-05,,45556.026432,0,0.535,24,Will Southampton FC win on 2026-09-05?,-0.535
+3789658,sea-fio-tor-2026-09-05-exact-score,,28979.803,0,0.0085,24,Exact Score: ACF Fiorentina 3 - 3 Torino FC?,-0.0085
+3789622,sea-fio-tor-2026-09-05,,934779.8737469999,0,0.495,24,Will ACF Fiorentina win on 2026-09-05?,-0.495
+3789624,sea-fio-tor-2026-09-05,,108325.374695,1,0.215,24,Will Torino FC win on 2026-09-05?,0.785
+3789623,sea-fio-tor-2026-09-05,,53553.592118999986,0,0.285,24,Will ACF Fiorentina vs. Torino FC end in a draw?,-0.285
+3786970,chi-wsz-qin-2026-09-05,,105959.99310700003,0,0.495,24,Will Wuhan San Zhen FC win on 2026-09-05?,-0.495
+3786973,chi-wsz-qin-2026-09-05,,34613.47712199999,0,0.235,24,Will Qingdao Xihaian FC win on 2026-09-05?,-0.235
+3791917,bl2-fck-svd-2026-09-05,,47841.31453900003,0,0.305,24,Will SV Darmstadt 98 win on 2026-09-05?,-0.305
+3791934,bl2-ksv-fcn-2026-09-05,,58168.997928,0,0.405,24,Will Holstein Kiel win on 2026-09-05?,-0.405
+3787366,kor-bch-dae1-2026-09-05,,59438.378594999995,1,0.505,24,Will Daejeon Hana Citizen FC win on 2026-09-05?,0.495
+3787351,kor-jeo-poh-2026-09-05,,36691.541888,1,0.515,24,Will Jeonbuk Hyundai Motors FC win on 2026-09-05?,0.485
+3787340,kor-seo-inc-2026-09-05,,251240.52048500002,1,0.51,24,Will FC Seoul win on 2026-09-05?,0.49
+3791921,epl-new-bou-2026-09-05,,971400.5576179974,0,0.455,24,Will Newcastle United FC win on 2026-09-05?,-0.455
+3791925,epl-new-bou-2026-09-05,,217040.7576710002,1,0.255,24,Will Newcastle United FC vs. AFC Bournemouth end in a draw?,0.745
+3791926,epl-new-bou-2026-09-05,,563376.8228560002,0,0.285,24,Will AFC Bournemouth win on 2026-09-05?,-0.285
+3787928,ja2-fuj-van-2026-09-05,,35729.394224,0,0.43,24,Will Fujieda MYFC win on 2026-09-05?,-0.43
+3780620,mex-jua-pac-2026-09-04,,25713.951970999995,0,0.265,24,Will FC Juárez win on 2026-09-04?,-0.265
+3780622,mex-jua-pac-2026-09-04,,178559.379239,1,0.485,24,Will CF Pachuca win on 2026-09-04?,0.515
+1088678,2026-womens-us-open-winner-tennis,,103352.96799900001,0,0.016,24,Will Elina Svitolina win the 2026 Women’s US Open?,-0.016
+3701623,when-will-trump-announce-a-new-white-house-press-secretary,,73010.74929299999,0,0.04,24,"Next White House Press Secretary announced by September 4, 2026?",-0.04
+1088518,2026-mens-us-open-winner-tennis,,100674.87499999999,0,0.0005,24,Will Ignacio Buse win the 2026 Men's US Open?,-0.0005
+1088497,2026-mens-us-open-winner-tennis,,245368.09399999998,0,0.0025,24,Will Valentin Vacherot win the 2026 Men's US Open?,-0.0025
+1088557,2026-mens-us-open-winner-tennis,,164438.09999999998,0,0.003,24,Will Mariano Navone win the 2026 Men's US Open?,-0.003
+1088486,2026-mens-us-open-winner-tennis,,682893.3488279999,0,0.0075,24,Will Jiri Lehecka win the 2026 Men's US Open?,-0.0075
+3782987,per1-caa-ctd-2026-09-04,,64092.261738999994,1,0.585,24,Will Club Alianza Atlético win on 2026-09-04?,0.41500000000000004
+3779810,mls-nyc-nas-2026-09-04,,35526.162697999986,1,0.265,24,Will New York City FC vs. Nashville SC end in a draw?,0.735
+3779814,mls-nyc-nas-2026-09-04,,193235.754894,0,0.375,24,Will Nashville SC win on 2026-09-04?,-0.375
+3779806,mls-nyc-nas-2026-09-04,,53831.248345,0,0.365,24,Will New York City FC win on 2026-09-04?,-0.365
+3780785,mls-nyc-nas-2026-09-04-more-markets,,34724.39806300001,0,0.585,24,New York City FC vs. Nashville SC: Both Teams to Score,-0.585
+1088699,2026-womens-us-open-winner-tennis,,42537.810000000005,0,0.0015,24,Will Ann Li win the 2026 Women’s US Open?,-0.0015
+1088663,2026-womens-us-open-winner-tennis,,128574.64770599997,0,0.0415,24,Will Karolina Muchova win the 2026 Women’s US Open?,-0.0415
+1088482,2026-mens-us-open-winner-tennis,,452000.1306060001,0,0.0055,24,Will Alexander Bublik win the 2026 Men's US Open?,-0.0055
+3785527,nor-san-vik-2026-09-04,,67120.60528500003,0,0.575,24,Will Viking FK win on 2026-09-04?,-0.575
+1088674,2026-womens-us-open-winner-tennis,,126842.31284800002,0,0.0105,24,Will Diana Shnaider win the 2026 Women’s US Open?,-0.0105
+3584199,gpt-6-released-by,,272834.7412420001,1,0.973,24,"Will GPT-6 be released by September 15, 2026?",0.027000000000000024
+3784933,spl-sha-hil-2026-09-04,,226400.44353100003,1,0.755,24,Will Al Hilal Saudi Club win on 2026-09-04?,0.245
+3379789,openais-astra-released-by-20260801214557729,,164645.73509099995,1,0.9195,24,"Will OpenAI’s Astra model be released by September 15, 2026?",0.08050000000000002
+3784931,spl-sha-hil-2026-09-04,,62410.993505999984,0,0.105,24,Will Al Shabab Saudi Club win on 2026-09-04?,-0.105
+3784928,spl-ahl-riy-2026-09-04,,49812.10532099999,1,0.735,24,Will Al Ahli Saudi Club win on 2026-09-04?,0.265
+3775536,fr2-gre-fca-2026-09-04,,64792.32678500002,1,0.405,24,Will FC Annecy win on 2026-09-04?,0.595
+3775530,fr2-usd-clf-2026-09-04,,41980.48514899999,0,0.525,24,Will USL Dunkerque win on 2026-09-04?,-0.525
+3775531,fr2-usd-clf-2026-09-04,,28139.487214000015,1,0.245,24,Will USL Dunkerque vs. Clermont Foot 63 end in a draw?,0.755
+1088503,2026-mens-us-open-winner-tennis,,253165.38919599997,0,0.0015,24,Will Arthur Rinderknech win the 2026 Men's US Open?,-0.0015
+3779106,ere-spa-zwo-2026-09-04,,27500.503082000007,0,0.505,24,Will Sparta Rotterdam win on 2026-09-04?,-0.505
+3775007,lal-bet-rea-2026-09-04,,747497.0340960001,1,0.115,24,Will Real Betis Balompié win on 2026-09-04?,0.885
+3775011,lal-bet-rea-2026-09-04,,2313751.024300996,0,0.705,24,Will Real Madrid CF win on 2026-09-04?,-0.705
+3775009,lal-bet-rea-2026-09-04,,608665.0807569997,0,0.175,24,Will Real Betis Balompié vs. Real Madrid CF end in a draw?,-0.175
+3775023,lal-bet-rea-2026-09-04-halftime-result,,31065.159425,0,0.535,24,Real Madrid CF leading at halftime?,-0.535
+3775031,lal-bet-rea-2026-09-04-exact-score,,27873.409406000002,0,0.0265,24,Exact Score: Real Betis Balompié 0 - 0 Real Madrid CF?,-0.0265
+3775558,lal-bet-rea-2026-09-04-more-markets,,56125.607664999974,0,0.605,24,Real Betis Balompié vs. Real Madrid CF: Both Teams to Score,-0.605
+3774264,fl1-psg-asm-2026-09-04-more-markets,,38894.900595999985,1,0.585,24,Paris Saint-Germain FC vs. AS Monaco FC: Both Teams to Score,0.41500000000000004
+3772744,fl1-psg-asm-2026-09-04,,412421.6005679991,0,0.695,24,Will Paris Saint-Germain FC win on 2026-09-04?,-0.695
+3772748,fl1-psg-asm-2026-09-04,,87275.13074600005,0,0.175,24,Will Paris Saint-Germain FC vs. AS Monaco FC end in a draw?,-0.175
+3772752,fl1-psg-asm-2026-09-04,,281483.29671700014,1,0.125,24,Will AS Monaco FC win on 2026-09-04?,0.875
+3772660,epl-ips-liv-2026-09-04,,938380.6409329997,0,0.165,24,Will Ipswich Town FC win on 2026-09-04?,-0.165
+3772673,epl-ips-liv-2026-09-04,,130855.17847500001,0,0.195,24,Will Ipswich Town FC vs. Liverpool FC end in a draw?,-0.195
+3772686,epl-ips-liv-2026-09-04,,1466420.198262999,1,0.645,24,Will Liverpool FC win on 2026-09-04?,0.355
+3772878,epl-ips-liv-2026-09-04-exact-score,,39768.23500000001,1,0.085,24,Exact Score: Ipswich Town FC 0 - 2 Liverpool FC?,0.915
+3772884,epl-ips-liv-2026-09-04-exact-score,,29295.63972500001,0,0.065,24,Exact Score: Ipswich Town FC 0 - 3 Liverpool FC?,-0.065
+3772901,epl-ips-liv-2026-09-04-exact-score,,27940.843131,0,0.0145,24,Exact Score: Ipswich Town FC 3 - 3 Liverpool FC?,-0.0145
+3772886,epl-ips-liv-2026-09-04-exact-score,,25988.90101999999,0,0.105,24,Exact Score: Ipswich Town FC 1 - 2 Liverpool FC?,-0.105
+3772900,epl-ips-liv-2026-09-04-exact-score,,73613.492101,0,0.017,24,Exact Score: Ipswich Town FC 3 - 2 Liverpool FC?,-0.017
+3774301,epl-ips-liv-2026-09-04-more-markets,,102735.031187,0,0.625,24,Ipswich Town FC vs. Liverpool FC: Both Teams to Score,-0.625
+1088700,2026-womens-us-open-winner-tennis,,47506.71860999999,0,0.0015,24,Will Leylah Fernandez win the 2026 Women’s US Open?,-0.0015
+3770178,sea-gen-com-2026-09-04,,50323.408426999995,0,0.175,24,Will Genoa CFC win on 2026-09-04?,-0.175
+3770179,sea-gen-com-2026-09-04,,29109.318156999994,0,0.285,24,Will Genoa CFC vs. Como 1907 end in a draw?,-0.285
+3770180,sea-gen-com-2026-09-04,,544232.7224109983,1,0.535,24,Will Como 1907 win on 2026-09-04?,0.46499999999999997
+3765544,den-vib-lyn-2026-09-04,,61311.075929999985,1,0.235,24,Will Lyngby BK win on 2026-09-04?,0.765
+3765542,den-vib-lyn-2026-09-04,,90420.24164299997,0,0.525,24,Will Viborg FF win on 2026-09-04?,-0.525
+3785518,nor-ffk-bog-2026-09-04,,33602.543806,1,0.755,24,Will FK Bodø/Glimt win on 2026-09-04?,0.245
+3785514,nor-ffk-bog-2026-09-04,,33330.167924,0,0.095,24,Will Fredrikstad FK win on 2026-09-04?,-0.095
+3772656,bun-stu-koe-2026-09-04,,543256.1499289995,1,0.655,24,Will VfB Stuttgart win on 2026-09-04?,0.345
+3772667,bun-stu-koe-2026-09-04,,38665.545246,0,0.195,24,Will VfB Stuttgart vs. 1. FC Köln end in a draw?,-0.195
+3772680,bun-stu-koe-2026-09-04,,133174.88668099997,0,0.165,24,Will 1. FC Köln win on 2026-09-04?,-0.165
+3774220,bun-stu-koe-2026-09-04-more-markets,,35342.745517,1,0.645,24,VfB Stuttgart vs. 1. FC Köln: Both Teams to Score,0.355
+3772745,bl2-h96-ksc-2026-09-04,,86231.94977,0,0.585,24,Will Hannover 96 win on 2026-09-04?,-0.585
+3772753,bl2-h96-ksc-2026-09-04,,55594.43305900002,0,0.195,24,Will Karlsruher SC win on 2026-09-04?,-0.195
+3772668,bl2-bie-stp-2026-09-04,,103242.62419199999,0,0.42,24,Will DSC Arminia Bielefeld win on 2026-09-04?,-0.42
+3784925,spl-abh-ett-2026-09-04,,50987.697796,0,0.335,24,Will Abha Saudi Club win on 2026-09-04?,-0.335
+3784927,spl-abh-ett-2026-09-04,,77572.03128200001,1,0.4,24,Will Al Ettifaq Saudi Club win on 2026-09-04?,0.6
+1088675,2026-womens-us-open-winner-tennis,,88364.32818899999,0,0.0035,24,Will Ekaterina Alexandrova win the 2026 Women’s US Open?,-0.0035
+1088671,2026-womens-us-open-winner-tennis,,86269.159432,0,0.0025,24,Will Jasmine Paolini win the 2026 Women’s US Open?,-0.0025
+2851406,israel-military-action-against-beirut-byptptpt-20260708221422557,,192569.68053499996,0,0.0075,24,Israel military action against Greater Beirut by August 31?,-0.0075
+3772661,fl1-lyo-aja-2026-09-04,,973777.7578509992,1,0.635,24,Will Olympique Lyonnais win on 2026-09-04?,0.365
+3772672,fl1-lyo-aja-2026-09-04,,39274.38772500001,0,0.215,24,Will Olympique Lyonnais vs. AJ Auxerre end in a draw?,-0.215
+3772684,fl1-lyo-aja-2026-09-04,,256509.87113699986,0,0.145,24,Will AJ Auxerre win on 2026-09-04?,-0.145
+3774354,fl1-lyo-aja-2026-09-04-more-markets,,30958.207961000004,1,0.535,24,Olympique Lyonnais vs. AJ Auxerre: Both Teams to Score,0.46499999999999997
+3403942,how-many-jobs-added-in-august-1786116586124,,30532.030449,0,0.295,24,Will the US add between 0 and 50k jobs in August?,-0.295
+909056,how-many-republican-house-members-not-running-in-2026,,27211.210023,0,0.0015,24,Will the number of Republican House members who retire in 2026 be between 24 and 27 inclusive?,-0.0015
+3782975,col1-ad1-alf-2026-09-03,,55599.66631599998,1,0.735,24,Will América de Cali win on 2026-09-03?,0.265
+3669978,uptspt-anti-cartel-operation-outside-of-the-uptspt-byptptpt-20260810131538349,,49684.236933,0,0.019,24,U.S. anti-cartel operation outside of the U.S. by August 31?,-0.019
+2995850,european-military-action-on-iran-byptptpt-20260720022428140,,163215.56923899997,0,0.0005,24,Will a European country take military action on Iran by August 31?,-0.0005
+909078,how-many-republican-senators-not-running-in-2026,,39434.609537,0,0.006,24,Will the number of Republican Senate members who retire in 2026 be exactly 6?,-0.006
+909077,how-many-republican-senators-not-running-in-2026,,27438.267513,0,0.0105,24,Will the number of Republican Senate members who retire in 2026 be less than 5?,-0.0105
+1088494,2026-mens-us-open-winner-tennis,,260737.47863899998,0,0.018,24,Will Alex de Minaur win the 2026 Men's US Open?,-0.018
+3741411,hamilton-eaststoney-creek-provincial-by-election-winner-1785955561114,,28927.551236999992,0,0.0505,24,Will Heino Doessing win the 2026 Hamilton East—Stoney Creek provincial by-election?,-0.0505
+3741412,hamilton-eaststoney-creek-provincial-by-election-winner-1785955561114,,27444.400855999997,0,0.535,24,Will Monique Taylor win the 2026 Hamilton East—Stoney Creek provincial by-election?,-0.535
+1088672,2026-womens-us-open-winner-tennis,,60667.727486,0,0.0015,24,Will Paula Badosa win the 2026 Women’s US Open?,-0.0015
+1088701,2026-womens-us-open-winner-tennis,,44026.75438400001,0,0.0005,24,Will Maria Sakkari win the 2026 Women’s US Open?,-0.0005
+3741437,scarborough-southwest-provincial-by-election-winner-1785955561142,,65038.160295,1,0.865,24,Will Fatima Shaban win the 2026 Scarborough Southwest provincial by-election?,0.135
+3761170,brco-gre-int-2026-09-03,,70138.656561,0,0.275,24,Will SC Internacional win on 2026-09-03?,-0.275
+3761177,brco-gre-int-2026-09-03-exact-score,,26313.978264999998,0,0.13,24,Exact Score: Grêmio FBPA 0 - 0 SC Internacional?,-0.13
+3761168,brco-gre-int-2026-09-03,,108802.24035200004,1,0.395,24,Will Grêmio FBPA win on 2026-09-03?,0.605
+2786063,putin-meets-with-iranian-officials-by-august-31-20260702174616624,,263480.3906839999,1,0.9995,24,Putin meets with Iranian officials by August 31?,0.0004999999999999449
+3746073,where-will-tropical-storm-saudel-make-landfall-1787177922936,,526107.2967720001,0,0.0005,24,Will Tropical Storm Saudel make landfall in Japan?,-0.0005
+1088483,2026-mens-us-open-winner-tennis,,606293.5916270002,0,0.015,24,Will Lorenzo Musetti win the 2026 Men's US Open?,-0.015
+3761307,itc-cag-ver-2026-09-03,,26264.397424,0,0.495,24,Will Cagliari Calcio win on 2026-09-03?,-0.495
+3706969,egy1-eas-sms-2026-09-01,,29956.015118999985,1,0.71,24,Will El Ahly SC win on 2026-09-01?,0.29000000000000004
+3750426,spl-fay-kho-2026-09-03,,49846.39656799998,0,0.325,24,Will Al Fayha Saudi Club win on 2026-09-03?,-0.325
+3750429,spl-neo-kha-2026-09-03,,114744.04143500005,1,0.565,24,Will NEOM SC win on 2026-09-03?,0.43500000000000005
+3750428,spl-fay-kho-2026-09-03,,88833.57330199995,0,0.375,24,Will Al Kholood Saudi Club win on 2026-09-03?,-0.375
+3761304,itc-pal-man-2026-09-03,,77533.43061200003,1,0.585,24,Will Palermo FC win on 2026-09-03?,0.41500000000000004
+2952493,israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963,,3333310.6017099996,1,0.9995,24,Israel x Iran ceasefire continues through August 31?,0.0004999999999999449
+1088553,2026-mens-us-open-winner-tennis,,80060.60500000001,0,0.0005,24,Will Jan-Lennard Struff win the 2026 Men's US Open?,-0.0005
+3750434,spl-dir-qad-2026-09-03,,28329.014618,1,0.64,24,Will Al Qadisiyah Saudi Club win on 2026-09-03?,0.36
+1088709,2026-womens-us-open-winner-tennis,,44990.4155,0,0.0005,24,Will Lilli Tagger win the 2026 Women’s US Open?,-0.0005
+1088480,2026-mens-us-open-winner-tennis,,1044243.0654250002,0,0.0335,24,Will Felix Auger Aliassime win the 2026 Men's US Open?,-0.0335
+3757656,lal-rso-cel-2026-09-03,,245264.20614900003,0,0.505,24,Will Real Sociedad de Fútbol win on 2026-09-03?,-0.505
+3757657,lal-rso-cel-2026-09-03,,84734.218868,1,0.265,24,Will Real Sociedad de Fútbol vs. RC Celta de Vigo end in a draw?,0.735
+3757658,lal-rso-cel-2026-09-03,,70666.81369199998,0,0.235,24,Will RC Celta de Vigo win on 2026-09-03?,-0.235
+3755908,fl1-tou-lil-2026-09-03,,54308.425619,0,0.285,24,Will Toulouse FC vs. Lille OSC end in a draw?,-0.285
+3755906,fl1-tou-lil-2026-09-03,,37018.90435700001,0,0.275,24,Will Toulouse FC win on 2026-09-03?,-0.275
+3755910,fl1-tou-lil-2026-09-03,,304664.41169499984,1,0.445,24,Will Lille OSC win on 2026-09-03?,0.5549999999999999
+3761306,itc-pal-man-2026-09-03,,49633.99750399999,0,0.185,24,Will Mantova 1911 win on 2026-09-03?,-0.185
+3377658,ism-services-pmi-august-2026,,26971.896137000007,0,0.225,24,Will ISM Services PMI be between 53.0 and 53.9 in August?,-0.225
+3710801,will-iran-target-iraq-byptptpt,,32989.92959,1,0.987,24,"Will Iran target Iraq by September 15, 2026?",0.013000000000000012
+2995866,iran-invades-kuwait-byptptpt-20260720015031544,,847904.9753709997,0,0.0025,24,Iran invades Kuwait by August 31?,-0.0025
+2928823,will-us-crude-oil-reserves-fall-to-by-august-28-20260714142248732,,49830.96468100001,0,0.007,24,Will US crude oil reserves fall to 285M by August 31?,-0.007
+2992282,chi1-cdl-cdu-2026-08-01,,28625.61422100001,0,0.33,24,Will CD Ñublense win on 2026-08-01?,-0.33
+2992279,chi1-cdl-cdu-2026-08-01,,78148.34117399994,1,0.395,24,Will CD Limache win on 2026-08-01?,0.605
+1088488,2026-mens-us-open-winner-tennis,,639439.2067730001,0,0.005,24,Will Matteo Berrettini win the 2026 Men's US Open?,-0.005
+1088673,2026-womens-us-open-winner-tennis,,76167.902556,0,0.0005,24,Will Maya Joint win the 2026 Women’s US Open?,-0.0005
+3749399,col1-isf-mif-2026-09-02,,152450.57821,1,0.34,24,Will Independiente Santa Fe win on 2026-09-02?,0.6599999999999999
+3749401,col1-isf-mif-2026-09-02,,31658.168042000005,0,0.38,24,Will Millonarios FC win on 2026-09-02?,-0.38
+1088681,2026-womens-us-open-winner-tennis,,176339.63461700003,0,0.0015,24,Will Donna Vekic win the 2026 Women’s US Open?,-0.0015
+3744340,brco-san-pal-2026-09-02,,44707.847719,0,0.395,24,Will SE Palmeiras win on 2026-09-02?,-0.395
+3744338,brco-san-pal-2026-09-02,,86202.69442199997,0,0.315,24,Will Santos FC win on 2026-09-02?,-0.315
+3744341,brco-vit-vas-2026-09-02,,62787.968938000005,0,0.43,24,Will EC Vitória win on 2026-09-02?,-0.43
+2883845,chi1-ccu-cu1-2026-07-25,,25492.590025000005,1,0.615,24,Will CD Coquimbo Unido win on 2026-07-25?,0.385
+3782963,bra-fla-mir-2026-09-02,,40470.212097999996,0,0.145,24,Will CR Flamengo vs. Mirassol FC end in a draw?,-0.145
+3782959,bra-fla-mir-2026-09-02,,152567.35598999998,1,0.785,24,Will CR Flamengo win on 2026-09-02?,0.21499999999999997
+3782969,bra-fla-mir-2026-09-02,,46109.765369,0,0.075,24,Will Mirassol FC win on 2026-09-02?,-0.075
+3709612,us-canada-diplomatic-agreement-to-lower-tariffs-by-august-31,,52301.65216099999,0,0.008,24,US-Canada diplomatic agreement to lower tariffs by August 31?,-0.008
+1088676,2026-womens-us-open-winner-tennis,,51762.473099,0,0.0015,24,Will Jelena Ostapenko win the 2026 Women’s US Open?,-0.0015
+1088501,2026-mens-us-open-winner-tennis,,254493.904764,0,0.0485,24,Will Rafael Jodar win the 2026 Men's US Open?,-0.0485
+1088491,2026-mens-us-open-winner-tennis,,540938.1897430002,0,0.0025,24,Will Hubert Hurkacz win the 2026 Men's US Open?,-0.0025
+1088691,2026-womens-us-open-winner-tennis,,1713666.536998,0,0.0015,24,Will Katie Boulter win the 2026 Women’s US Open?,-0.0015
+1088508,2026-mens-us-open-winner-tennis,,270947.082278,0,0.028,24,Will Brandon Nakashima win the 2026 Men's US Open?,-0.028
+1088568,2026-mens-us-open-winner-tennis,,44819.75499999999,0,0.0005,24,Will Jaume Munar win the 2026 Men's US Open?,-0.0005
+1088717,2026-womens-us-open-winner-tennis,,30047.447245000003,0,0.0025,24,Will Sloane Stephens win the 2026 Women’s US Open?,-0.0025
+1088690,2026-womens-us-open-winner-tennis,,259420.73999900004,0,0.0015,24,Will Sofia Kenin win the 2026 Women’s US Open?,-0.0015
+3729075,den-agf-mid-2026-09-02,,84094.53729099999,1,0.445,24,Will FC Midtjylland win on 2026-09-02?,0.5549999999999999
+3746920,dfb-osn-bay-2026-09-02,,204389.31035800005,0,0.014,24,Will VfL Osnabrück win on 2026-09-02?,-0.014
+3746922,dfb-osn-bay-2026-09-02,,37364.006371,0,0.0325,24,Will VfL Osnabrück vs. FC Bayern München end in a draw?,-0.0325
+3735726,elc-bur-mid-2026-09-02,,63068.70338900001,0,0.345,24,Will Burnley FC win on 2026-09-02?,-0.345
+3735727,elc-bur-mid-2026-09-02,,32922.50891400001,1,0.265,24,Will Burnley FC vs. Middlesbrough FC end in a draw?,0.735
+3735729,elc-bur-mid-2026-09-02,,109266.20551899997,0,0.385,24,Will Middlesbrough FC win on 2026-09-02?,-0.385
+3746923,dfb-osn-bay-2026-09-02,,264111.1162740001,1,0.955,24,Will FC Bayern München win on 2026-09-02?,0.04500000000000004
+3748110,dfb-osn-bay-2026-09-02-more-markets,,51196.30300899998,1,0.38,24,VfL Osnabrück vs. FC Bayern München: Both Teams to Score,0.62
+3742361,elc-bur-mid-2026-09-02-more-markets,,26789.810609999997,1,0.595,24,Burnley FC vs. Middlesbrough FC: Both Teams to Score,0.405
+3739804,scop-fal-ran-2026-09-02,,93583.950481,1,0.615,24,Will Rangers FC win on 2026-09-02?,0.385
+3735717,elc-mil-wre-2026-09-02,,80413.168408,1,0.285,24,Will Wrexham AFC win on 2026-09-02?,0.7150000000000001
+3739798,scop-cel-abe-2026-09-02,,285177.63210499997,1,0.785,24,Will Celtic FC win on 2026-09-02?,0.21499999999999997
+3735715,elc-mil-wre-2026-09-02,,48223.881647,0,0.275,24,Will Millwall FC vs. Wrexham AFC end in a draw?,-0.275
+3735713,elc-mil-wre-2026-09-02,,423469.67135000037,0,0.435,24,Will Millwall FC win on 2026-09-02?,-0.435
+3742394,elc-mil-wre-2026-09-02-more-markets,,57404.129447,0,0.555,24,Millwall FC vs. Wrexham AFC: Both Teams to Score,-0.555
+3739885,scop-cel-abe-2026-09-02-halftime-result,,36488.610417,1,0.625,24,Celtic FC leading at halftime?,0.375
+3735697,elc-qpr-car-2026-09-02,,33007.607244000006,0,0.265,24,Will Cardiff City FC win on 2026-09-02?,-0.265
+3735693,elc-qpr-car-2026-09-02,,109295.10219399995,1,0.495,24,Will Queens Park Rangers FC win on 2026-09-02?,0.505
+3735710,elc-wba-cha-2026-09-02,,46699.921282,1,0.255,24,Will West Bromwich Albion FC vs. Charlton Athletic FC end in a draw?,0.745
+3735709,elc-wba-cha-2026-09-02,,101463.87103100002,0,0.54,24,Will West Bromwich Albion FC win on 2026-09-02?,-0.54
+3735790,elc-wba-cha-2026-09-02-exact-score,,43745.72838899999,0,0.13,24,Exact Score: West Bromwich Albion FC 1 - 0 Charlton Athletic FC?,-0.13
+3735711,elc-wba-cha-2026-09-02,,54131.10171800002,0,0.195,24,Will Charlton Athletic FC win on 2026-09-02?,-0.195
+3739790,scop-mot-dun-2026-09-02,,52222.07386400002,1,0.495,24,Will Motherwell FC win on 2026-09-02?,0.505
+3738871,el1-bur-wim-2026-09-02,,137275.09206799997,1,0.48,24,Will Burton Albion FC win on 2026-09-02?,0.52
+1088489,2026-mens-us-open-winner-tennis,,511457.61608099996,0,0.005,24,Will Andrey Rublev win the 2026 Men's US Open?,-0.005
+3744496,itc-udi-ven-2026-09-02,,413117.56292399997,1,0.495,24,Will Udinese Calcio win on 2026-09-02?,0.505
+3744497,itc-udi-ven-2026-09-02,,30746.054635000004,0,0.275,24,Will Udinese Calcio vs. Venezia FC end in a draw?,-0.275
+3744498,itc-udi-ven-2026-09-02,,113557.29552000006,0,0.235,24,Will Venezia FC win on 2026-09-02?,-0.235
+3721215,itc-sas-fro-2026-09-02,,88328.22935999998,1,0.255,24,Will US Sassuolo Calcio vs. Frosinone Calcio end in a draw?,0.745
+3721214,itc-sas-fro-2026-09-02,,235787.69170499998,0,0.515,24,Will US Sassuolo Calcio win on 2026-09-02?,-0.515
+3721216,itc-sas-fro-2026-09-02,,98347.75388099998,0,0.225,24,Will Frosinone Calcio win on 2026-09-02?,-0.225
+2773242,bank-of-canada-decision-in-september-20260701223913897,,56653.05701599999,1,0.998,24,Will the Bank of Canada make no change to the target for the overnight rate at the September interest rate announcement?,0.0020000000000000018
+3727856,jap-avi-ura-2026-09-02,,39317.060508999995,0,0.385,24,Will Avispa Fukuoka win on 2026-09-02?,-0.385
+3727859,jap-hol-kas-2026-09-02,,27059.20095,1,0.225,24,Will FC Mito Holly Hock win on 2026-09-02?,0.775
+3727861,jap-hol-kas-2026-09-02,,99699.64552899999,0,0.51,24,Will Kashima Antlers win on 2026-09-02?,-0.51
+3727862,jap-cer-rey-2026-09-02,,32684.296382,1,0.295,24,Will Cerezo Ōsaka win on 2026-09-02?,0.7050000000000001
+3727864,jap-cer-rey-2026-09-02,,41757.94236399999,0,0.445,24,Will Kashiwa Reysol win on 2026-09-02?,-0.445
+3727850,jap-san-ngr-2026-09-02,,50282.422503,1,0.64,24,Will Sanfrecce Hiroshima win on 2026-09-02?,0.36
+3727852,jap-san-ngr-2026-09-02,,25379.937428000005,0,0.155,24,Will Nagoya Grampus win on 2026-09-02?,-0.155
+3727873,jap-ssp-fct-2026-09-02,,41756.97107699999,0,0.47,24,Will FC Tōkyō win on 2026-09-02?,-0.47
+3727868,jap-zel-kaw-2026-09-02,,45305.543578,1,0.495,24,Will FC Machida Zelvia win on 2026-09-02?,0.505
+3727870,jap-zel-kaw-2026-09-02,,59451.644639,0,0.24,24,Will Kawasaki Frontale win on 2026-09-02?,-0.24
+3727849,jap-fct1-vis-2026-09-02,,54959.145623,1,0.445,24,Will Vissel Kōbe win on 2026-09-02?,0.5549999999999999
+2496475,2026-song-of-the-summer-20260610191834334,,45252.320169,0,0.0295,24,"Will ""hate that i made you love me - Ariana Grande"" be the song of the summer?",-0.0295
+3721146,brco-cam-cru-2026-09-01,,96700.65791600003,0,0.295,24,Will Cruzeiro EC win on 2026-09-01?,-0.295
+2965046,will-michael-olise-transfer-to-real-madrid-20260717222856707,,49855.398055000005,0,0.003,24,Will Michael Olise Transfer to Real Madrid?,-0.003
+2555508,where-will-julian-alvarez-transfer-20260612230221012,,35560.777732,0,0.0005,24,Will Julian Alvarez join Real Madrid?,-0.0005
+2555509,where-will-julian-alvarez-transfer-20260612230221012,,353334.75159800006,0,0.0345,24,Will Julian Alvarez join Barcelona?,-0.0345
+2555510,where-will-julian-alvarez-transfer-20260612230221012,,58934.88713699999,0,0.0005,24,Will Julian Alvarez join Manchester City?,-0.0005
+2555511,where-will-julian-alvarez-transfer-20260612230221012,,88179.195441,0,0.004,24,Will Julian Alvarez join Chelsea?,-0.004
+2555512,where-will-julian-alvarez-transfer-20260612230221012,,286876.7434539999,0,0.0975,24,Will Julian Alvarez join Arsenal?,-0.0975
+2555530,where-will-julian-alvarez-transfer-20260612230221012,,411708.47767199995,1,0.8655,24,Will Julian Alvarez stay at Atletico Madrid?,0.13449999999999995
+2555641,where-will-eduardo-camavinga-transfer-20260612224955761,,53246.739827000005,1,0.994,24,Will Eduardo Camavinga stay at Real Madrid?,0.006000000000000005
+2555747,where-will-marcus-rashford-transfer-20260612223855109,,49623.416335,1,0.988,24,Will Marcus Rashford stay at Manchester United?,0.01200000000000001
+3362542,spider-man-brand-new-day-total-domestic-gross-by-august-31-higher-strikes-20260804222016411,,120456.03825500002,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 900m and 920m by August 31?,-0.0005
+2555776,where-will-bruno-fernandes-transfer-20260612223228777,,35438.30891400001,1,0.998,24,Will Bruno Fernandes stay at Manchester United?,0.0020000000000000018
+2553120,where-will-aurelien-tchouameni-transfer-20260612233725155,,75475.643923,1,0.9965,24,Will Aurelien Tchouameni stay at Real Madrid?,0.0034999999999999476
+3094311,the-odyssey-total-domestic-gross-by-august-31-higher-strikes-20260723204527748,,136266.80277699995,1,0.9985,24,Will the total domestic gross for The Odyssey be between 550m and 570m by August 31?,0.0014999999999999458
+1493235,ma-08-democratic-primary-winner,,135786.52382200002,1,0.79,24,Will Stephen Lynch be the Democratic nominee for MA-08?,0.20999999999999996
+1493236,ma-08-democratic-primary-winner,,99658.84089400001,0,0.21,24,Will Patrick Roath be the Democratic nominee for MA-08?,-0.21
+704002,ma-06-democratic-primary-winner,,137928.90610200004,1,0.89,24,Will Dan Koh be the Democratic nominee for MA-06?,0.10999999999999999
+704009,ma-06-democratic-primary-winner,,54607.84025999999,0,0.113,24,Will Tram Nguyen be the Democratic nominee for MA-06?,-0.113
+3141846,ma-01-democratic-primary-winner-20260727173754524,,79034.916297,1,0.9215,24,Will Richard Neal be the MA-01 Democratic nominee?,0.07850000000000001
+3141847,ma-01-democratic-primary-winner-20260727173754524,,52796.943823,0,0.0805,24,Will Jeromie Whalen be the MA-01 Democratic nominee?,-0.0805
+799654,massachusetts-democratic-senate-primary-winner,,114750.87328999996,0,0.0095,24,Will Seth Moulton be the Democratic nominee for Senate in Massachusetts?,-0.0095
+799651,massachusetts-democratic-senate-primary-winner,,92725.08041100002,1,0.9905,24,Will Ed Markey be the Democratic nominee for Senate in Massachusetts?,0.009499999999999953
+3727532,bra2-lon-juv-2026-09-01,,33282.804032,0,0.285,24,Will Londrina EC win on 2026-09-01?,-0.285
+3727538,bra2-lon-juv-2026-09-01,,54261.53570499999,0,0.39,24,Will EC Juventude win on 2026-09-01?,-0.39
+1088668,2026-womens-us-open-winner-tennis,,100917.03389699999,0,0.0065,24,Will Belinda Bencic win the 2026 Women’s US Open?,-0.0065
+2555698,where-will-jack-grealish-transfer-20260612224322458,,41406.786559,1,0.935,24,Will Jack Grealish join Everton?,0.06499999999999995
+2554103,where-will-enzo-fernandez-transfer-20260612231640461,,182081.55743399996,1,0.905,24,Will Enzo Fernandez join Manchester City?,0.09499999999999997
+2554098,where-will-enzo-fernandez-transfer-20260612231640461,,54598.598913999995,0,0.001,24,Will Enzo Fernandez join Real Madrid?,-0.001
+2554113,where-will-enzo-fernandez-transfer-20260612231640461,,193129.72801300004,0,0.1005,24,Will Enzo Fernandez stay at Chelsea?,-0.1005
+908034,who-will-advance-from-the-alaska-governor-primary,,72623.79215300002,0,0.2765,24,Will Click Bishop advance from the 2026 Alaska Governor primary election?,-0.2765
+908036,who-will-advance-from-the-alaska-governor-primary,,25066.492121000003,0,0.0155,24,Will Adam Crum advance from the 2026 Alaska Governor primary election?,-0.0155
+908043,who-will-advance-from-the-alaska-governor-primary,,93231.23189499999,0,0.2255,24,Will Treg Taylor advance from the 2026 Alaska Governor primary election?,-0.2255
+3362541,spider-man-brand-new-day-total-domestic-gross-by-august-31-higher-strikes-20260804222016411,,140677.05050600006,1,0.999,24,Will the total domestic gross for Spider-Man: Brand New Day be less than 900m by August 31?,0.0010000000000000009
+3362543,spider-man-brand-new-day-total-domestic-gross-by-august-31-higher-strikes-20260804222016411,,44809.492382000004,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 920m and 940m by August 31?,-0.0005
+3362544,spider-man-brand-new-day-total-domestic-gross-by-august-31-higher-strikes-20260804222016411,,29584.33301,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 940m and 960m by August 31?,-0.0005
+2966554,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,53814.985752,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be less than 400m by August 31?,-0.0005
+2966555,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,36669.857369000005,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 400m and 500m by August 31?,-0.0005
+2966556,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,32489.002055999994,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 500m and 600m by August 31?,-0.0005
+2966557,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,46259.492417999994,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 600m and 700m by August 31?,-0.0005
+2966558,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,139846.359162,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be between 700m and 800m by August 31?,-0.0005
+2966559,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,648066.0429909998,1,0.9995,24,Will the total domestic gross for Spider-Man: Brand New Day be between 800m and 900m by August 31?,0.0004999999999999449
+2966560,spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512,,1271527.1203090001,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be at least 900m by August 31?,-0.0005
+3362551,spider-man-brand-new-day-total-domestic-gross-by-august-31-higher-strikes-20260804222016411,,199810.493888,0,0.0005,24,Will the total domestic gross for Spider-Man: Brand New Day be at least 1080m by August 31?,-0.0005
+3721211,itc-tor-mon1-2026-09-01,,165760.148642,0,0.52,24,Will Torino FC win on 2026-09-01?,-0.52
+3721212,itc-tor-mon1-2026-09-01,,46403.918882,0,0.28,24,Will Torino FC vs. AC Monza end in a draw?,-0.28
+3721213,itc-tor-mon1-2026-09-01,,108862.349998,1,0.2,24,Will AC Monza win on 2026-09-01?,0.8
+3713992,elc-bir-sot-2026-09-01,,125958.59996199998,0,0.385,24,Will Birmingham City FC win on 2026-09-01?,-0.385
+3713994,elc-bir-sot-2026-09-01,,115468.82292199999,1,0.275,24,Will Birmingham City FC vs. Southampton FC end in a draw?,0.725
+3713996,elc-bir-sot-2026-09-01,,70390.440442,0,0.345,24,Will Southampton FC win on 2026-09-01?,-0.345
+3714012,elc-sto-nor-2026-09-01,,122985.063023,1,0.305,24,Will Stoke City FC win on 2026-09-01?,0.6950000000000001
+3714013,elc-sto-nor-2026-09-01,,48539.214781,0,0.265,24,Will Stoke City FC vs. Norwich City FC end in a draw?,-0.265
+3714014,elc-sto-nor-2026-09-01,,54719.85326699999,0,0.415,24,Will Norwich City FC win on 2026-09-01?,-0.415
+3713943,elc-por-der-2026-09-01,,112743.526304,0,0.435,24,Will Portsmouth FC win on 2026-09-01?,-0.435
+3713945,elc-por-der-2026-09-01,,41723.957061,0,0.285,24,Will Portsmouth FC vs. Derby County FC end in a draw?,-0.285
+3713947,elc-por-der-2026-09-01,,47782.27327600001,1,0.285,24,Will Derby County FC win on 2026-09-01?,0.7150000000000001
+3713982,elc-whu-wol-2026-09-01,,216191.820804,1,0.475,24,Will West Ham United FC win on 2026-09-01?,0.525
+3713983,elc-whu-wol-2026-09-01,,116134.03837600001,0,0.265,24,Will West Ham United FC vs. Wolverhampton Wanderers FC end in a draw?,-0.265
+3713984,elc-whu-wol-2026-09-01,,274945.884958,0,0.265,24,Will Wolverhampton Wanderers FC win on 2026-09-01?,-0.265
+3713972,elc-she-bol-2026-09-01,,81666.60840400001,1,0.565,24,Will Sheffield United FC win on 2026-09-01?,0.43500000000000005
+3713976,elc-she-bol-2026-09-01,,35629.002903000015,0,0.185,24,Will Bolton Wanderers FC win on 2026-09-01?,-0.185
+3713999,elc-swa-wat-2026-09-01,,152423.73591699998,1,0.505,24,Will Swansea City AFC win on 2026-09-01?,0.495
+3719091,elc-whu-wol-2026-09-01-more-markets,,42718.33692599998,1,0.575,24,West Ham United FC vs. Wolverhampton Wanderers FC: Both Teams to Score,0.42500000000000004
+3713956,elc-pne-bri-2026-09-01,,41854.390698,0,0.365,24,Will Preston North End FC win on 2026-09-01?,-0.365
+3713958,elc-pne-bri-2026-09-01,,478204.5312470001,1,0.355,24,Will Bristol City FC win on 2026-09-01?,0.645
+3724750,dfb-heb-bvb-2026-09-01,,101227.94422399998,0,0.004,24,Will Hamburg-Eimsbütteler BC win on 2026-09-01?,-0.004
+3724752,dfb-heb-bvb-2026-09-01,,88721.58488000004,1,0.9885,24,Will BV Borussia 09 Dortmund win on 2026-09-01?,0.011499999999999955
+3724751,dfb-heb-bvb-2026-09-01,,42554.33051699999,0,0.0065,24,Will Hamburg-Eimsbütteler BC vs. BV Borussia 09 Dortmund end in a draw?,-0.0065
+2954621,the-odyssey-total-domestic-gross-by-august-31-20260716181154228,,31839.157063000002,1,0.9975,24,Will the total domestic gross for The Odyssey be at least 350m by August 31?,0.0024999999999999467
+3094310,the-odyssey-total-domestic-gross-by-august-31-higher-strikes-20260723204527748,,80731.633014,0,0.0005,24,Will the total domestic gross for The Odyssey be between 530m and 550m by August 31?,-0.0005
+3094312,the-odyssey-total-domestic-gross-by-august-31-higher-strikes-20260723204527748,,184658.87108600006,0,0.0015,24,Will the total domestic gross for The Odyssey be at least 570m by August 31?,-0.0015
+3094309,the-odyssey-total-domestic-gross-by-august-31-higher-strikes-20260723204527748,,26012.35652899999,0,0.0005,24,Will the total domestic gross for The Odyssey be between 510m and 530m by August 31?,-0.0005
+908046,who-will-advance-from-the-alaska-governor-primary,,39523.21319,0,0.002,24,Will Matt Claman advance from the 2026 Alaska Governor primary election?,-0.002
+3708485,spl-hil-ahl-2026-09-01,,59238.832317000015,0,0.205,24,Will Al Ahli Saudi Club win on 2026-09-01?,-0.205
+3710901,spl-hil-ahl-2026-09-01-more-markets,,38636.775169,0,0.6,24,Al Hilal Saudi Club vs. Al Ahli Saudi Club: Both Teams to Score,-0.6
+3708484,spl-hil-ahl-2026-09-01,,31629.649076999995,0,0.225,24,Will Al Hilal Saudi Club vs. Al Ahli Saudi Club end in a draw?,-0.225
+3708483,spl-hil-ahl-2026-09-01,,442151.4789280003,1,0.585,24,Will Al Hilal Saudi Club win on 2026-09-01?,0.41500000000000004
+3716500,el1-bro-ley-2026-09-01,,110924.021977,0,0.365,24,Will Bromley FC win on 2026-09-01?,-0.365
+3716502,el1-bro-ley-2026-09-01,,41833.34206100002,1,0.355,24,Will Leyton Orient FC win on 2026-09-01?,0.645
+3733134,another-iranian-diplomat-expelled-byptptpt,,28317.085990000003,0,0.043,24,"Another Iranian Ambassador expelled by August 31, 2026?",-0.043
+3716512,el1-lei-ply-2026-09-01,,132242.941035,1,0.495,24,Will Leicester City FC win on 2026-09-01?,0.505
+3716518,el1-hud-oxf-2026-09-01,,29616.342824,1,0.56,24,Will Huddersfield Town AFC win on 2026-09-01?,0.43999999999999995
+3716506,el1-pet-ste-2026-09-01,,33799.08165899999,0,0.36,24,Will Peterborough United FC win on 2026-09-01?,-0.36
+3716503,el1-bra-cam-2026-09-01,,83131.39430999996,0,0.535,24,Will Bradford City AFC win on 2026-09-01?,-0.535
+3706980,egy1-wds-elq-2026-09-01,,59776.870032000006,0,0.435,24,Will Wadi Degla SC win on 2026-09-01?,-0.435
+3717360,el2-sal-new-2026-09-01,,30964.934856000007,1,0.635,24,Will Salford City FC win on 2026-09-01?,0.365
+3379800,next-mythos-class-model-released-by,,96676.99458799999,1,0.88,24,"Next Mythos-Class Model released by September 15, 2026?",0.12
+3759614,next-mythos-class-model-released-by,,119643.15546700006,1,0.82,24,"Next Mythos-Class Model released by September 9, 2026?",0.18000000000000005
+3721208,itc-par-cre-2026-09-01,,191636.65762399996,0,0.455,24,Will Parma Calcio 1913 win on 2026-09-01?,-0.455
+3721210,itc-par-cre-2026-09-01,,96664.61502199995,1,0.265,24,Will US Cremonese win on 2026-09-01?,0.735
+3722840,itc-par-cre-2026-09-01-more-markets,,30766.336376,0,0.485,24,Parma Calcio 1913 vs. US Cremonese: Both Teams to Score,-0.485
+3706960,egy1-teg-zef-2026-09-01,,40902.93999099999,1,0.245,24,Will ZED FC win on 2026-09-01?,0.755
+3772750,elon-musk-of-tweets-august-25-september-1-2026,,101506.86934700001,0,0.0085,24,"Will Elon Musk post 220-239 tweets from August 25 to September 1, 2026?",-0.0085
+3772756,elon-musk-of-tweets-august-25-september-1-2026,,103176.50995799998,0,0.0005,24,"Will Elon Musk post 260-279 tweets from August 25 to September 1, 2026?",-0.0005
+3772768,elon-musk-of-tweets-august-25-september-1-2026,,26613.2414,0,0.0005,24,"Will Elon Musk post 480-499 tweets from August 25 to September 1, 2026?",-0.0005
+3772738,elon-musk-of-tweets-august-25-september-1-2026,,300114.157345,1,0.71,24,"Will Elon Musk post 160-179 tweets from August 25 to September 1, 2026?",0.29000000000000004
+3772754,elon-musk-of-tweets-august-25-september-1-2026,,81055.55246200002,0,0.0015,24,"Will Elon Musk post 240-259 tweets from August 25 to September 1, 2026?",-0.0015
+3772761,elon-musk-of-tweets-august-25-september-1-2026,,41935.911308,0,0.0005,24,"Will Elon Musk post 340-359 tweets from August 25 to September 1, 2026?",-0.0005
+3772762,elon-musk-of-tweets-august-25-september-1-2026,,37117.491556,0,0.0005,24,"Will Elon Musk post 360-379 tweets from August 25 to September 1, 2026?",-0.0005
+3772746,elon-musk-of-tweets-august-25-september-1-2026,,140668.37198299996,0,0.0235,24,"Will Elon Musk post 200-219 tweets from August 25 to September 1, 2026?",-0.0235
+3772760,elon-musk-of-tweets-august-25-september-1-2026,,49383.11605099999,0,0.0005,24,"Will Elon Musk post 320-339 tweets from August 25 to September 1, 2026?",-0.0005
+3772763,elon-musk-of-tweets-august-25-september-1-2026,,42676.101,0,0.0005,24,"Will Elon Musk post 380-399 tweets from August 25 to September 1, 2026?",-0.0005
+3772764,elon-musk-of-tweets-august-25-september-1-2026,,38920.453886999996,0,0.0005,24,"Will Elon Musk post 400-419 tweets from August 25 to September 1, 2026?",-0.0005
+3772770,elon-musk-of-tweets-august-25-september-1-2026,,48801.65030700001,0,0.0005,24,"Will Elon Musk post 500+ tweets from August 25 to September 1, 2026?",-0.0005
+3772759,elon-musk-of-tweets-august-25-september-1-2026,,60326.682519,0,0.0005,24,"Will Elon Musk post 300-319 tweets from August 25 to September 1, 2026?",-0.0005
+3772742,elon-musk-of-tweets-august-25-september-1-2026,,339975.87440100004,0,0.185,24,"Will Elon Musk post 180-199 tweets from August 25 to September 1, 2026?",-0.185
+3772758,elon-musk-of-tweets-august-25-september-1-2026,,67409.358829,0,0.0005,24,"Will Elon Musk post 280-299 tweets from August 25 to September 1, 2026?",-0.0005
+3772731,elon-musk-of-tweets-august-25-september-1-2026,,364530.0972329999,0,0.073,24,"Will Elon Musk post 140-159 tweets from August 25 to September 1, 2026?",-0.073
+3347863,ism-manufacturing-pmi-august-2026,,25131.163494999997,0,0.36,24,Will ISM Manufacturing PMI be between 55.0 and 55.9 in August?,-0.36
+2870692,bank-of-israel-decision-in-september-20260710022159182,,36763.37432499999,1,0.145,24,Will the Bank of Israel decrease the Bank of Israel Interest Rate after the September decision?,0.855
+2870693,bank-of-israel-decision-in-september-20260710022159182,,44603.87233,0,0.855,24,Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the September decision?,-0.855
+2363939,bank-of-israel-decision-in-august,,41742.93291300001,1,0.18,24,Will the Bank of Israel cut by 25 bps at the August 2026 meeting?,0.8200000000000001
+2356727,bank-of-israel-decision-in-august,,75368.44373499998,0,0.83,24,Will the Bank of Israel hold at the August 2026 meeting?,-0.83
+2428142,brazil-gdp-growth-in-q2-2026-qoq,,31148.825995,1,0.7055,24,Will Brazil's Q2 2026 GDP growth rate (QoQ) be between 0.3% and 0.5%?,0.2945
+3324625,us-iran-hormuz-agreement-byptptpt-20260803235957575,,366185.769448,0,0.0035,24,US-Iran Hormuz Agreement by August 31?,-0.0035
+3348048,iran-oman-hormuz-management-agreement-byptptpt-20260804222725871,,627942.5877449999,0,0.026,24,Iran-Oman Hormuz Agreement by August 31?,-0.026
+1923635,will-valve-add-cobblestone-to-the-map-pool-by,,63098.574516999994,0,0.005,24,Will Valve add Cobblestone to the map pool by August 30? ,-0.005
+3002443,israeli-forces-withdraw-from-beyond-the-litani-river-by-20260607234645733,,106617.11721800001,0,0.0015,24,Will Israeli forces withdraw from beyond the Litani River by August 31?,-0.0015
+3120761,nato-x-russia-military-clash-in-2025,,2122003.4854169996,0,0.0045,24,"NATO x Russia military clash by August 31, 2026?",-0.0045
+2730712,israel-closes-its-airspace-by,,1561277.8721820011,0,0.009,24,Israel closes its airspace by August 31?,-0.009
+1361023,where-will-maxx-crosby-play-in-2026,,1150890.2066809991,0,0.0005,24,Will Maxx Crosby play for Indianapolis Colts next?,-0.0005
+1361037,where-will-maxx-crosby-play-in-2026,,620379.452372,0,0.0015,24,Will Maxx Crosby play for San Francisco 49ers next?,-0.0015
+1361021,where-will-maxx-crosby-play-in-2026,,30487.891111000008,0,0.0005,24,Will Maxx Crosby play for Green Bay Packers next?,-0.0005
+1361024,where-will-maxx-crosby-play-in-2026,,437163.27701200004,0,0.002,24,Will Maxx Crosby play for Jacksonville Jaguars next?,-0.002
+1361025,where-will-maxx-crosby-play-in-2026,,34622.703795,0,0.0005,24,Will Maxx Crosby play for Kansas City Chiefs next?,-0.0005
+1361014,where-will-maxx-crosby-play-in-2026,,846268.3969260001,0,0.0005,24,Will Maxx Crosby play for Carolina Panthers next?,-0.0005
+1361015,where-will-maxx-crosby-play-in-2026,,300736.23161699995,0,0.0015,24,Will Maxx Crosby play for Chicago Bears next?,-0.0015
+1361018,where-will-maxx-crosby-play-in-2026,,87855.16992800002,0,0.0015,24,Will Maxx Crosby play for Dallas Cowboys next?,-0.0015
+1361010,where-will-maxx-crosby-play-in-2026,,73432.426761,0,0.0005,24,Will Maxx Crosby play for Arizona Cardinals next?,-0.0005
+1387124,where-will-tyreek-hill-play-in-2026,,42128.103333,0,0.0045,24,Will Tyreek Hill play for the Los Angeles Rams next?,-0.0045
+1387126,where-will-tyreek-hill-play-in-2026,,1781737.904,0,0.0005,24,Will Tyreek Hill play for the Dallas Cowboys next?,-0.0005
+1387120,where-will-tyreek-hill-play-in-2026,,131624.675755,0,0.0015,24,Will Tyreek Hill play for the Baltimore Ravens next?,-0.0015
+1387127,where-will-tyreek-hill-play-in-2026,,221352.81039,0,0.0035,24,Will Tyreek Hill play for the Philadelphia Eagles next?,-0.0035
+1387121,where-will-tyreek-hill-play-in-2026,,222557.43583300003,0,0.0015,24,Will Tyreek Hill play for the Minnesota Vikings next?,-0.0015
+1387123,where-will-tyreek-hill-play-in-2026,,2195683.9052159996,0,0.0065,24,Will Tyreek Hill play for the Chicago Bears next?,-0.0065
+1387118,where-will-tyreek-hill-play-in-2026,,504693.582489,0,0.0015,24,Will Tyreek Hill play for the New England Patriots next?,-0.0015
+1361040,where-will-maxx-crosby-play-in-2026,,888964.3142859999,0,0.0005,24,Will Maxx Crosby play for Tennessee Titans next?,-0.0005
+1361039,where-will-maxx-crosby-play-in-2026,,69658.26904899998,0,0.0005,24,Will Maxx Crosby play for Tampa Bay Buccaneers next?,-0.0005
+1361034,where-will-maxx-crosby-play-in-2026,,1204878.2377029997,0,0.004,24,Will Maxx Crosby play for New York Jets next?,-0.004
+1361030,where-will-maxx-crosby-play-in-2026,,61340.524454,0,0.0005,24,Will Maxx Crosby play for Minnesota Vikings next?,-0.0005
+3203595,us-obtains-iranian-enriched-uranium-by,,65752.66253100001,0,0.0005,24,US obtains Iranian enriched uranium by August 31?,-0.0005
+3350267,farsi-hengam-hormuz-or-kharg-island-no-longer-under-iranian-control-byptptpt-20260804165426109,,52776.339881,0,0.003,24,"Will Farsi, Hengam, Hormuz or Kharg Island no longer be under Iranian control by August 31, 2026?",-0.003
+3231221,situational-awareness-raises-new-capital-by-august-31-20260730182353379,,60144.664634999994,0,0.0055,24,Situational Awareness raises new capital by August 31?,-0.0055
+3076480,elon-musk-of-tweets-august-2026,,65846.875594,1,0.605,24,Will Elon Musk post 880-919 tweets in August 2026?,0.395
+1088492,2026-mens-us-open-winner-tennis,,950843.8163250003,0,0.0035,24,Will Grigor Dimitrov win the 2026 Men's US Open?,-0.0035
+3076479,elon-musk-of-tweets-august-2026,,183591.20145300002,0,0.358,24,Will Elon Musk post 840-879 tweets in August 2026?,-0.358
+1088679,2026-womens-us-open-winner-tennis,,580969.4937430001,0,0.0015,24,Will Tereza Valentova win the 2026 Women’s US Open?,-0.0015
+1088684,2026-womens-us-open-winner-tennis,,1061645.3874730002,0,0.0005,24,Will Xiyu Wang win the 2026 Women’s US Open?,-0.0005
+1361028,where-will-maxx-crosby-play-in-2026,,406043.8442019999,0,0.0005,24,Will Maxx Crosby play for Los Angeles Rams next?,-0.0005
+2853119,iran-agrees-to-surrender-enriched-uranium-stockpile-by,,147822.021388,0,0.0005,24,"Iran agrees to surrender enriched uranium stockpile by August 31, 2026?",-0.0005
+2907312,us-charges-hormuz-fees-byptptpt-20260713151243232,,181151.991862,0,0.001,24,"US charges Hormuz fees by August 31, 2026?",-0.001
+2853113,iaea-visits-isfahan-fordow-or-natanz-nuclear-site-by-july-31-20260624040209014,,60074.665049999996,0,0.001,24,"IAEA visits Isfahan, Fordow, or Natanz nuclear site by August 31?",-0.001
+3009269,farsi-island-no-longer-under-iranian-control-byptptpt-20260720015111488,,168377.92384200002,0,0.0005,24,Farsi Island no longer under Iranian control by August 31?,-0.0005
+3009265,hormuz-island-no-longer-under-iranian-control-byptptpt-20260720014603391,,58540.753047000006,0,0.0015,24,Hormuz Island no longer under Iranian control by August 31?,-0.0015
+3009267,hengam-island-no-longer-under-iranian-control-byptptpt-20260720014859845,,178292.176379,0,0.0005,24,Hengam Island no longer under Iranian control by August 31?,-0.0005
+3502548,ssi-public-model-released-by-20260810094604188,,40271.053609,0,0.0295,24,"SSI public model released by August 31, 2026?",-0.0295
+3009227,greater-tunb-island-no-longer-under-iranian-control-byptptpt-20260720014332851,,32159.211139,0,0.005,24,Greater Tunb Island no longer under Iranian control by August 31?,-0.005
+3009229,abu-musa-island-no-longer-under-iranian-control-byptptpt-20260720011758214,,86730.882563,0,0.0005,24,Abu Musa Island no longer under Iranian control by August 31?,-0.0005
+3203590,israel-ground-operation-in-iran-confirmed-by,,56683.270852,0,0.001,24,"Will Israel launch a ground operation in Iran by August 31, 2026?",-0.001
+3231246,situational-awareness-announces-fund-wind-down-byptptpt-20260730181230095,,66170.90114000002,0,0.0005,24,"Situational Awareness announces fund wind-down by August 31, 2026?",-0.0005
+2641010,israel-withdraws-from-lebanon-by,,669321.5074139999,0,0.0005,24,"Israel withdraws from Lebanon by August 31, 2026?",-0.0005
+2686771,iran-full-airspace-closure-byptptpt-20260625195253028,,1543856.7825060003,0,0.026,24,Iran full airspace closure by August 31?,-0.026
+3246710,who-will-trump-meet-with-in-august-20260731154151454,,122461.63770300001,0,0.0015,24,Will Trump meet with Volodymyr Zelenskyy in August 2026?,-0.0015
+3246712,who-will-trump-meet-with-in-august-20260731154151454,,45636.186677,0,0.0005,24,Will Trump meet with Mohammed bin Salman in August 2026?,-0.0005
+3246718,who-will-trump-meet-with-in-august-20260731154151454,,34811.068314,0,0.003,24,Will Trump meet with Benjamin Netanyahu in August 2026?,-0.003
+2839298,israel-x-hezbollah-diplomatic-meeting-byptptpt-20260706181026740,,90472.35105599998,0,0.001,24,"Israel x Hezbollah diplomatic meeting by August 31, 2026?",-0.001
+2849356,us-reissues-iran-oil-sales-sanction-relief-byptptpt-20260708142359046,,241388.73665499996,0,0.0045,24,US reissues Iran oil sanction relief by August 31?,-0.0045
+3121258,another-nato-article-4-byptptpt-20260726214235871,,145714.78231200008,0,0.0015,24,"Another NATO Article 4 invocation by August 31, 2026?",-0.0015
+3128290,foreign-intervention-in-gaza-by,,115609.065607,0,0.0035,24,Foreign intervention in Gaza by August 31?,-0.0035
+2734399,serbia-parliament-dissolved-by-20260629164744649,,56306.945469000006,0,0.0165,24,Will the Serbian National Assembly be dissolved by August 31?,-0.0165
+3324658,jeanine-pirro-out-as-dc-us-attorney-by,,85892.17084600002,0,0.0215,24,Jeanine Pirro out as D.C. U.S. Attorney by August 31?,-0.0215
+3005947,total-internet-blackout-in-iran-byptptpt-20260720155238426,,176216.16596699998,0,0.008,24,"Total Internet Blackout in Iran by August 31, 2026?",-0.008
+3246713,who-will-trump-meet-with-in-august-20260731154151454,,27447.519506999997,0,0.001,24,Will Trump meet with Vladimir Putin in August 2026?,-0.001
+3246711,who-will-trump-meet-with-in-august-20260731154151454,,60794.81586699999,0,0.0005,24,Will Trump meet with Xi Jinping in August 2026?,-0.0005
+2507618,kharg-island-no-longer-under-iranian-control-by-march-31,,5917973.911869001,0,0.0015,24,Kharg Island no longer under Iranian control by August 31?,-0.0015
+2633430,us-iran-final-nuclear-deal-by-20260621201254412,,4562610.169641,0,0.0005,24,"US-Iran Final Nuclear Deal by August 31, 2026?",-0.0005
+3190237,andrew-tate-released-from-custody-byptptpt-20260719023459650,,92191.04822099999,0,0.0055,24,"Andrew Tate released from custody by August 31, 2026?",-0.0055
+2602228,will-zelenskyy-talk-to-putin-by-november-30-821,,68745.735218,0,0.0005,24,Will Zelenskyy talk to Putin by August 31?,-0.0005
+2438747,italy-senate-approves-nuclear-power-bill-by-august-31,,26155.353858999995,0,0.005,24,Italy Senate approves Nuclear Power Bill by August 31?,-0.005
+2822003,putin-out-before-2027,,1079267.556315,0,0.0005,24,"Putin out as President of Russia by August 31, 2026?",-0.0005
+3231768,pete-hegseth-out-as-secretary-of-defense-by-august-31-20260730185522346,,36668.701120000005,0,0.001,24,Pete Hegseth out as Secretary of Defense by August 31?,-0.001
+3025960,mykhailo-fedorov-reinstated-as-ukrainian-defense-minister-byptptpt-20260716185015029,,185599.23278499997,0,0.0005,24,"Mykhailo Fedorov reinstated as Ukrainian Defense Minister by August 31, 2026?",-0.0005
+3076481,elon-musk-of-tweets-august-2026,,50443.418455000006,0,0.007,24,Will Elon Musk post 920-959 tweets in August 2026?,-0.007
+3076482,elon-musk-of-tweets-august-2026,,38869.788715999995,0,0.0025,24,Will Elon Musk post 960-999 tweets in August 2026?,-0.0025
+2995848,will-mojtaba-khamenei-leave-iran-byptptpt-20260720003505489,,75011.1724,0,0.0025,24,Will Mojtaba Khamenei leave Iran by August 31?,-0.0025
+3017684,iran-leadership-change-by,,1599414.1198490001,0,0.004,24,Iran leadership change by August 31?,-0.004
+3076483,elon-musk-of-tweets-august-2026,,32074.805619,0,0.001,24,Will Elon Musk post 1000+ tweets in August 2026?,-0.001
+2610235,will-ukraine-agree-to-cede-territory-to-russia-before-2027,,67532.35795899999,0,0.001,24,"Will Ukraine agree to cede territory to Russia by August 31, 2026?",-0.001
+2602052,russia-x-ukraine-ceasefire-agreement-by,,586175.510101,0,0.001,24,"Russia x Ukraine ceasefire agreement by August 31, 2026?",-0.001
+2602067,ukraine-election-called-in-2025,,210858.07764600002,0,0.0005,24,"Ukraine election called by August 31, 2026?",-0.0005
+1459614,where-will-george-pickens-play-in-2026-27,,320884.351597,0,0.0015,24,Will George Pickens play for Cleveland Browns in 2026-27?,-0.0015
+2183578,will-kylian-mbappe-leave-real-madrid-before-august-31,,25080.060585000007,0,0.0075,24,Will Kylian Mbappe leave Real Madrid before August 31?,-0.0075
+1459608,where-will-george-pickens-play-in-2026-27,,190390.184,0,0.0015,24,Will George Pickens play for Atlanta Falcons in 2026-27?,-0.0015
+1459620,where-will-george-pickens-play-in-2026-27,,79438.488581,0,0.0015,24,Will George Pickens play for Indianapolis Colts in 2026-27?,-0.0015
+1459610,where-will-george-pickens-play-in-2026-27,,124436.80900000001,0,0.002,24,Will George Pickens play for Buffalo Bills in 2026-27?,-0.002
+2911832,next-round-of-us-iran-peace-talks-byptptpt-20260623022722982,,1506144.9982869995,0,0.0025,24,"US x Iran diplomatic meeting by August 31, 2026?",-0.0025
+1459629,where-will-george-pickens-play-in-2026-27,,125005.258011,0,0.0015,24,Will George Pickens play for New Orleans Saints in 2026-27?,-0.0015
+2610025,putin-and-zelenskyy-shake-hands-by-june-30,,84248.44056200002,0,0.0005,24,Putin and Zelenskyy shake hands by August 31?,-0.0005
+2602509,will-putin-meet-with-zelenskyy-by-august-31-2026-20260619004734475,,98453.987285,0,0.001,24,"Will Putin meet with Zelenskyy by August 31, 2026?",-0.001
+2686766,iran-charges-hormuz-fees-byptptpt-20260625175035466,,1261684.3773519997,0,0.011,24,Iran charges Hormuz fees by August 31?,-0.011
+2849008,us-announces-withdrawal-from-mou-negotiations-byptptpt-20260622192051747,,472591.82467700006,0,0.012,24,Will the US announce withdrawal from MOU negotiations by August 31?,-0.012
+3192360,next-claude-opus-released-byptptpt-20260727142323912,,41514.741034,0,0.107,24,"Will the next Claude Opus model be released by August 31, 2026?",-0.107
+2487205,next-mythos-class-model-released-by,,380203.802494,0,0.365,24,"Next Mythos-Class Model released by August 31, 2026?",-0.365
+2602277,ukraine-signs-peace-deal-with-russia-by-august-31-20260619003108240,,321701.841326,0,0.0005,24,Ukraine signs peace deal with Russia by August 31?,-0.0005
+2602501,ukraine-agrees-not-to-join-nato-by-august-31-20260619004335094,,30199.070392999998,0,0.004,24,Ukraine agrees not to join NATO by August 31?,-0.004
+2658302,mojtaba-khamenei-public-appearance-by,,532829.4178869999,0,0.0055,24,Mojtaba Khamenei seen in public by August 31?,-0.0055
+2910438,us-announces-end-of-iranian-blockade-byptptpt-20260713152715080,,4936927.520507002,0,0.0035,24,"US announces end of Iranian blockade by August 31, 2026?",-0.0035
+3240740,spacex-starship-flight-test-14,,62536.588115,0,0.0015,24,Will SpaceX Starship Flight Test 14 launch by August 31?,-0.0015
+3502066,israel-x-lebanon-diplomatic-meeting-byptptpt-20260810145737299,,208504.65605400002,0,0.071,24,"Israel x Lebanon diplomatic meeting by August 31, 2026?",-0.071
+1485174,where-will-joey-bosa-play-in-2026-27,,29889.956092000004,0,0.0105,24,Will Joey Bosa play for Carolina Panthers in 2026-27?,-0.0105
+2732505,another-gta-vi-trailer-released-by,,798671.4248680002,0,0.0095,24,Another GTA VI trailer released by August 31?,-0.0095
+3231771,trump-out-as-president-by-august-31-20260730185655928,,2826324.758736994,0,0.0005,24,Trump out as President by August 31?,-0.0005
+1459635,where-will-george-pickens-play-in-2026-27,,29629.56,0,0.0005,24,Will George Pickens play for Seattle Seahawks in 2026-27?,-0.0005
+3207796,next-google-gemini-pro-model-released-onptptpt-20260729182045875,,89986.97416199998,1,0.993,24,"Will there be no next Google Gemini Pro model release by August 31, 2026?",0.007000000000000006
+3243198,todd-blanche-nomination-withdrawn-by-august-31-20260731141647591,,93555.08769700001,0,0.0005,24,Todd Blanche nomination withdrawn by August 31?,-0.0005
+3240657,which-countries-will-send-warships-through-the-strait-of-hormuz-by-august-31,,59382.674887999994,0,0.002,24,"Will France send warships through the Strait of Hormuz by August 31, 2026?",-0.002
+3242383,will-a-new-country-join-the-abraham-accords-by-august-31-1785517679415,,56848.48717200001,0,0.003,24,Will a new country join the Abraham Accords by August 31?,-0.003
+2672031,who-will-attend-a-round-of-us-iran-peace-by-august-31-20260623143114130,,25409.170443,0,0.003,24,"Will J.D. Vance attend a US x Iran diplomatic meeting by August 31, 2026?",-0.003
+2926628,next-google-gemini-pro-model-released-byptptpt,,347191.583732,0,0.006,24,"Will the next Google Gemini Pro model be released by August 31, 2026?",-0.006
+2672033,who-will-attend-a-round-of-us-iran-peace-by-august-31-20260623143114130,,27626.643355999997,0,0.0005,24,"Will Steve Witkoff attend a US x Iran diplomatic meeting by August 31, 2026?",-0.0005
+3240658,which-countries-will-send-warships-through-the-strait-of-hormuz-by-august-31,,47320.416997,0,0.006,24,"Will the United States send warships through the Strait of Hormuz by August 31, 2026?",-0.006
+3240695,will-russia-capture-all-of-kostyantynivka-by,,40671.728711,0,0.004,24,"Will Russia capture all of Kostyantynivka by August 31, 2026?",-0.004
+3242235,will-spain-accuse-morocco-of-facilitating-the-ceuta-migrant-influx-by-august-31-20260731174220331,,241101.25088299997,0,0.015,24,Spain accuses Morocco of facilitating Ceuta migrant wave by August 31?,-0.015
+2672032,who-will-attend-a-round-of-us-iran-peace-by-august-31-20260623143114130,,28640.188318000004,0,0.0025,24,"Will Jared Kushner attend a US x Iran diplomatic meeting by August 31, 2026?",-0.0025
+3372767,will-russia-capture-svitle-byptptpt-20260805161409629,,32006.349022999995,0,0.1115,24,Will Russia capture Svitle by August 31?,-0.1115
+3517831,will-russia-enter-hannivka-byptptpt-20260729205150054,,25737.402756000003,0,0.05,24,"Will Russia enter Hannivka by August 31, 2026?",-0.05
+2925999,will-russia-capture-bilytske-by,,48070.96112899999,0,0.0355,24,"Will Russia capture Bilytske by August 31, 2026?",-0.0355
+3241305,will-russia-enter-mykhailivka-by-april-30,,34774.669025,0,0.012,24,Will Russia enter Mykhailivka by August 31?,-0.012
+3275538,openais-astra-released-by-20260801214557729,,162403.832162,0,0.009,24,"Will OpenAI’s Astra model be released by August 31, 2026?",-0.009
+3205507,gemini-4pt0-released-by-june-30-2026,,61740.929551,0,0.0015,24,"Gemini 4.0 released by August 31, 2026?",-0.0015
+2850825,gpt-6-released-by,,297817.39353199996,0,0.004,24,"Will GPT-6 be released by August 31, 2026?",-0.004
+3089566,will-russia-capture-kucheriv-yar-byptptpt-20260724165221452,,131365.831599,0,0.023,24,Will Russia capture Kucheriv Yar by August 31?,-0.023
+3240662,which-countries-will-send-warships-through-the-strait-of-hormuz-by-august-31,,93224.78255900001,0,0.0005,24,"Will Germany send warships through the Strait of Hormuz by August 31, 2026?",-0.0005
+3372771,will-russia-capture-shevchenko-byptptpt-20260805162837387,,47406.913908999995,0,0.04,24,Will Russia capture Shevchenko by August 31?,-0.04
+3089557,will-russia-capture-novyi-donbas-byptptpt-20260724163321934,,51551.347523,0,0.0375,24,Will Russia capture Novyi Donbas by August 31?,-0.0375
+3240659,which-countries-will-send-warships-through-the-strait-of-hormuz-by-august-31,,46951.762371000004,0,0.002,24,"Will the Netherlands send warships through the Strait of Hormuz by August 31, 2026?",-0.002
+3724225,what-price-will-bitcoin-hit-in-august-2026,,717088.448457,0,0.007,24,"Will Bitcoin dip to $67,500 in August?",-0.007
+3724229,what-price-will-solana-hit-in-august-2026,,57246.328441000005,0,0.0035,24,Will Solana dip to $80 in August?,-0.0035
+3746585,what-price-will-xrp-hit-in-august-2026,,25786.202295000006,0,0.0205,24,Will XRP dip to $1.20 in August?,-0.0205
+3780326,what-price-will-solana-hit-in-august-2026,,39359.54241800002,0,0.041,24,Will Solana dip to $90 in August?,-0.041
+3763512,what-price-will-bitcoin-hit-in-august-2026,,924303.66211,0,0.1005,24,"Will Bitcoin dip to $75,000 in August?",-0.1005
+3307942,what-price-will-bitcoin-hit-in-august-2026,,1390913.1268809997,0,0.0015,24,"Will Bitcoin dip to $62,500 in August?",-0.0015
+3763513,what-price-will-bitcoin-hit-in-august-2026,,693120.1744389998,0,0.025,24,"Will Bitcoin dip to $72,500 in August?",-0.025
+3724226,what-price-will-bitcoin-hit-in-august-2026,,380247.4572209999,0,0.0025,24,"Will Bitcoin dip to $65,000 in August?",-0.0025
+3724228,what-price-will-ethereum-hit-in-august-2026,,302952.171459,0,0.003,24,"Will Ethereum dip to $2,000 in August?",-0.003
+3746576,what-price-will-ethereum-hit-in-august-2026,,211540.99736599997,0,0.0155,24,"Will Ethereum dip to $2,200 in August?",-0.0155
+3746577,what-price-will-ethereum-hit-in-august-2026,,116027.84482500002,0,0.007,24,"Will Ethereum dip to $2,100 in August?",-0.007
+3724230,what-price-will-xrp-hit-in-august-2026,,25793.097571000002,0,0.005,24,Will XRP dip to $1.00 in August?,-0.005
+3257386,what-price-will-ethereum-hit-in-august-2026,,556649.3228179998,0,0.0295,24,"Will Ethereum reach $2,600 in August?",-0.0295
+3257416,what-price-will-ethereum-hit-in-august-2026,,116654.81185599999,0,0.0005,24,Will Ethereum dip to $900 in August?,-0.0005
+3257470,what-price-will-xrp-hit-in-august-2026,,168369.707489,0,0.001,24,Will XRP reach $2.80 in August?,-0.001
+3257475,what-price-will-xrp-hit-in-august-2026,,59386.63520099999,0,0.001,24,Will XRP reach $2.20 in August?,-0.001
+3257480,what-price-will-xrp-hit-in-august-2026,,165469.14725900002,0,0.0015,24,Will XRP reach $1.80 in August?,-0.0015
+3701627,what-price-will-ethereum-hit-in-august-2026,,242954.16646599997,0,0.0035,24,"Will Ethereum dip to $1,900 in August?",-0.0035
+3746574,what-price-will-bitcoin-hit-in-august-2026,,593630.5377049999,0,0.0095,24,"Will Bitcoin dip to $70,000 in August?",-0.0095
+3257399,what-price-will-ethereum-hit-in-august-2026,,751681.7356119998,0,0.001,24,"Will Ethereum dip to $1,700 in August?",-0.001
+3257447,what-price-will-solana-hit-in-august-2026,,110901.44659000004,0,0.0015,24,Will Solana dip to $70 in August?,-0.0015
+3257435,what-price-will-solana-hit-in-august-2026,,151812.355815,0,0.0035,24,Will Solana reach $130 in August?,-0.0035
+3257437,what-price-will-solana-hit-in-august-2026,,324317.42123700003,0,0.0075,24,Will Solana reach $120 in August?,-0.0075
+3257448,what-price-will-solana-hit-in-august-2026,,84713.131087,0,0.0015,24,Will Solana dip to $60 in August?,-0.0015
+3257449,what-price-will-solana-hit-in-august-2026,,52413.258262,0,0.0005,24,Will Solana dip to $50 in August?,-0.0005
+3257474,what-price-will-xrp-hit-in-august-2026,,31340.717644000004,0,0.0005,24,Will XRP reach $2.40 in August?,-0.0005
+3257489,what-price-will-xrp-hit-in-august-2026,,105998.21937199999,0,0.001,24,Will XRP dip to $0.80 in August?,-0.001
+3257492,what-price-will-xrp-hit-in-august-2026,,42204.453318,0,0.0005,24,Will XRP dip to $0.60 in August?,-0.0005
+3257452,what-price-will-solana-hit-in-august-2026,,34113.87410800001,0,0.0005,24,Will Solana dip to $20 in August?,-0.0005
+3257468,what-price-will-xrp-hit-in-august-2026,,514806.10150100006,0,0.0005,24,Will XRP reach $3.00 in August?,-0.0005
+3257477,what-price-will-xrp-hit-in-august-2026,,120349.41784199997,0,0.0005,24,Will XRP reach $2.00 in August?,-0.0005
+3257472,what-price-will-xrp-hit-in-august-2026,,26794.34552,0,0.0055,24,Will XRP reach $2.60 in August?,-0.0055
+3257370,what-price-will-bitcoin-hit-in-august-2026,,807229.9378750002,0,0.0005,24,"Will Bitcoin dip to $40,000 in August?",-0.0005
+3257411,what-price-will-ethereum-hit-in-august-2026,,101707.492788,0,0.0005,24,"Will Ethereum dip to $1,100 in August?",-0.0005
+3257356,what-price-will-bitcoin-hit-in-august-2026,,1165766.4295899998,0,0.0005,24,"Will Bitcoin dip to $57,500 in August?",-0.0005
+3257358,what-price-will-bitcoin-hit-in-august-2026,,1181719.212485,0,0.0005,24,"Will Bitcoin dip to $55,000 in August?",-0.0005
+3257403,what-price-will-ethereum-hit-in-august-2026,,159885.160876,0,0.001,24,"Will Ethereum dip to $1,500 in August?",-0.001
+3257453,what-price-will-solana-hit-in-august-2026,,48315.432000000015,0,0.0005,24,Will Solana dip to $10 in August?,-0.0005
+3257364,what-price-will-bitcoin-hit-in-august-2026,,640493.354338,0,0.0005,24,"Will Bitcoin dip to $47,500 in August?",-0.0005
+3257366,what-price-will-bitcoin-hit-in-august-2026,,482481.7890939999,0,0.0005,24,"Will Bitcoin dip to $45,000 in August?",-0.0005
+3257384,what-price-will-ethereum-hit-in-august-2026,,572696.3839670002,0,0.0095,24,"Will Ethereum reach $2,700 in August?",-0.0095
+3257401,what-price-will-ethereum-hit-in-august-2026,,397732.4996959999,0,0.0015,24,"Will Ethereum dip to $1,600 in August?",-0.0015
+3257407,what-price-will-ethereum-hit-in-august-2026,,146875.66908999998,0,0.001,24,"Will Ethereum dip to $1,300 in August?",-0.001
+3257433,what-price-will-solana-hit-in-august-2026,,103197.512635,0,0.0015,24,Will Solana reach $140 in August?,-0.0015
+3746575,what-price-will-ethereum-hit-in-august-2026,,277150.0654019999,0,0.088,24,"Will Ethereum dip to $2,300 in August?",-0.088
+3257334,what-price-will-bitcoin-hit-in-august-2026,,1684440.3046449998,0,0.0035,24,"Will Bitcoin reach $85,000 in August?",-0.0035
+3257397,what-price-will-ethereum-hit-in-august-2026,,593642.7999130001,0,0.0015,24,"Will Ethereum dip to $1,800 in August?",-0.0015
+3257413,what-price-will-ethereum-hit-in-august-2026,,27484.550482000002,0,0.0005,24,"Will Ethereum dip to $1,000 in August?",-0.0005
+3257431,what-price-will-solana-hit-in-august-2026,,78806.44594300001,0,0.0005,24,Will Solana reach $150 in August?,-0.0005
+3257355,what-price-will-bitcoin-hit-in-august-2026,,1429083.5093649998,0,0.0005,24,"Will Bitcoin dip to $60,000 in August?",-0.0005
+3257382,what-price-will-ethereum-hit-in-august-2026,,1051729.8008169993,0,0.0005,24,"Will Ethereum reach $3,000 in August?",-0.0005
+3257405,what-price-will-ethereum-hit-in-august-2026,,133947.77855899997,0,0.0005,24,"Will Ethereum dip to $1,400 in August?",-0.0005
+3257429,what-price-will-solana-hit-in-august-2026,,192983.819226,0,0.0005,24,Will Solana reach $160 in August?,-0.0005
+3257506,what-price-will-dogecoin-hit-in-august-2026,,95237.027567,0,0.004,24,Will Dogecoin reach $0.15 in August?,-0.004
+3257336,what-price-will-bitcoin-hit-in-august-2026,,1921252.8397249994,0,0.0165,24,"Will Bitcoin reach $82,500 in August?",-0.0165
+3257360,what-price-will-bitcoin-hit-in-august-2026,,641035.3108839999,0,0.0005,24,"Will Bitcoin dip to $52,500 in August?",-0.0005
+3257362,what-price-will-bitcoin-hit-in-august-2026,,888844.6976460002,0,0.0005,24,"Will Bitcoin dip to $50,000 in August?",-0.0005
+3257368,what-price-will-bitcoin-hit-in-august-2026,,502045.37690500007,0,0.0005,24,"Will Bitcoin dip to $42,500 in August?",-0.0005
+3257409,what-price-will-ethereum-hit-in-august-2026,,156775.23193200002,0,0.0005,24,"Will Ethereum dip to $1,200 in August?",-0.0005
+3257332,what-price-will-bitcoin-hit-in-august-2026,,3088033.251118,0,0.0005,24,"Will Bitcoin reach $100,000 in August?",-0.0005
+3746578,what-price-will-ethereum-hit-in-august-2026,,189392.140233,0,0.004,24,"Will Ethereum reach $2,800 in August?",-0.004
+3746579,what-price-will-ethereum-hit-in-august-2026,,186435.72448299994,0,0.001,24,"Will Ethereum reach $2,900 in August?",-0.001
+3763514,what-price-will-bitcoin-hit-in-august-2026,,651596.5390860001,0,0.004,24,"Will Bitcoin reach $87,500 in August?",-0.004
+3763515,what-price-will-bitcoin-hit-in-august-2026,,881288.5507679998,0,0.001,24,"Will Bitcoin reach $90,000 in August?",-0.001
+1088683,2026-womens-us-open-winner-tennis,,53789.31550200001,0,0.0035,24,Will Liudmila Samsonova win the 2026 Women’s US Open?,-0.0035
+1088667,2026-womens-us-open-winner-tennis,,41648.770413,0,0.0025,24,Will Clara Tauson win the 2026 Women’s US Open?,-0.0025
+1088685,2026-womens-us-open-winner-tennis,,59558.43328099999,0,0.0015,24,Will Ashlyn Krueger win the 2026 Women’s US Open?,-0.0015
+1327991,which-club-will-cristiano-ronaldo-play-for-next,,33089.99852500001,0,0.003,24,Will Cristiano Ronaldo play for Seattle Sounders FC next?,-0.003
+1088485,2026-mens-us-open-winner-tennis,,688822.961208,0,0.071,24,Will Arthur Fils win the 2026 Men's US Open?,-0.071
+3096357,what-price-will-xauusd-hit-in-august-2026,,271897.72780499986,0,0.0135,24,"Will Gold (XAUUSD) hit (HIGH) $4,700 in August?",-0.0135
+3096409,what-price-will-wti-hit-in-august-2026,,416242.31822300004,0,0.001,24,Will WTI Crude Oil (WTI) hit (HIGH) $130 in August?,-0.001
+3096413,what-price-will-wti-hit-in-august-2026,,1462952.34949,0,0.114,24,Will WTI Crude Oil (WTI) hit (HIGH) $90 in August?,-0.114
+3096420,what-price-will-wti-hit-in-august-2026,,50150.93517499999,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $20 in August?,-0.0005
+3096365,what-price-will-xauusd-hit-in-august-2026,,92980.48240099999,0,0.001,24,"Will Gold (XAUUSD) hit (LOW) $3,900 in August?",-0.001
+3096366,what-price-will-xauusd-hit-in-august-2026,,50531.551306999994,0,0.0005,24,"Will Gold (XAUUSD) hit (LOW) $3,800 in August?",-0.0005
+3096407,what-price-will-wti-hit-in-august-2026,,471196.49348000006,0,0.0005,24,Will WTI Crude Oil (WTI) hit (HIGH) $150 in August?,-0.0005
+3096408,what-price-will-wti-hit-in-august-2026,,407020.70255199994,0,0.0005,24,Will WTI Crude Oil (WTI) hit (HIGH) $140 in August?,-0.0005
+3096412,what-price-will-wti-hit-in-august-2026,,842305.4875490001,0,0.0105,24,Will WTI Crude Oil (WTI) hit (HIGH) $100 in August?,-0.0105
+3096369,what-price-will-xauusd-hit-in-august-2026,,45637.873135,0,0.0005,24,"Will Gold (XAUUSD) hit (LOW) $3,500 in August?",-0.0005
+3096410,what-price-will-wti-hit-in-august-2026,,494016.485016,0,0.0005,24,Will WTI Crude Oil (WTI) hit (HIGH) $120 in August?,-0.0005
+3096417,what-price-will-wti-hit-in-august-2026,,67599.886361,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $50 in August?,-0.0005
+3096419,what-price-will-wti-hit-in-august-2026,,49668.971368000006,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $30 in August?,-0.0005
+3102467,what-price-will-wti-hit-in-august-2026,,484638.60100999987,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $65 in August?,-0.0005
+3096364,what-price-will-xauusd-hit-in-august-2026,,79845.796325,0,0.0015,24,"Will Gold (XAUUSD) hit (LOW) $4,000 in August?",-0.0015
+3096370,what-price-will-xauusd-hit-in-august-2026,,45607.008072,0,0.0005,24,"Will Gold (XAUUSD) hit (LOW) $3,400 in August?",-0.0005
+3096418,what-price-will-wti-hit-in-august-2026,,50393.65663099999,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $40 in August?,-0.0005
+3096436,what-price-will-ng-hit-in-august-2026,,37870.43150500001,0,0.0365,24,Will Natural Gas (NG) hit (HIGH) $3.00 in August?,-0.0365
+3096382,what-price-will-xagusd-hit-in-august-2026,,57825.382786,0,0.0255,24,Will Silver (XAGUSD) hit (HIGH) $72 in August?,-0.0255
+3096411,what-price-will-wti-hit-in-august-2026,,664271.3273549998,0,0.0015,24,Will WTI Crude Oil (WTI) hit (HIGH) $110 in August?,-0.0015
+3096416,what-price-will-wti-hit-in-august-2026,,669041.7435049999,0,0.001,24,Will WTI Crude Oil (WTI) hit (LOW) $60 in August?,-0.001
+3102466,what-price-will-wti-hit-in-august-2026,,489386.608487,0,0.0015,24,Will WTI Crude Oil (WTI) hit (HIGH) $115 in August?,-0.0015
+3128585,what-price-will-wti-hit-in-august-2026,,124457.957467,0,0.0005,24,Will WTI Crude Oil (WTI) hit (LOW) $55 in August?,-0.0005
+3096391,what-price-will-xagusd-hit-in-august-2026,,25164.167047000003,0,0.0055,24,Will Silver (XAGUSD) hit (LOW) $54 in August?,-0.0055
+3096415,what-price-will-wti-hit-in-august-2026,,520315.498206,0,0.0015,24,Will WTI Crude Oil (WTI) hit (LOW) $70 in August?,-0.0015
+3102464,what-price-will-wti-hit-in-august-2026,,584696.8343039998,0,0.003,24,Will WTI Crude Oil (WTI) hit (HIGH) $105 in August?,-0.003
+3383654,what-price-will-wti-hit-in-august-2026,,444385.4717029999,0,0.0075,24,Will WTI Crude Oil (WTI) hit (LOW) $75 in August?,-0.0075
+3102462,what-price-will-wti-hit-in-august-2026,,1281556.719549003,0,0.059,24,Will WTI Crude Oil (WTI) hit (HIGH) $95 in August?,-0.059
+1807950,kristi-noem-divorce-by-august-31,,38140.58456,1,0.095,24,Kristi Noem divorce by August 31?,0.905
+3008670,second-best-text-arena-math-ai-lab-end-of-august-20260720224944657,,34154.03604600001,1,0.985,24,Will Google be the second-best Math AI lab at the end of August 2026?,0.015000000000000013
+2954946,best-chinese-ai-company-end-of-august-20260717004241592,,266067.741652,1,0.9815,24,Will Alibaba have the best Chinese AI model at the end of August 2026?,0.01849999999999996
+3008875,2-ai-lab-end-of-august-style-control-on-20260720231255330,,27319.284705000005,1,0.9825,24,Will Meta be the #2 AI lab at the end of August 2026?,0.01749999999999996
+2955043,which-company-has-best-ai-model-end-of-august-20260717015626546,,526709.1611580001,1,0.996,24,Will Anthropic have the best AI model at the end of August 2026?,0.0040000000000000036
+2954910,which-company-has-the-best-code-arena-webdev-ai-model-end-of-august-20260716213053775,,34777.26462100001,1,0.958,24,Will Anthropic have the best Code Arena | WebDev AI at the end of August 2026?,0.04200000000000004
+3008457,second-best-code-arena-webdev-ai-lab-end-of-august-20260720215424125,,44692.04848,1,0.938,24,Will Moonshot be the second-best Code Arena | WebDev AI lab at the end of August 2026?,0.062000000000000055
+3008811,second-best-ai-lab-end-of-august-20260720230627650,,32172.86414,1,0.962,24,Will Google be the second-best AI lab at the end of August 2026?,0.038000000000000034
+3007804,which-company-has-the-best-ai-agent-end-of-august-20260716210246314,,31029.974997999998,0,0.007,24,Will OpenAI have the best AI Agent at the end of August 2026?,-0.007
+2955050,which-company-has-best-ai-model-end-of-august-20260717015626546,,238039.31872800004,0,0.0005,24,Will Z.ai have the best AI model at the end of August 2026?,-0.0005
+2955047,which-company-has-best-ai-model-end-of-august-20260717015626546,,119985.43205199996,0,0.0005,24,Will Moonshot have the best AI model at the end of August 2026?,-0.0005
+2955049,which-company-has-best-ai-model-end-of-august-20260717015626546,,35031.7095,0,0.0005,24,Will Baidu have the best AI model at the end of August 2026?,-0.0005
+2954951,best-chinese-ai-company-end-of-august-20260717004241592,,146527.17605599997,0,0.0005,24,Will DeepSeek have the best Chinese AI model at the end of August 2026?,-0.0005
+2954952,best-chinese-ai-company-end-of-august-20260717004241592,,67995.72984099998,0,0.0005,24,Will Bytedance have the best Chinese AI model at the end of August 2026?,-0.0005
+2954993,which-company-has-the-best-text-arena-math-ai-model-end-of-august-20260717012538240,,35580.96324999999,1,0.9885,24,Will Anthropic have the best Math AI model at the end of August 2026?,0.011499999999999955
+2954949,best-chinese-ai-company-end-of-august-20260717004241592,,162079.37420500003,0,0.0015,24,Will Z.ai have the best Chinese AI model at the end of August 2026?,-0.0015
+2954953,best-chinese-ai-company-end-of-august-20260717004241592,,87381.43716900003,0,0.0015,24,Will MiniMax have the best Chinese AI model at the end of August 2026?,-0.0015
+2954948,best-chinese-ai-company-end-of-august-20260717004241592,,98242.01042400002,0,0.0005,24,Will Baidu have the best Chinese AI model at the end of August 2026?,-0.0005
+2954950,best-chinese-ai-company-end-of-august-20260717004241592,,56729.112177,0,0.0015,24,Will Xiaomi have the best Chinese AI model at the end of August 2026?,-0.0015
+2954955,best-chinese-ai-company-end-of-august-20260717004241592,,73358.78431,0,0.0015,24,Will Tencent have the best Chinese AI model at the end of August 2026?,-0.0015
+2955051,which-company-has-best-ai-model-end-of-august-20260717015626546,,50863.339,0,0.0005,24,Will Xiaomi have the best AI model at the end of August 2026?,-0.0005
+2955055,which-company-has-best-ai-model-end-of-august-20260717015626546,,675513.9105,0,0.0005,24,Will Bytedance have the best AI model at the end of August 2026?,-0.0005
+2955058,which-company-has-best-ai-model-end-of-august-20260717015626546,,38167.550609,0,0.0005,24,Will MiniMax have the best AI model at the end of August 2026?,-0.0005
+2955059,which-company-has-best-ai-model-end-of-august-20260717015626546,,25350.797000000002,0,0.0005,24,Will Mistral have the best AI model at the end of August 2026?,-0.0005
+2955063,which-company-has-best-ai-model-end-of-august-20260717015626546,,42523.580833,0,0.0005,24,Will Microsoft have the best AI model at the end of August 2026?,-0.0005
+3008458,second-best-code-arena-webdev-ai-lab-end-of-august-20260720215424125,,25394.156693,0,0.0125,24,Will Anthropic be the second-best Code Arena | WebDev AI lab at the end of August 2026?,-0.0125
+3008604,second-best-chinese-ai-company-end-of-august-20260717141100971,,45422.128045,1,0.9715,24,Will Moonshot be the second-best Chinese AI company at the end of August 2026?,0.02849999999999997
+3008606,second-best-chinese-ai-company-end-of-august-20260717141100971,,33591.565977,0,0.024,24,Will Z.ai be the second-best Chinese AI company at the end of August 2026?,-0.024
+2954956,best-chinese-ai-company-end-of-august-20260717004241592,,28904.825320999997,0,0.0005,24,Will StepFun have the best Chinese AI model at the end of August 2026?,-0.0005
+2955044,which-company-has-best-ai-model-end-of-august-20260717015626546,,187472.31585199997,0,0.0005,24,Will Meta have the best AI model at the end of August 2026?,-0.0005
+2955045,which-company-has-best-ai-model-end-of-august-20260717015626546,,254942.182733,0,0.001,24,Will Google have the best AI model at the end of August 2026?,-0.001
+2955046,which-company-has-best-ai-model-end-of-august-20260717015626546,,166772.794446,0,0.0005,24,Will Alibaba have the best AI model at the end of August 2026?,-0.0005
+2955052,which-company-has-best-ai-model-end-of-august-20260717015626546,,222110.609717,0,0.0005,24,Will SpaceXAI have the best AI model at the end of August 2026?,-0.0005
+2955053,which-company-has-best-ai-model-end-of-august-20260717015626546,,300795.36630399997,0,0.0005,24,Will DeepSeek have the best AI model at the end of August 2026?,-0.0005
+2955048,which-company-has-best-ai-model-end-of-august-20260717015626546,,253449.33722399996,0,0.0035,24,Will OpenAI have the best AI model at the end of August 2026?,-0.0035
+3008812,second-best-ai-lab-end-of-august-20260720230627650,,32172.574120999998,0,0.0125,24,Will Alibaba be the second-best AI lab at the end of August 2026?,-0.0125
+2954947,best-chinese-ai-company-end-of-august-20260717004241592,,88488.724844,0,0.0165,24,Will Moonshot have the best Chinese AI model at the end of August 2026?,-0.0165
+2941259,3rd-largest-company-end-of-august-20260715203029875,,78717.97566599998,0,0.0015,24,Will Apple be the third-largest company in the world by market cap on August 31?,-0.0015
+2941260,3rd-largest-company-end-of-august-20260715203029875,,104733.96805900002,1,0.988,24,Will Alphabet be the third-largest company in the world by market cap on August 31?,0.01200000000000001
+2941288,2nd-largest-company-end-of-august-20260715202554129,,189649.47589,1,0.9965,24,Will Apple be the second-largest company in the world by market cap on August 31?,0.0034999999999999476
+2941289,2nd-largest-company-end-of-august-20260715202554129,,178155.61305599997,0,0.005,24,Will Alphabet be the second-largest company in the world by market cap on August 31?,-0.005
+2941316,largest-company-end-of-august-20260715202138598,,275760.997327,0,0.0005,24,Will Microsoft be the largest company in the world by market cap on August 31?,-0.0005
+2941317,largest-company-end-of-august-20260715202138598,,526940.076608,0,0.0005,24,Will Apple be the largest company in the world by market cap on August 31?,-0.0005
+2941318,largest-company-end-of-august-20260715202138598,,506642.24386600003,0,0.0005,24,Will Alphabet be the largest company in the world by market cap on August 31?,-0.0005
+2941321,largest-company-end-of-august-20260715202138598,,275772.6673219999,0,0.0005,24,Will Amazon be the largest company in the world by market cap on August 31?,-0.0005
+2941286,2nd-largest-company-end-of-august-20260715202554129,,114784.59704899997,0,0.0015,24,Will NVIDIA be the second-largest company in the world by market cap on August 31?,-0.0015
+2941287,2nd-largest-company-end-of-august-20260715202554129,,36049.685397,0,0.0005,24,Will Microsoft be the second-largest company in the world by market cap on August 31?,-0.0005
+2941315,largest-company-end-of-august-20260715202138598,,779953.7545239995,1,0.998,24,Will NVIDIA be the largest company in the world by market cap on August 31?,0.0020000000000000018
+2941319,largest-company-end-of-august-20260715202138598,,226000.60253600002,0,0.0005,24,Will Tesla be the largest company in the world by market cap on August 31?,-0.0005
+2941320,largest-company-end-of-august-20260715202138598,,176480.73945299996,0,0.0005,24,Will Saudi Aramco be the largest company in the world by market cap on August 31?,-0.0005
+2941322,largest-company-end-of-august-20260715202138598,,153957.13631,0,0.0005,24,Will Broadcom be the largest company in the world by market cap on August 31?,-0.0005
+2941257,3rd-largest-company-end-of-august-20260715203029875,,102566.129727,0,0.0005,24,Will NVIDIA be the third-largest company in the world by market cap on August 31?,-0.0005
+2941258,3rd-largest-company-end-of-august-20260715203029875,,61015.942666999996,0,0.006,24,Will Microsoft be the third-largest company in the world by market cap on August 31?,-0.006
+3096331,what-price-will-spy-hit-in-august-2026,,39329.529997,0,0.08,24,Will S&P 500 (SPY) hit (HIGH) $780 in August?,-0.08
+3096169,what-price-will-nvda-hit-in-august-2026,,45449.87444100001,0,0.0295,24,Will NVIDIA (NVDA) hit (HIGH) $240 in August?,-0.0295
+3096170,what-price-will-nvda-hit-in-august-2026,,29393.503717000007,0,0.018,24,Will NVIDIA (NVDA) hit (HIGH) $232 in August?,-0.018
+3096330,what-price-will-spy-hit-in-august-2026,,36715.81132700001,0,0.028,24,Will S&P 500 (SPY) hit (HIGH) $790 in August?,-0.028
+2555694,where-will-bradley-barcola-transfer-20260612224628256,,31137.108012000004,0,0.005,24,Will Bradley Barcola stay at Paris Saint-Germain?,-0.005
+2555679,where-will-bradley-barcola-transfer-20260612224628256,,72344.59615599999,1,0.989,24,Will Bradley Barcola join Liverpool?,0.01100000000000001
+3772723,elon-musk-of-tweets-august-25-september-1-2026,,160095.27956600004,0,0.0365,24,"Will Elon Musk post 120-139 tweets from August 25 to September 1, 2026?",-0.0365
+3706966,col1-adc-cab-2026-08-31,,57577.02060299999,1,0.3,24,Will AD Cali vs. CA Bucaramanga end in a draw?,0.7
+1973887,fedex-cup-playoffs-winner,,30932.565119000006,1,0.175,24,Will Scottie Scheffler win the 2026 TOUR Championship?,0.825
+1088473,2026-mens-us-open-winner-tennis,,1395326.5825170006,0,0.0955,24,Will Novak Djokovic win the 2026 Men's US Open?,-0.0955
+3706963,col1-adc-cab-2026-08-31,,49685.336642,0,0.47,24,Will AD Cali win on 2026-08-31?,-0.47
+3706967,col1-adc-cab-2026-08-31,,30943.163631,0,0.22,24,Will CA Bucaramanga win on 2026-08-31?,-0.22
+1088682,2026-womens-us-open-winner-tennis,,43392.13094799998,0,0.0015,24,Will Dayana Yastremska win the 2026 Women’s US Open?,-0.0015
+1973894,fedex-cup-playoffs-winner,,101020.685112,0,0.009,24,Will Min Woo Lee win the 2026 TOUR Championship?,-0.009
+1973888,fedex-cup-playoffs-winner,,25337.190481999995,0,0.007,24,Will Jacob Bridgeman win the 2026 TOUR Championship?,-0.007
+1973912,fedex-cup-playoffs-winner,,318922.88710500003,0,0.0115,24,Will Gary Woodland win the 2026 TOUR Championship?,-0.0115
+3700195,us-ceasefire-against-iran-continues-throughptptpt,,1679995.720882,0,0.885,24,US ceasefire against Iran continues through September 15?,-0.885
+1088662,2026-womens-us-open-winner-tennis,,574857.80095,0,0.0095,24,Will Barbora Krejcikova win the 2026 Women’s US Open?,-0.0095
+3772714,elon-musk-of-tweets-august-25-september-1-2026,,156142.92727100005,0,0.0145,24,"Will Elon Musk post 100-119 tweets from August 25 to September 1, 2026?",-0.0145
+3745384,crint-gbr-pak-2026-08-27,,101113.49784099997,1,0.957,24,Will England win?,0.04300000000000004
+3745385,crint-gbr-pak-2026-08-27,,36577.283638,0,0.0085,24,Will the match end in a draw?,-0.0085
+3745386,crint-gbr-pak-2026-08-27,,115526.14717600003,0,0.0215,24,Will Pakistan win?,-0.0215
+3076478,elon-musk-of-tweets-august-2026,,97040.256694,0,0.0685,24,Will Elon Musk post 800-839 tweets in August 2026?,-0.0685
+2555794,where-will-rafael-leao-transfer-20260612222809594,,29758.62926,0,0.0005,24,Will Rafael Leao join Fenerbahce?,-0.0005
+2555804,where-will-rafael-leao-transfer-20260612222809594,,75000.065208,0,0.0035,24,Will Rafael Leao stay at AC Milan?,-0.0035
+3788817,rurgr-rsa-nzl-2026-08-29,,26494.803798000004,1,0.71,24,Will South Africa win in regulation?,0.29000000000000004
+2553053,where-will-emiliano-martinez-transfer-20260612234353773,,79291.959704,0,0.0115,24,Will Emiliano Martinez stay at Aston Villa?,-0.0115
+3772705,elon-musk-of-tweets-august-25-september-1-2026,,177364.88866099998,0,0.0045,24,"Will Elon Musk post 80-99 tweets from August 25 to September 1, 2026?",-0.0045
+3515998,when-will-the-rhine-river-return-to-normal-levels-1786402709329,,29262.243382,1,0.387,24,"Will the Rhine River return to normal levels before September 1, 2026?",0.613
+3515999,when-will-the-rhine-river-return-to-normal-levels-1786402709329,,27841.094830000005,0,0.315,24,"Will the Rhine River return to normal levels between September 1 and September 14, 2026?",-0.315
+3772696,elon-musk-of-tweets-august-25-september-1-2026,,90840.58119200001,0,0.012,24,"Will Elon Musk post 60-79 tweets from August 25 to September 1, 2026?",-0.012
+3076475,elon-musk-of-tweets-august-2026,,36057.956476,0,0.007,24,Will Elon Musk post 780-799 tweets in August 2026?,-0.007
+2946383,cook-islands-parliamentary-election-ngatangiia-winner-20260715192220118,,30368.726074000002,1,0.9715,24,Will Tukaka George Tamarua Ama win the Ngatangiia constituency in the 2026 Cook Islands parliamentary elections?,0.02849999999999997
+3076470,elon-musk-of-tweets-august-2026,,28291.343803000003,0,0.002,24,Will Elon Musk post 760-779 tweets in August 2026?,-0.002
+3778089,mlb-sd-tb-2026-08-28,,29278.674645000003,0,0.49,24,Will there be a run scored in the first inning?: San Diego Padres vs. Tampa Bay Rays,-0.49
+3772685,elon-musk-of-tweets-august-25-september-1-2026,,58076.543000000005,0,0.001,24,"Will Elon Musk post 40-59 tweets from August 25 to September 1, 2026?",-0.001
+1088688,2026-womens-us-open-winner-tennis,,40239.102333,0,0.0005,24,Will Beatriz Haddad Maia win the 2026 Women’s US Open?,-0.0005
+1088474,2026-mens-us-open-winner-tennis,,394364.12197600014,0,0.0005,24,Will Jack Draper win the 2026 Men's US Open?,-0.0005
+1088484,2026-mens-us-open-winner-tennis,,204793.82980899996,0,0.0005,24,Will Holger Rune win the 2026 Men's US Open?,-0.0005
+1088664,2026-womens-us-open-winner-tennis,,59495.02275,0,0.0005,24,Will Marketa Vondrousova win the 2026 Women’s US Open?,-0.0005
+1088665,2026-womens-us-open-winner-tennis,,54940.056614,0,0.0005,24,Will Victoria Mboko win the 2026 Women’s US Open?,-0.0005
+1088669,2026-womens-us-open-winner-tennis,,78996.76134300002,0,0.0005,24,Will Emma Raducanu win the 2026 Women’s US Open?,-0.0005
+704425,fl-19-republican-primary-winner,,43806.743505,0,0.0005,24,Will Bob Rommel be the Republican nominee for FL-19?,-0.0005
+799881,florida-democratic-senate-primary-winner,,36724.411240999994,0,0.0005,24,Will Jennifer Jenkins be the Democratic nominee for Senate in Florida?,-0.0005
+799883,florida-democratic-senate-primary-winner,,88123.21559100001,1,0.9995,24,Will Angie Nixon be the Democratic nominee for Senate in Florida?,0.0004999999999999449
+799876,florida-democratic-senate-primary-winner,,52959.940148999995,0,0.0005,24,Will Jared Moskowitz be the Democratic nominee for Senate in Florida?,-0.0005
+799879,florida-democratic-senate-primary-winner,,99614.482946,0,0.0005,24,Will Alexander Vindman be the Democratic nominee for Senate in Florida?,-0.0005
+907579,wisconsin-governor-republican-primary-winner,,37785.116957000006,0,0.001,24,Will Sean Duffy win the 2026 Wisconsin Governor Republican primary election?,-0.001
+3257439,what-price-will-solana-hit-in-august-2026,,123433.59577400002,1,0.1055,24,Will Solana reach $110 in August?,0.8945
+704426,fl-19-republican-primary-winner,,42302.648309000004,0,0.0005,24,Will Spencer Roach be the Republican nominee for FL-19?,-0.0005
+1088479,2026-mens-us-open-winner-tennis,,583458.6338000002,0,0.0005,24,Will Joao Fonseca win the 2026 Men's US Open?,-0.0005
+2761138,james-fishback-vote-share-in-2026-florida-republican-governor-primary-20260701214154078,,36005.638343000006,1,0.9865,24,Will James Fishback win 10–15% of votes in the Florida Republican Governor primary?,0.013499999999999956
+2761137,james-fishback-vote-share-in-2026-florida-republican-governor-primary-20260701214154078,,280544.05077799986,0,0.0085,24,Will James Fishback win less than 10% of votes in the Florida Republican Governor primary?,-0.0085
+2761142,james-fishback-vote-share-in-2026-florida-republican-governor-primary-20260701214154078,,29054.465190000003,0,0.002,24,Will James Fishback at least 30% of votes in the Florida Republican Governor primary?,-0.002
+2378914,bank-of-korea-decision-in-august,,29862.165575,0,0.33,24,Will the Bank of Korea hold at the August 2026 meeting?,-0.33
+2378915,bank-of-korea-decision-in-august,,28022.164757000013,1,0.675,24,Will the Bank of Korea hike by 25 bps at the August 2026 meeting?,0.32499999999999996
+2378916,bank-of-korea-decision-in-august,,66151.85653399998,0,0.0005,24,Will the Bank of Korea hike by 50 bps or more at the August 2026 meeting?,-0.0005
+3743635,mlb-kc-tor-2026-08-26,,37886.977513000005,0,0.455,24,Will there be a run scored in the first inning?: Kansas City Royals vs. Toronto Blue Jays,-0.455
+825091,oklahoma-governor-republican-primary-winner,,478239.75519899995,0,0.21,24,Will Gentner Drummond win the 2026 Oklahoma Governor Republican primary election?,-0.21
+3743606,mlb-phi-sea-2026-08-26,,80570.73162100001,1,0.445,24,Will there be a run scored in the first inning?: Philadelphia Phillies vs. Seattle Mariners,0.5549999999999999
+3743573,mlb-tb-det-2026-08-26,,48346.044827,0,0.435,24,Will there be a run scored in the first inning?: Tampa Bay Rays vs. Detroit Tigers,-0.435
+1131742,2025-2026-pfa-players-player-of-the-year-winner,,28670.764699000003,0,0.002,24,Will Rayan Cherki win the 2026 PFA Player of the Year?,-0.002
+1131737,2025-2026-pfa-players-player-of-the-year-winner,,66058.64109399998,0,0.11,24,Will Declan Rice win the 2026 PFA Player of the Year?,-0.11
+943396,oklahoma-democratic-senate-primary-winner,,88648.84135800002,1,0.914,24,Will N’Kiyla “Jasmine” Thomas be the Democratic nominee for Senate in Oklahoma?,0.08599999999999997
+825095,oklahoma-governor-republican-primary-winner,,146167.13220099997,0,0.0005,24,Will Charles McCall win the 2026 Oklahoma Governor Republican primary election?,-0.0005
+1131738,2025-2026-pfa-players-player-of-the-year-winner,,58260.09442100001,0,0.0175,24,Will Erling Haaland win the 2026 PFA Player of the Year?,-0.0175
+3720842,mlb-mil-nym-2026-08-25,,37873.418425,0,0.44,24,Will there be a run scored in the first inning?: Milwaukee Brewers vs. New York Mets,-0.44
+825094,oklahoma-governor-republican-primary-winner,,340416.10913399997,1,0.772,24,Will Mike Mazzei win the 2026 Oklahoma Governor Republican primary election?,0.22799999999999998
+943398,oklahoma-democratic-senate-primary-winner,,29839.833137000005,0,0.066,24,Will Jim Priest be the Democratic nominee for Senate in Oklahoma?,-0.066
+2896069,south-carolina-republican-senate-special-primary-winner-20260712135206676,,26817.960801999998,0,0.0005,24,Will Mark Lynch be the new Republican nominee for Senate in South Carolina?,-0.0005
+2896071,south-carolina-republican-senate-special-primary-winner-20260712135206676,,1322260.5534619999,0,0.37,24,Will Ralph Norman be the new Republican nominee for Senate in South Carolina?,-0.37
+2896073,south-carolina-republican-senate-special-primary-winner-20260712135206676,,287282.6956389999,0,0.0005,24,Will Russell Fry be the new Republican nominee for Senate in South Carolina?,-0.0005
+2896080,south-carolina-republican-senate-special-primary-winner-20260712135206676,,2445816.7951310007,1,0.6295,24,Will Darline Graham Nordone be the new republican nominee for Senate in South Carolina?,0.37050000000000005
+2896081,south-carolina-republican-senate-special-primary-winner-20260712135206676,,371025.48280000006,0,0.0005,24,Will Mark Sanford be the new republican nominee for Senate in South Carolina?,-0.0005
+2446739,ga-13-special-election-winner-20260604224652888,,28649.963719,0,0.866,24,Will Marcye Scott win the 2026 GA-13 special election?,-0.866
+3720894,mlb-pit-sd-2026-08-25,,40571.938596,0,0.425,24,Will there be a run scored in the first inning?: Pittsburgh Pirates vs. San Diego Padres,-0.425
+3720873,mlb-cle-laa-2026-08-25,,33139.65771099999,1,0.45,24,Will there be a run scored in the first inning?: Cleveland Guardians vs. Los Angeles Angels,0.55
+3720789,mlb-tb-det-2026-08-25,,30409.790721,0,0.48,24,Will there be a run scored in the first inning?: Tampa Bay Rays vs. Detroit Tigers,-0.48
+1131753,2025-2026-pfa-players-player-of-the-year-winner,,148907.493021,1,0.875,24,Will Bruno Fernandes win the 2026 PFA Player of the Year?,0.125
+973624,mn-05-democratic-primary-winner,,31428.52021300001,1,0.9995,24,Will Ilhan Omar be the Democratic Nominee for MN-05?,0.0004999999999999449
+2915350,kazakhstan-kurultai-election-2nd-place-20260713225045611,,83760.585497,1,0.974,24,Will Auyl win the second most seats in the 2026 Kazakh Kurultai elections?,0.026000000000000023
+2822708,michigan-democratic-senate-primary-margin-of-victory-20260706180330731,,29011.392717999992,1,0.995,24,Will Abdul El-Sayed win the Michigan Senate Democratic primary by less than 5%?,0.0050000000000000044
+2822705,michigan-democratic-senate-primary-margin-of-victory-20260706180330731,,27725.678177,0,0.0035,24,Will Abdul El-Sayed win the Michigan Senate Democratic primary by 15–20%?,-0.0035
+2822706,michigan-democratic-senate-primary-margin-of-victory-20260706180330731,,53106.00696300001,0,0.0005,24,Will Abdul El-Sayed win the Michigan Senate Democratic primary by 10–15%?,-0.0005
+2822707,michigan-democratic-senate-primary-margin-of-victory-20260706180330731,,60784.11934400002,0,0.0025,24,Will Abdul El-Sayed win the Michigan Senate Democratic primary by 5–10%?,-0.0025
+3696502,mlb-cin-sf-2026-08-24,,40505.251193000004,1,0.445,24,Will there be a run scored in the first inning?: Cincinnati Reds vs. San Francisco Giants,0.5549999999999999
+3696500,mlb-phi-sea-2026-08-24,,41017.511771000005,1,0.395,24,Will there be a run scored in the first inning?: Philadelphia Phillies vs. Seattle Mariners,0.605
+2953600,cook-islands-parliamentary-election-party-winner-20260715185920487,,59662.645419,1,0.9965,24,Will Cook Islands Party win the most seats in the 2026 Cook Islands parliamentary elections?,0.0034999999999999476
+3257338,what-price-will-bitcoin-hit-in-august-2026,,1516226.8691639998,1,0.616,24,"Will Bitcoin reach $80,000 in August?",0.384
+3780325,what-price-will-ethereum-hit-in-august-2026,,45256.585,1,0.655,24,"Will Ethereum reach $2,500 in August?",0.345
+1973896,fedex-cup-playoffs-winner,,290327.26385700004,0,0.0015,24,Will Jake Knapp win the 2026 TOUR Championship?,-0.0015
+1973911,fedex-cup-playoffs-winner,,1330903.78262,0,0.0155,24,Will Sahith Theegala win the 2026 TOUR Championship?,-0.0155
+1973915,fedex-cup-playoffs-winner,,330244.104142,0,0.007,24,Will Sudarshan Yellamaraju win the 2026 TOUR Championship?,-0.007
+1973908,fedex-cup-playoffs-winner,,188722.405219,0,0.0035,24,Will Nicolai Højgaard win the 2026 TOUR Championship?,-0.0035
+826115,connecticut-governor-democratic-primary-winner,,26002.474808000003,1,0.9995,24,Will Ned Lamont win the 2026 Connecticut Governor Democratic primary election?,0.0004999999999999449
+1088471,2026-mens-us-open-winner-tennis,,516969.26967499993,0,0.355,24,Will Jannik Sinner win the 2026 Men's US Open?,-0.355
+2853462,gpt-6-released-by,,190368.80985899997,0,0.004,24,"Will GPT-6 be released by August 21, 2026?",-0.004
+3257441,what-price-will-solana-hit-in-august-2026,,122842.91469799998,1,0.3085,24,Will Solana reach $100 in August?,0.6915
+3257482,what-price-will-xrp-hit-in-august-2026,,49071.701288,1,0.0825,24,Will XRP reach $1.60 in August?,0.9175
+704428,fl-19-republican-primary-winner,,38170.87013199999,1,0.9995,24,Will Jim Schwartzel be the Republican nominee for FL-19?,0.0004999999999999449
+3257388,what-price-will-ethereum-hit-in-august-2026,,379514.473462,1,0.392,24,"Will Ethereum reach $2,500 in August?",0.608
+3096383,what-price-will-xagusd-hit-in-august-2026,,47677.880100999995,1,0.51,24,Will Silver (XAGUSD) hit (HIGH) $70 in August?,0.49
+1993060,ca-14-special-election-winner,,111999.88972699997,1,0.91,24,Will Aisha Wahab win the CA-14 special election?,0.08999999999999997
+3096358,what-price-will-xauusd-hit-in-august-2026,,126819.15623799997,1,0.516,24,"Will Gold (XAUUSD) hit (HIGH) $4,600 in August?",0.484
+3257483,what-price-will-xrp-hit-in-august-2026,,624329.7315870001,1,0.0465,24,Will XRP reach $1.40 in August?,0.9535
+1993061,ca-14-special-election-winner,,37655.068523,0,0.0955,24,Will Melissa Hernandez win the CA-14 special election?,-0.0955
+3258429,what-price-will-hyperliquid-hit-in-august,,129699.78450299999,1,0.5135,24,Will Hyperliquid reach $76 in August?,0.48650000000000004
+3257389,what-price-will-ethereum-hit-in-august-2026,,336751.24942600005,1,0.4175,24,"Will Ethereum reach $2,400 in August?",0.5825
+2663611,us-iran-60-day-negotiation-period-extended-20260624044855448,,2894249.7596790027,0,0.0105,24,US-Iran 60 day negotiation period extended?,-0.0105
+3257340,what-price-will-bitcoin-hit-in-august-2026,,834330.275556,1,0.101,24,"Will Bitcoin reach $77,500 in August?",0.899
+3257443,what-price-will-solana-hit-in-august-2026,,56474.59087199999,1,0.557,24,Will Solana reach $90 in August?,0.44299999999999995
+3257342,what-price-will-bitcoin-hit-in-august-2026,,1061886.178272,1,0.2205,24,"Will Bitcoin reach $75,000 in August?",0.7795
+3096384,what-price-will-xagusd-hit-in-august-2026,,28887.222561,1,0.66,24,Will Silver (XAGUSD) hit (HIGH) $68 in August?,0.33999999999999997
+3257344,what-price-will-bitcoin-hit-in-august-2026,,1031665.6637239998,1,0.0445,24,"Will Bitcoin reach $72,500 in August?",0.9555
+3257486,what-price-will-xrp-hit-in-august-2026,,61173.82387099999,1,0.0265,24,Will XRP reach $1.20 in August?,0.9735
+2822715,wa-03-primary-first-place-20260706195611094,,42401.678086999986,1,0.9765,24,Will John Braun earn the most votes in the WA-03 primary?,0.023499999999999965
+2822716,wa-03-primary-first-place-20260706195611094,,27173.18669,0,0.013,24,Will Marie Gluesenkamp Perez earn the most votes in the WA-03 primary?,-0.013
+1006913,fl-09-republican-primary-winner,,31519.517456999998,1,0.465,24,Will Dan Green be the Republican nominee for FL-09?,0.5349999999999999
+3257346,what-price-will-bitcoin-hit-in-august-2026,,897286.068784,1,0.115,24,"Will Bitcoin reach $70,000 in August?",0.885
+2853652,will-russia-capture-kostyantynivka-by,,505499.3292200002,1,0.977,24,Will Russia capture Kostyantynivka by August 31?,0.02300000000000002
+3257390,what-price-will-ethereum-hit-in-august-2026,,234407.79509200001,1,0.0305,24,"Will Ethereum reach $2,300 in August?",0.9695
+3096359,what-price-will-xauusd-hit-in-august-2026,,81601.100246,1,0.4005,24,"Will Gold (XAUUSD) hit (HIGH) $4,500 in August?",0.5994999999999999
+3257391,what-price-will-ethereum-hit-in-august-2026,,150203.16789100002,1,0.075,24,"Will Ethereum reach $2,200 in August?",0.925
+704479,republican-nominee-for-florida-governor,,54194.708683,0,0.0005,24,Will Jimmy Patronis be the Republican nominee for Florida Governor?,-0.0005
+704480,republican-nominee-for-florida-governor,,52967.602915,0,0.0005,24,Will Matt Gaetz be the Republican nominee for Florida Governor?,-0.0005
+704478,republican-nominee-for-florida-governor,,227503.95230499996,0,0.0005,24,Will Casey DeSantis be the Republican nominee for Florida Governor?,-0.0005
+704476,republican-nominee-for-florida-governor,,83086.17798199996,0,0.0005,24,Will Wilton Simpson be the Republican nominee for Florida Governor?,-0.0005
+3257392,what-price-will-ethereum-hit-in-august-2026,,255018.47836799998,1,0.185,24,"Will Ethereum reach $2,100 in August?",0.815
+3257348,what-price-will-bitcoin-hit-in-august-2026,,738567.9082280002,1,0.395,24,"Will Bitcoin reach $67,500 in August?",0.605
+3257393,what-price-will-ethereum-hit-in-august-2026,,341027.49091700005,1,0.515,24,"Will Ethereum reach $2,000 in August?",0.485
+3021691,michigan-democratic-senate-primary-oakland-county-winner-20260721153909098,,48062.510204000006,1,0.9885,24,Will Haley Stevens win Oakland County in the Michigan Senate Democratic primary?,0.011499999999999955
+2875012,florida-governor-republican-primary-second-place-20260710143927093,,81042.245737,1,0.765,24,Will Jay Collins finish second in the Florida Republican Governor primary?,0.235
+3021690,michigan-democratic-senate-primary-oakland-county-winner-20260721153909098,,41966.990417,0,0.0055,24,Will Abdul El-Sayed win Oakland County in the Michigan Senate Democratic primary?,-0.0055
+2732526,russia-x-ukraine-any-diplomatic-meeting-byptptpt-20260629155934230,,302859.41881700006,1,0.205,24,"Will Russia and Ukraine hold any diplomatic meeting by August 31, 2026?",0.795
+2875015,florida-governor-republican-primary-second-place-20260710143927093,,79787.327565,0,0.225,24,Will James Fishback finish second in the Florida Republican Governor primary?,-0.225
+1006908,fl-09-republican-primary-winner,,62915.10806700001,0,0.173,24,Will Thomas Chalifoux be the Republican nominee for FL-09?,-0.173
+1006912,fl-09-republican-primary-winner,,43845.255614,0,0.3115,24,Will Ben Butler be the Republican nominee for FL-09?,-0.3115
+3006436,fl-02-republican-primary-winner-20260717204308964,,43118.58330099999,1,0.83,24,Will Austin Rogers be the FL-02 Republican nominee?,0.17000000000000004
+3006464,fl-07-republican-primary-winner-20260717204847811,,28273.464706000002,1,0.85,24,Will Ryan Elijah be the FL-07 Republican nominee?,0.15000000000000002
+2044836,fl-20-democratic-primary-winner,,31657.289380999995,1,0.84,24,Will Debbie Wasserman Schultz be the Democratic nominee for FL-20?,0.16000000000000003
+1973824,fl-06-republican-primary-winner,,42459.340913,1,0.983,24,Will Randy Fine be the Republican nominee for FL-06?,0.017000000000000015
+2633429,us-iran-final-nuclear-deal-by-20260621201254412,,2730303.833568,0,0.0015,24,"US-Iran Final Nuclear Deal by August 18, 2026?",-0.0015
+907599,wyoming-governor-republican-primary-winner,,214138.64466799996,1,0.807,24,Will Eric Barlow win the 2026 Wyoming Governor Republican primary election?,0.19299999999999995
+907600,wyoming-governor-republican-primary-winner,,39709.164235000004,0,0.035,24,Will Brent Bien win the 2026 Wyoming Governor Republican primary election?,-0.035
+907604,wyoming-governor-republican-primary-winner,,118618.74452599997,0,0.1685,24,Will Megan Degenfelder win the 2026 Wyoming Governor Republican primary election?,-0.1685
+704424,fl-19-republican-primary-winner,,89483.72565000004,0,0.895,24,Will Catalina Lauf be the Republican nominee for FL-19?,-0.895
+704474,republican-nominee-for-florida-governor,,1495808.9805130004,1,0.9905,24,Will Byron Donalds be the Republican nominee for Florida Governor?,0.009499999999999953
+704475,republican-nominee-for-florida-governor,,6462255.492774996,0,0.0085,24,Will James Fishback be the Republican nominee for Florida Governor?,-0.0085
+704477,republican-nominee-for-florida-governor,,1419766.7469359997,0,0.0025,24,Will Jay Collins be the Republican nominee for Florida Governor?,-0.0025
+3006430,fl-02-republican-primary-winner-20260717204308964,,30062.550852000004,0,0.175,24,Will Keith Gross be the FL-02 Republican nominee?,-0.175
+3006466,fl-07-republican-primary-winner-20260717204847811,,34428.690198000004,0,0.13,24,Will Cory Mills be the FL-07 Republican nominee?,-0.13
+1973820,fl-06-republican-primary-winner,,41190.920438999994,0,0.0005,24,Will Alexandra Van Cleef be the Republican nominee for FL-06?,-0.0005
+1973822,fl-06-republican-primary-winner,,28867.231050000006,0,0.01,24,Will Aaron Baker be the Republican nominee for FL-06?,-0.01
+1973823,fl-06-republican-primary-winner,,204780.444456,0,0.0085,24,Will Dan Bilzerian be the Republican nominee for FL-06?,-0.0085
+2044833,fl-20-democratic-primary-winner,,40380.42051999999,0,0.11,24,Will Elijah Manley be the Democratic nominee for FL-20?,-0.11
+2820206,iran-announces-withdrawal-from-mou-negotiations-byptptpt-20260622191732319,,1530015.7302569998,0,0.0005,24,Will Iran announce withdrawal from MOU negotiations by August 15?,-0.0005
+2555492,where-will-rodri-transfer-20260612230519201,,331338.62622100004,1,0.99,24,Will Rodri join Barcelona?,0.010000000000000009
+2555491,where-will-rodri-transfer-20260612230519201,,202523.01961900006,0,0.0035,24,Will Rodri join Real Madrid?,-0.0035
+2555493,where-will-rodri-transfer-20260612230519201,,78449.77848099999,0,0.0005,24,Will Rodri join Paris Saint-Germain?,-0.0005
+2555494,where-will-rodri-transfer-20260612230519201,,33373.391793999996,0,0.0005,24,Will Rodri join Al-Hilal?,-0.0005
+2555505,where-will-rodri-transfer-20260612230519201,,172877.29950800005,0,0.009,24,Will Rodri stay at Manchester City?,-0.009
+2952488,israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963,,2534770.3530070027,1,0.9995,24,Israel x Iran ceasefire continues through August 15?,0.0004999999999999449
+2446611,zambia-presidential-election-winner-20260604205247322,,122664.044528,1,0.986,24,Will Hakainde Hichilema win the 2026 Zambian presidential elections?,0.014000000000000012
+2446612,zambia-presidential-election-winner-20260604205247322,,93002.44590300001,0,0.009,24,Will Brian Mundubile win the 2026 Zambian presidential elections?,-0.009
+3492743,what-price-will-bitcoin-hit-in-august-2026,,270457.862113,1,0.695,24,"Will Bitcoin reach $65,000 in August?",0.30500000000000005

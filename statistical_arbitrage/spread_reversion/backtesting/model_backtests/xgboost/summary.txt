@@ -1,0 +1,30 @@
+=== xgboost — ML WATCH backtest (bias-hardened) ===
+events: 113   T2 base: 43%   symbols: 18
+split: newest 22 events (arm>=1007) = FINAL UNTOUCHED TEST; rest = walk-forward validation
+look-ahead guard: training requires arm+OBS+10 < fold boundary (no label leakage)
+gates: raw prob >= 0.5  &  EV > 0.0  (fixed a priori, not tuned on test)
+mechanical trade: LONG A/SHORT B, exit z>=0 / stop 5% notional / max 30d
+
+--- walk-forward VALIDATION (all events except final test) ---
+  walk-forward folds: 5   (events arm<1007 only train, never validate; validated events below)
+--- VALIDATION ---
+  events: 41   T2 win: 39%   signals(raw>=0.5): 17
+  trades taken: 3   net: Rs +223   win%: 67%   avg: Rs +74
+  exits: {'ZERO': np.int64(1), 'TIME': np.int64(1), 'STOP': np.int64(1)}   avg hold: 29d
+  per-pair:
+    JSWSTEEL    /TATASTEEL    n=1  net=Rs  +1,177  win=100%
+    HCLTECH     /TCS          n=1  net=Rs     +31  win=100%
+    ICICIBANK   /NESTLEIND    n=1  net=Rs    -985  win=0%
+
+--- FINAL TEST ---
+  events: 22   T2 win: 41%   signals(raw>=0.5): 6
+  trades taken: 2   net: Rs -171   win%: 50%   avg: Rs -86
+  exits: {'STOP': np.int64(1), 'ZERO': np.int64(1)}   avg hold: 6d
+  per-pair:
+    JSWSTEEL    /WIPRO        n=1  net=Rs  +1,061  win=100%
+    HCLTECH     /HINDALCO     n=1  net=Rs  -1,232  win=0%
+
+--- bias controls ---
+  look-ahead: training label windows end before the test period (arm+OBS+10<boundary)
+  overfitting: quarterly walk-forward validation + final untouched test; early stopping for trees; thresholds fixed a priori
+  survivorship: all symbols used, no pair dropped for performance (caveat: today's large-cap universe; no point-in-time membership data)

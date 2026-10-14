@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaction — Test Replay + WATCH Scanner</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#c9d1d9;
+          --dim:#8b949e; --green:#2ea043; --red:#f85149; --yellow:#d29922;
+          --blue:#58a6ff; --orange:#db6d28; --purple:#bc8cff; --cyan:#39c5cf; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body { margin:0; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+         background:var(--bg); color:var(--fg); height:100vh; display:flex;
+         flex-direction:column; overflow:hidden; }
+  header { display:flex; align-items:center; gap:12px; padding:8px 12px;
+           background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  header .title { font-weight:700; letter-spacing:.5px; }
+  .badge { padding:2px 8px; border-radius:4px; font-weight:700; font-size:12px; }
+  .badge.live { background:var(--green); color:#000; }
+  .badge.watch { background:var(--yellow); color:#000; animation:blink 1s steps(1) infinite; }
+  .badge.off { background:var(--line); color:var(--dim); }
+  @keyframes blink { 50% { opacity:.4; } }
+  .spacer { flex:1; }
+  select, input[type=number], input[type=range], button {
+    background:var(--panel); color:var(--fg); border:1px solid var(--line);
+    border-radius:4px; padding:4px 8px; font-family:inherit; font-size:13px; }
+  button { cursor:pointer; min-width:34px; }
+  button:hover { border-color:var(--fg); }
+  button.buy { background:var(--green); color:#000; font-weight:700; }
+  button.sell { background:var(--red); color:#000; font-weight:700; }
+  button.close { background:var(--line); }
+  .main { flex:1; display:flex; flex-direction:column; min-height:0; }
+  .charts { flex:1; display:flex; flex-direction:column; min-height:0; }
+  .chart-wrap { position:relative; min-height:0; }
+  .chart-price { flex:3; } .chart-z { flex:2; }
+  canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .legend { position:absolute; top:6px; left:10px; font-size:12px; color:var(--dim);
+            background:rgba(13,17,23,.7); padding:2px 6px; border-radius:4px; }
+  .side { display:flex; flex-direction:column; gap:8px; padding:8px 12px;
+          background:var(--panel); border-top:1px solid var(--line); min-height:0; }
+  .row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .trades { max-height:104px; overflow:auto; font-size:12px; color:var(--dim); }
+  .trades div { white-space:nowrap; }
+  .pl { font-weight:700; }
+  .pl.pos { color:var(--green); } .pl.neg { color:var(--red); }
+  .label { color:var(--dim); font-size:12px; }
+  .sig { font-weight:700; }
+  .sig.on { color:var(--yellow); } .sig.off { color:var(--dim); }
+  #scrub { flex:1; min-width:120px; }
+</style>
+</head>
+<body>
+<header>
+  <span class="title">REACTION · CANDLES + WATCH SCANNER</span>
+  <select id="pair"></select>
+  <span id="range" class="label"></span>
+  <span class="spacer"></span>
+  <span id="conn" class="badge off">connecting</span>
+  <span id="watchBadge" class="badge off">WATCH</span>
+</header>
+
+<div class="main">
+  <div class="charts">
+    <div class="chart-wrap chart-price">
+      <canvas id="price"></canvas>
+      <div class="legend" id="legLegend"></div>
+    </div>
+    <div class="chart-wrap chart-z">
+      <canvas id="z"></canvas>
+      <div class="legend">z-score · enter z&lt;-3 · exit z=0 · cyan = model P(WATCH)</div>
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="row">
+      <button id="play" class="close">▶ Play</button>
+      <button id="prev" class="close">◀ -1d</button>
+      <button id="next" class="close">+1d ▶</button>
+      <span class="label">speed</span>
+      <input type="range" id="speed" min="0.2" max="10" step="0.1" value="1">
+      <span id="speedVal" class="label">1 s/day</span>
+      <input type="range" id="scrub" min="0" max="100" step="1" value="0">
+      <button id="reset" class="close">↺ Reset</button>
+      <span class="spacer"></span>
+      <span class="label">stop-loss</span>
+      <input type="number" id="stop" value="5" min="0.5" max="100" step="0.5" style="width:60px"> %
+      <button id="buy" class="buy">BUY</button>
+      <button id="sell" class="sell">SELL</button>
+      <button id="close" class="close">CLOSE</button>
+    </div>
+    <div class="row">
+      <span class="label">signal</span>
+      <span id="signal" class="sig off">waiting…</span>
+      <span class="label">position</span>
+      <span id="posTxt">flat</span>
+      <span class="label">unrealized</span>
+      <span id="upnl" class="pl">0</span>
+      <span class="label">realized</span>
+      <span id="realized" class="pl">0</span>
+    </div>
+    <div class="trades" id="trades"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const price = $('price'), zc = $('z');
+const pctx = price.getContext('2d'), zctx = zc.getContext('2d');
+
+const st = { win: null, cur: 0, pos: null, realized: 0, lastScan: null,
+             speed: 1, paused: true, timer: null };
+let ws = null;
+
+function dpr(c){ const d=window.devicePixelRatio||1, w=c.clientWidth, h=c.clientHeight;
+  if(c.width!==w*d || c.height!==h*d){ c.width=w*d; c.height=h*d; }
+  const ctx=c.getContext('2d'); ctx.setTransform(d,0,0,d,0,0); return [w,h]; }
+
+async function loadPairs(){
+  const r = await fetch('/api/pairs'); const j = await r.json();
+  const sel = $('pair');
+  j.pairs.forEach(p => { const o=document.createElement('option');
+    o.value=p.leg+','+p.partner; o.textContent=p.leg+' / '+p.partner; sel.appendChild(o); });
+  if(j.default) sel.value=j.default.leg+','+j.default.partner;
+  connect();
+}
+$('pair').addEventListener('change', ()=> connect());
+
+function connect(){
+  if(ws) ws.close(); stopPlay();
+  ws = new WebSocket((location.protocol==='https:'?'wss':'ws')+'://'+location.host+'/ws');
+  ws.onopen = ()=>{ $('conn').className='badge live'; $('conn').textContent='LIVE'; start(); };
+  ws.onmessage = e => handle(JSON.parse(e.data));
+  ws.onclose = ()=>{ $('conn').className='badge off'; $('conn').textContent='disconnected'; };
+}
+function start(){
+  const [leg,partner]=$('pair').value.split(',');
+  st.win=null; st.pos=null; st.realized=0; st.lastScan=null;
+  $('trades').innerHTML='';
+  ws.send(JSON.stringify({type:'start', leg, partner}));
+}
+function send(o){ if(ws && ws.readyState===1) ws.send(JSON.stringify(o)); }
+function askScan(){ if(st.win) send({type:'scan', i:st.cur}); }
+
+function handle(m){
+  if(m.type==='init'){
+    st.win = {ohlc:m.ohlc, z:m.z, pb:m.pb, watches:m.watches, probs:m.probs,
+              testStart:m.test_start, total:m.total};
+    st.cur = m.test_start;
+    $('scrub').min=m.test_start; $('scrub').max=m.total-1; $('scrub').value=m.cur;
+    $('stop').value = m.stop_pct;
+    $('legLegend').textContent = m.leg+' candles · '+m.partner+' line (right axis) · test window arm '+m.test_start;
+    draw(); askScan();
+  } else if(m.type==='scan'){
+    st.lastScan=m; st.cur=m.i;
+    $('scrub').value=m.i;
+    if(m.pos) st.pos=m.pos; else if(!m.closed) st.pos=null;
+    st.realized=m.realized;
+    $('range').textContent='bar '+m.i+'/'+(st.win.total-1)+' · '+st.win.ohlc[m.i-st.win.testStart].ts;
+    updateSignal(m); updatePos(); draw();
+    if(m.closed) logTrade(m.closed);
+  } else if(m.type==='trade'){
+    if(m.status==='open'){
+      st.pos={side:m.side,qty:m.qty,pa0:m.pa0,pb0:m.pb0,entry_i:m.entry_i};
+    } else if(m.status==='closed'){
+      st.realized=m.realized; st.pos=null; logTrade(m);
+    } else if(m.status==='rejected'){
+      $('signal').textContent='rejected: '+m.reason;
+    }
+    updatePos(); draw();
+  } else if(m.type==='reset'){
+    st.cur=st.win?st.win.testStart:0; st.pos=null; st.realized=0; st.lastScan=null;
+    $('trades').innerHTML=''; $('scrub').value=st.cur; updatePos(); draw(); askScan();
+  }
+}
+
+function updateSignal(m){
+  const s=$('signal');
+  if(m.watch){ s.className='sig on'; s.textContent='WATCH @'+m.i+'  P='+(m.prob*100).toFixed(0)+'%  z='+m.z_now.toFixed(2)+'  z_rec='+m.zrec.toFixed(2)+'  px_low='+(m.pxdist*100).toFixed(1)+'%';
+    $('watchBadge').className='badge watch'; $('watchBadge').textContent='WATCH'; }
+  else { s.className='sig off'; s.textContent='bar '+m.i+' · P='+(m.prob*100).toFixed(1)+'%  z='+m.z_now.toFixed(2)+'  arm='+(m.arm==null?'—':m.arm);
+    $('watchBadge').className='badge off'; $('watchBadge').textContent='WATCH'; }
+}
+function updatePos(){
+  const t=$('posTxt');
+  if(st.pos){ t.textContent=(st.pos.side==='BUY'?'LONG leg / SHORT partner':'SHORT leg / LONG partner')
+      +'  qty='+st.pos.qty+'  @'+st.pos.pa0.toFixed(2)+'/'+st.pos.pb0.toFixed(2); }
+  else t.textContent='flat';
+  const u=$('upnl'); const v=st.pos?st.pos.pnl:0;
+  u.textContent=v.toFixed(0); u.className='pl '+(v>=0?'pos':'neg');
+  const r=$('realized'); r.textContent=st.realized.toFixed(0);
+  r.className='pl '+(st.realized>=0?'pos':'neg');
+}
+function logTrade(m){
+  const div=document.createElement('div');
+  const c=m.pnl>=0?'var(--green)':'var(--red)';
+  div.innerHTML='<b style="color:'+c+'">'+(m.pnl>=0?'+':'')+m.pnl.toFixed(0)+'</b> '+
+    (m.side==='BUY'?'BUY':'SELL')+' @'+m.entry_i+' → '+m.exit_i+'  ['+m.reason+']';
+  const box=$('trades'); box.insertBefore(div, box.firstChild);
+}
+
+// ------- drawing -------
+function draw(){ if(!st.win) return; drawPrice(); drawZ(); }
+function xOf(k,n,l,pw){ return l+(k+0.5)*(pw/Math.max(n,1)); }
+
+function drawPrice(){
+  const [W,H]=dpr(price), ctx=pctx; ctx.clearRect(0,0,W,H);
+  const w=st.win, ohlc=w.ohlc, n=ohlc.length;
+  const l=64, r=64, t=26, b=44, pw=W-l-r, ph=H-t-b;
+  // ranges
+  let pmn=Infinity,pmx=-Infinity, bmn=Infinity,bmx=-Infinity, vmax=0;
+  ohlc.forEach(o=>{ pmn=Math.min(pmn,o.l); pmx=Math.max(pmx,o.h);
+    bmn=Math.min(bmn,o.l); bmx=Math.max(bmx,o.h); vmax=Math.max(vmax,o.v); });
+  w.pb.forEach(v=>{ bmn=Math.min(bmn,v); bmx=Math.max(bmx,v); });
+  const pad=(pmx-pmn)*0.06||1; pmn-=pad; pmx+=pad;
+  const yp=v=> t+ph-((v-pmn)/(pmx-pmn))*ph;
+  const yb=v=> t+ph-((v-bmn)/(bmx-bmn))*ph;
+  // grid + left axis (leg price)
+  ctx.strokeStyle='#21262d'; ctx.fillStyle='#8b949e'; ctx.font='11px monospace';
+  for(let g=0;g<=4;g++){ const v=pmn+(pmx-pmn)*g/4, yy=yp(v);
+    ctx.beginPath(); ctx.moveTo(l,yy); ctx.lineTo(W-r,yy); ctx.stroke();
+    ctx.fillText(v.toFixed(0),6,yy+4); }
+  // right axis (partner price)
+  ctx.textAlign='right';
+  for(let g=0;g<=4;g++){ const v=bmn+(bmx-bmn)*g/4, yy=yb(v);
+    ctx.fillText(v.toFixed(0),W-4,yy+4); }
+  ctx.textAlign='left';
+  // volume strip (bottom)
+  const vh=16, vtop=t+ph-vh;
+  ctx.strokeStyle='#21262d'; ctx.beginPath(); ctx.moveTo(l,vtop); ctx.lineTo(W-r,vtop); ctx.stroke();
+  ohlc.forEach((o,k)=>{ const x=xOf(k,n,l,pw), wdt=Math.max(1,pw/n*0.65);
+    const hh=(o.v/vmax)*vh;
+    ctx.fillStyle = o.c>=o.o ? 'rgba(46,160,67,.55)' : 'rgba(248,81,73,.55)';
+    ctx.fillRect(x-wdt/2, vtop+vh-hh, wdt, hh); });
+  // candles
+  ohlc.forEach((o,k)=>{ const x=xOf(k,n,l,pw), wdt=Math.max(1.5,pw/n*0.7);
+    const up=o.c>=o.o; ctx.strokeStyle=up?'#2ea043':'#f85149';
+    ctx.fillStyle=up?'#2ea043':'#f85149';
+    ctx.beginPath(); ctx.moveTo(x,yp(o.h)); ctx.lineTo(x,yp(o.l)); ctx.stroke();
+    const yo=yp(o.o), yc=yp(o.c), top=Math.min(yo,yc), hh=Math.max(1,Math.abs(yc-yo));
+    ctx.fillRect(x-wdt/2, top, wdt, hh); });
+  // partner line
+  ctx.strokeStyle='#58a6ff'; ctx.lineWidth=1.4; ctx.beginPath();
+  w.pb.forEach((v,k)=>{ const xx=xOf(k,n,l,pw), yy=yb(v); k?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy); });
+  ctx.stroke();
+  // watch shading (historical)
+  w.watches.forEach(sw=>{ const k=sw.i-w.testStart, xx=xOf(k,n,l,pw);
+    ctx.fillStyle='rgba(210,153,34,.18)'; ctx.fillRect(xx-pw/n/2, t, pw/n, ph-vh); });
+  // current cursor
+  const ck=st.cur-w.testStart, cx=xOf(ck,n,l,pw);
+  ctx.strokeStyle='rgba(139,148,157,.8)'; ctx.setLineDash([4,3]);
+  ctx.beginPath(); ctx.moveTo(cx,t); ctx.lineTo(cx,t+ph); ctx.stroke(); ctx.setLineDash([]);
+  const o=ohlc[ck]; ctx.strokeStyle='#e6edf3'; ctx.lineWidth=2;
+  ctx.strokeRect(cx-pw/n/2-2, yp(o.h)-3, pw/n+4, (yp(o.l)-yp(o.h))+6);
+  // cursor info box
+  const txt='day '+st.cur+'  '+o.ts+'  P='+(st.lastScan?(st.lastScan.prob*100).toFixed(1):'?')+'%'
+    +(st.lastScan&&st.lastScan.watch?'  ★WATCH':'');
+  ctx.font='bold 12px monospace'; ctx.fillStyle='#e6edf3';
+  const tw=ctx.measureText(txt).width+8; let bx=cx-tw/2;
+  bx=Math.max(l+2,Math.min(W-r-tw-2,bx));
+  ctx.fillStyle='rgba(13,17,23,.85)'; ctx.fillRect(bx,4,tw,18);
+  ctx.fillStyle=st.lastScan&&st.lastScan.watch?'#d29922':'#e6edf3';
+  ctx.fillText(txt,bx+4,17);
+  // x labels (first/last)
+  ctx.fillStyle='#8b949e';
+  ctx.fillText(ohlc[0].ts, l, H-6);
+  ctx.fillText(ohlc[n-1].ts, W-r-70, H-6);
+}
+
+function drawZ(){
+  const [W,H]=dpr(zc), ctx=zctx; ctx.clearRect(0,0,W,H);
+  const w=st.win, zs=w.z, probs=w.probs, n=zs.length;
+  const l=64, r=64, t=22, b=22, pw=W-l-r, ph=H-t-b;
+  let mn=Math.min(-3.2,...zs), mx=Math.max(1.2,...zs);
+  if(mn>mx){ mn=-4; mx=4; }
+  const y=v=> t+ph-((v-mn)/(mx-mn))*ph;
+  ctx.font='11px monospace'; ctx.strokeStyle='#21262d'; ctx.fillStyle='#8b949e';
+  for(let g=0;g<=4;g++){ const v=mn+(mx-mn)*g/4, yy=y(v);
+    ctx.beginPath(); ctx.moveTo(l,yy); ctx.lineTo(W-r,yy); ctx.stroke();
+    ctx.fillText(v.toFixed(1),6,yy+4); }
+  [0,-3].forEach(v=>{ const yy=y(v);
+    ctx.strokeStyle=v===0?'#8b949e':'#f85149'; ctx.setLineDash(v===0?[]:[4,3]);
+    ctx.beginPath(); ctx.moveTo(l,yy); ctx.lineTo(W-r,yy); ctx.stroke(); ctx.setLineDash([]); });
+  // watch shading
+  w.watches.forEach(sw=>{ const k=sw.i-w.testStart, xx=xOf(k,n,l,pw);
+    ctx.fillStyle='rgba(210,153,34,.18)'; ctx.fillRect(xx-pw/n/2,t,pw/n,ph); });
+  // z line
+  ctx.strokeStyle='#bc8cff'; ctx.lineWidth=1.6; ctx.beginPath();
+  zs.forEach((v,k)=>{ const xx=xOf(k,n,l,pw), yy=y(v); k?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy); });
+  ctx.stroke();
+  // prob line (0..1) at bottom of panel — scanner confidence over the window
+  ctx.strokeStyle='#39c5cf'; ctx.lineWidth=1.2; ctx.beginPath();
+  probs.forEach((p,k)=>{ const xx=xOf(k,n,l,pw), yy=t+ph-6-(p)*(16); k?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy); });
+  ctx.stroke();
+  ctx.fillStyle='#39c5cf'; ctx.fillText('1.0', l, t+ph-4); ctx.fillText('0', l, t+ph-24);
+  // cursor
+  const ck=st.cur-w.testStart, cx=xOf(ck,n,l,pw);
+  ctx.strokeStyle='rgba(139,148,157,.8)'; ctx.setLineDash([4,3]);
+  ctx.beginPath(); ctx.moveTo(cx,t); ctx.lineTo(cx,t+ph); ctx.stroke(); ctx.setLineDash([]);
+}
+
+// ------- controls -------
+function stopPlay(){ if(st.timer){ clearInterval(st.timer); st.timer=null; } }
+function tickPlay(){ if(st.cur<st.win.total-1){ st.cur++; askScan(); }
+  else stopPlay(); $('play').textContent='▶ Play'; }
+$('play').addEventListener('click', ()=>{ if(st.timer){ stopPlay(); $('play').textContent='▶ Play'; }
+  else { st.timer=setInterval(tickPlay, 1000/st.speed); $('play').textContent='⏸ Pause'; } });
+$('prev').addEventListener('click', ()=>{ if(st.win){ st.cur=Math.max(st.win.testStart,st.cur-1); askScan(); } });
+$('next').addEventListener('click', ()=>{ if(st.win){ st.cur=Math.min(st.win.total-1,st.cur+1); askScan(); } });
+$('speed').addEventListener('input', ()=>{ st.speed=+$('speed').value;
+  $('speedVal').textContent=(st.speed<1? (1000/st.speed).toFixed(0)+' ms/day' : st.speed+' s/day');
+  if(st.timer){ stopPlay(); st.timer=setInterval(tickPlay, 1000/st.speed); } });
+$('scrub').addEventListener('input', ()=>{ st.cur=+$('scrub').value; askScan(); });
+$('reset').addEventListener('click', ()=> send({type:'reset'}));
+$('stop').addEventListener('change', ()=> send({type:'stop', value:+$('stop').value}));
+$('buy').addEventListener('click', ()=> send({type:'buy'}));
+$('sell').addEventListener('click', ()=> send({type:'sell'}));
+$('close').addEventListener('click', ()=> send({type:'close'}));
+window.addEventListener('resize', draw);
+loadPairs();
+</script>
+</body>
+</html>

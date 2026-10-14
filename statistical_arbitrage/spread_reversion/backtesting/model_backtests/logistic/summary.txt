@@ -1,0 +1,31 @@
+=== logistic — ML WATCH backtest (bias-hardened) ===
+events: 113   T2 base: 43%   symbols: 18
+split: newest 22 events (arm>=1007) = FINAL UNTOUCHED TEST; rest = walk-forward validation
+look-ahead guard: training requires arm+OBS+10 < fold boundary (no label leakage)
+gates: raw prob >= 0.5  &  EV > 0.0  (fixed a priori, not tuned on test)
+mechanical trade: LONG A/SHORT B, exit z>=0 / stop 5% notional / max 30d
+
+--- walk-forward VALIDATION (all events except final test) ---
+  walk-forward folds: 5   (events arm<1007 only train, never validate; validated events below)
+--- VALIDATION ---
+  events: 41   T2 win: 39%   signals(raw>=0.5): 12
+  trades taken: 4   net: Rs +183   win%: 50%   avg: Rs +46
+  exits: {'TIME': np.int64(2), 'ZERO': np.int64(1), 'STOP': np.int64(1)}   avg hold: 25d
+  per-pair:
+    COALINDIA   /INDUSINDBK   n=1  net=Rs  +1,022  win=100%
+    JSWSTEEL    /RELIANCE     n=1  net=Rs    +334  win=100%
+    HCLTECH     /WIPRO        n=1  net=Rs    -137  win=0%
+    TCS         /WIPRO        n=1  net=Rs  -1,036  win=0%
+
+--- FINAL TEST ---
+  events: 22   T2 win: 41%   signals(raw>=0.5): 8
+  trades taken: 2   net: Rs -398   win%: 50%   avg: Rs -199
+  exits: {'STOP': np.int64(1), 'ZERO': np.int64(1)}   avg hold: 10d
+  per-pair:
+    JSWSTEEL    /NESTLEIND    n=1  net=Rs    +656  win=100%
+    TATASTEEL   /TCS          n=1  net=Rs  -1,054  win=0%
+
+--- bias controls ---
+  look-ahead: training label windows end before the test period (arm+OBS+10<boundary)
+  overfitting: quarterly walk-forward validation + final untouched test; early stopping for trees; thresholds fixed a priori
+  survivorship: all symbols used, no pair dropped for performance (caveat: today's large-cap universe; no point-in-time membership data)

@@ -1,0 +1,27 @@
+# NSE CASH trading symbols to screen (one per line).
+# Seeded with the names we already hold daily history for.
+# Expand to a focused liquid universe (e.g. Nifty 200) by adding symbols here.
+AXISBANK
+BAJAJFINSV
+BANKBEES
+COALINDIA
+HCLTECH
+HDFCBANK
+HINDALCO
+HINDUNILVR
+ICICIBANK
+INDUSINDBK
+ITC
+JSWSTEEL
+KOTAKBANK
+MAFANG
+NESTLEIND
+NIFTYBEES
+RELIANCE
+SBIN
+SETFNIF50
+SETFNIFBK
+SP500
+TATASTEEL
+TCS
+WIPRO
