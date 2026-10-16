@@ -90,6 +90,19 @@ impl Record {
     pub fn is_strategy_buy(&self) -> bool {
         self.is_major_buy() && self.value() >= STRATEGY_MIN_VALUE_INR
     }
+    /// Mirror of `is_major_buy` on the disposal side: a MAJOR insider selling on
+    /// the open market. This is the "big players are distributing" event.
+    pub fn is_major_sell(&self) -> bool {
+        let sec = self.sec_type.as_deref().unwrap_or("");
+        is_major_role(self.role())
+            && self.acq_mode.as_deref().unwrap_or("") == "Market Sale"
+            && self.txn.as_deref().unwrap_or("") == "Sell"
+            && (sec.is_empty() || sec == "Equity Shares")
+    }
+    /// A disposal large enough to show up in the combined chart / watchlist.
+    pub fn is_strategy_sell(&self) -> bool {
+        self.is_major_sell() && self.value() >= STRATEGY_MIN_VALUE_INR
+    }
     pub fn value(&self) -> f64 {
         as_f64(&self.sec_val)
     }

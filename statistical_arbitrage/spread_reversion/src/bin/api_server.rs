@@ -46,6 +46,13 @@ const DEFAULT_RECENT_DAYS: i64 = 60;
 /// Window (days) of LIVE filings to pull from the new `-gg` endpoint.
 const GG_WINDOW_DAYS: i64 = 60;
 const ADDR: &str = "127.0.0.1:8787";
+/// Bind address, overridable with `INSIDER_BACKEND_ADDR` (default 127.0.0.1:8787).
+fn bind_addr() -> String {
+    std::env::var("INSIDER_BACKEND_ADDR")
+        .ok()
+        .filter(|s| !s.trim().is_empty())
+        .unwrap_or_else(|| ADDR.to_string())
+}
 const CACHE_TTL_SECS: i64 = 24 * 60 * 60;
 const GROWW_PAGE_DAYS: i64 = 1_000;
 
@@ -786,22 +793,29 @@ async fn series(State(app): State<App>, Query(q): Query<SeriesQ>) -> Json<Value>
     let rsi14 = insider::rsi(&closes, 14);
 
     let ins = all_records(&app).await;
+    let event_json = |r: &insider::Record, side: &str| {
+        json!({
+            "side": side,
+            "trade_date": r.trade_date(),
+            "disclosure_date": r.disc_date(),
+            "intimation_date": r.intimation_date(),
+            "buyer": r.buyer(),
+            "role": insider::short_role(r.role()),
+            "qty": r.qty(),
+            "value_inr": r.value(),
+            "estimated_price": r.estimated_price(),
+            "price_basis": if r.estimated_price().is_some() { "disclosed_value_div_quantity" } else { "unavailable" },
+        })
+    };
     let buys: Vec<Value> = ins
         .iter()
         .filter(|r| r.is_strategy_buy() && r.sym().eq_ignore_ascii_case(&symbol))
-        .map(|r| {
-            json!({
-                "trade_date": r.trade_date(),
-                "disclosure_date": r.disc_date(),
-                "intimation_date": r.intimation_date(),
-                "buyer": r.buyer(),
-                "role": insider::short_role(r.role()),
-                "qty": r.qty(),
-                "value_inr": r.value(),
-                "estimated_price": r.estimated_price(),
-                "price_basis": if r.estimated_price().is_some() { "disclosed_value_div_quantity" } else { "unavailable" },
-            })
-        })
+        .map(|r| event_json(r, "buy"))
+        .collect();
+    let sells: Vec<Value> = ins
+        .iter()
+        .filter(|r| r.is_strategy_sell() && r.sym().eq_ignore_ascii_case(&symbol))
+        .map(|r| event_json(r, "sell"))
         .collect();
 
     let num = |v: f64| -> Value { if v.is_finite() { json!(v) } else { Value::Null } };
@@ -817,6 +831,7 @@ async fn series(State(app): State<App>, Query(q): Query<SeriesQ>) -> Json<Value>
         "ema200": e200.iter().map(|&c| num(c)).collect::<Vec<_>>(),
         "rsi": rsi14.iter().map(|&c| num(c)).collect::<Vec<_>>(),
         "buys": buys,
+        "sells": sells,
     }))
 }
 
@@ -911,8 +926,8 @@ async fn main() -> anyhow::Result<()> {
         .layer(cors)
         .with_state(app);
 
-    let listener = tokio::net::TcpListener::bind(ADDR).await?;
-    println!("insider API on http://{ADDR}  (read-only, 127.0.0.1 only, GET only)");
+    let listener = tokio::net::TcpListener::bind(bind_addr()).await?;
+    println!("insider API on http://{}  (read-only, GET only)", bind_addr());
     println!(
         "  Groww market data: {} | cache: {}",
         if groww.is_some() {

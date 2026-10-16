@@ -20,7 +20,22 @@ const SYMBOLS = [
   "NRBBEARING", "NCC", "MANINFRA", "APLLTD", "JSL", "BAJAJHLDNG", "KRISHANA",
 ];
 
-// One symbol: price + EMA50/EMA200 + insider-buy markers + RSI, and the buys table.
+// Red down-triangle marker for insider SELLS (recharts has no built-in one).
+function DownTriangle({ cx, cy, fill }) {
+  if (cx == null || cy == null) return null;
+  const s = 6;
+  return (
+    <path
+      d={`M ${cx - s} ${cy - s} L ${cx + s} ${cy - s} L ${cx} ${cy + s} Z`}
+      fill={fill}
+      stroke="white"
+      strokeWidth={0.5}
+    />
+  );
+}
+
+// One symbol: price + EMA50/EMA200 + insider BUY (▲) and SELL (▼) markers + RSI,
+// and the buys/sells tables. This is the combined long+distribution view.
 export default function PriceChart({ symbol, setSymbol, range, setRange }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -43,24 +58,32 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
     };
   }, [symbol, range]);
 
-  const { rows, buyRows } = useMemo(() => {
-    if (!data) return { rows: [], buyRows: [] };
-    const purchaseByDate = new Map();
-    const disclosureByDate = new Map();
+  const { rows, buyRows, sellRows } = useMemo(() => {
+    if (!data) return { rows: [], buyRows: [], sellRows: [] };
     const firstTradingDate = (target, strictlyAfter = false) =>
       data.dates.find((date) => strictlyAfter ? date > target : date >= target);
-    for (const b of data.buys || []) {
-      const purchaseDate = firstTradingDate(isoFromDmY(b.trade_date));
-      if (purchaseDate) {
-        const prev = purchaseByDate.get(purchaseDate) || { value: 0, qty: 0, names: [] };
-        prev.value += Number(b.value_inr) || 0;
-        prev.qty += Number(b.qty) || 0;
-        prev.names.push(`${b.buyer} (${b.role})`);
-        purchaseByDate.set(purchaseDate, prev);
-      }
 
-      // Disclosure remains separate: this is when the strategy could know that
-      // the private purchase had happened. Never confuse it with the buy date.
+    const bucketByTradeDate = (events, key) => {
+      const byDate = new Map();
+      for (const e of events) {
+        const tradeDate = firstTradingDate(isoFromDmY(e.trade_date));
+        if (!tradeDate) continue;
+        const prev = byDate.get(tradeDate) || { value: 0, qty: 0, names: [] };
+        prev.value += Number(e.value_inr) || 0;
+        prev.qty += Number(e.qty) || 0;
+        prev.names.push(`${e.buyer} (${e.role})`);
+        byDate.set(tradeDate, prev);
+      }
+      return byDate;
+    };
+
+    const purchaseByDate = bucketByTradeDate(data.buys || []);
+    const saleByDate = bucketByTradeDate(data.sells || []);
+
+    // Public-disclosure dates stay separate from the trade date: this is when the
+    // strategy could first know that the private purchase had happened.
+    const disclosureByDate = new Map();
+    for (const b of data.buys || []) {
       const disclosureIso = isoFromDmY(b.disclosure_date)
         || (b.disclosure_date || "").slice(0, 10);
       const time = String(b.disclosure_date || "").match(/\s(\d{1,2}):(\d{2})/);
@@ -74,12 +97,15 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
         disclosureByDate.set(disclosureDate, prev);
       }
     }
+
     const rows = data.dates.map((date, i) => {
       const purchase = purchaseByDate.get(date);
+      const sale = saleByDate.get(date);
       const disclosure = disclosureByDate.get(date);
       const estimatedPurchasePrice = purchase?.qty > 0
         ? purchase.value / purchase.qty
         : null;
+      const estimatedSalePrice = sale?.qty > 0 ? sale.value / sale.qty : null;
       return {
         date,
         close: data.close[i],
@@ -90,15 +116,23 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
         purchasePriceEstimated: estimatedPurchasePrice != null,
         purchaseValue: purchase?.value || null,
         purchaseNames: purchase ? purchase.names.join("; ") : null,
+        insiderSale: sale ? (estimatedSalePrice || data.close[i]) : null,
+        salePriceEstimated: estimatedSalePrice != null,
+        saleValue: sale?.value || null,
+        saleNames: sale ? sale.names.join("; ") : null,
         publicDisclosure: disclosure ? data.close[i] : null,
         disclosureValue: disclosure?.value || null,
         disclosureNames: disclosure ? disclosure.names.join("; ") : null,
       };
     });
-    return { rows, buyRows: data.buys || [] };
+    return { rows, buyRows: data.buys || [], sellRows: data.sells || [] };
   }, [data]);
 
   const nBuys = buyRows.length;
+  const nSells = sellRows.length;
+  const buyValue = buyRows.reduce((a, b) => a + (Number(b.value_inr) || 0), 0);
+  const sellValue = sellRows.reduce((a, b) => a + (Number(b.value_inr) || 0), 0);
+  const netValue = buyValue - sellValue;
 
   return (
     <div>
@@ -122,7 +156,9 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
           </select>
         </label>
         <Star symbol={symbol} />
-        <span className="badge">{nBuys} insider buys</span>
+        <span className="badge">{nBuys} buys</span>
+        <span className="badge">{nSells} sells</span>
+        <span className="badge">net {inr(netValue)}</span>
         {data?.price_source && <span className="sourceBadge">prices: {data.price_source}{data.price_cache_hit ? " · cached" : ""}</span>}
         {loading && <span className="sub">loading…</span>}
         {err && <span className="err">error: {err}</span>}
@@ -148,8 +184,14 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
                     <div>EMA50 {p.ema50?.toFixed?.(1)} · EMA200 {p.ema200?.toFixed?.(1)}</div>
                     {p.purchaseNames && (
                       <div style={{ color: "#9ad29a" }}>
-                        INSIDER PURCHASE: {p.purchaseNames}<br />
+                        INSIDER BUY: {p.purchaseNames}<br />
                         {p.purchasePriceEstimated ? "estimated average" : "close proxy"} {rupees(p.insiderPurchase)} · {inr(p.purchaseValue || 0)}
+                      </div>
+                    )}
+                    {p.saleNames && (
+                      <div style={{ color: "#e8a0a0" }}>
+                        INSIDER SELL: {p.saleNames}<br />
+                        {p.salePriceEstimated ? "estimated average" : "close proxy"} {rupees(p.insiderSale)} · {inr(p.saleValue || 0)}
                       </div>
                     )}
                     {p.disclosureNames && (
@@ -165,13 +207,16 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
             <Line yAxisId="price" dataKey="close" dot={false} stroke="#c8c8c8" strokeWidth={1.1} name="close" />
             <Line yAxisId="price" dataKey="ema50" dot={false} stroke="#4d9fe0" strokeWidth={1} name="EMA50" />
             <Line yAxisId="price" dataKey="ema200" dot={false} stroke="#b58b3c" strokeWidth={1} name="EMA200" />
-            <Scatter yAxisId="price" dataKey="insiderPurchase" fill="#1a9850" name="insider purchase (est. avg)" shape="triangle" />
+            <Scatter yAxisId="price" dataKey="insiderPurchase" fill="#1a9850" name="insider buy (est. avg)" shape="triangle" />
             <Scatter yAxisId="price" dataKey="publicDisclosure" fill="#4d9fe0" name="public disclosure" shape="circle" />
+            <Scatter yAxisId="price" dataKey="insiderSale" fill="#d73027" name="insider sell (est. avg)" shape={<DownTriangle />} />
           </ComposedChart>
         </ResponsiveContainer>
         <div className="sub">
-          Green triangles mark the insider’s reported transaction date at disclosed value ÷ quantity (an estimated batch-average price).
-          Blue circles mark the later public disclosure date—the first point the strategy could know about it.
+          Green ▲ = major insider market purchase; blue ● = the later public disclosure
+          (the first point the strategy could know about it); red ▼ = major insider
+          market sale. Buy/sell markers sit at disclosed value ÷ quantity (estimated
+          batch-average price) on the reported trade date.
         </div>
       </div>
 
@@ -191,7 +236,7 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
 
       <div className="card">
         <div className="sub" style={{ marginBottom: 6 }}>
-          Insider market purchases — {symbol} ({nBuys})
+          Insider market purchases — {symbol} ({nBuys}) · {inr(buyValue)}
         </div>
         <table>
           <thead>
@@ -226,6 +271,50 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
               <tr>
                 <td colSpan={7} className="sub">
                   No major insider buys for {symbol} in the window.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="card">
+        <div className="sub" style={{ marginBottom: 6 }}>
+          Insider market sales — {symbol} ({nSells}) · {inr(sellValue)}
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Trade date</th>
+              <th>Disclosure</th>
+              <th>Seller</th>
+              <th>Role</th>
+              <th>Quantity</th>
+              <th>Estimated avg price</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sellRows
+              .slice()
+              .sort((a, b) => (a.trade_date < b.trade_date ? 1 : -1))
+              .map((s, i) => (
+                <tr key={i}>
+                  <td>{s.trade_date}</td>
+                  <td>{(s.disclosure_date || "").slice(0, 10)}</td>
+                  <td>{s.buyer}</td>
+                  <td>{s.role}</td>
+                  <td>{Number(s.qty || 0).toLocaleString("en-IN")}</td>
+                  <td title="NSE disclosed transaction value divided by disclosed quantity">
+                    {s.estimated_price == null ? "—" : `${rupees(s.estimated_price)} (est.)`}
+                  </td>
+                  <td>{inr(s.value_inr || 0)}</td>
+                </tr>
+              ))}
+            {nSells === 0 && (
+              <tr>
+                <td colSpan={7} className="sub">
+                  No major insider sales for {symbol} in the window.
                 </td>
               </tr>
             )}
