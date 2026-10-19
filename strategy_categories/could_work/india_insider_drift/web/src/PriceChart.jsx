@@ -13,11 +13,18 @@ import {
 } from "recharts";
 import { inr, isoFromDmY, rupees } from "./util.js";
 import Star from "./Star.jsx";
+import { useMomentumPoints } from "./momentumHistory.js";
+import { mlDirection, mlText, useMomentumScores } from "./momentumScores.js";
 
 const SYMBOLS = [
   "TFCILTD", "SURYAROSNI", "ADANIPORTS", "CHAMBLFERT", "MAHSEAMLES", "JSWSTEEL",
   "GRASIM", "GODREJAGRO", "GODREJIND", "APOLLOTYRE", "DBCORP", "STEL", "NCLIND",
   "NRBBEARING", "NCC", "MANINFRA", "APLLTD", "JSL", "BAJAJHLDNG", "KRISHANA",
+  // Symbols carried over from the moneyflow ledger (OSINT/moneyflow) so the same
+  // stocks can be plotted in both apps. STEL and INFY are already listed above.
+  "SHK", "HCLTECH", "NATCOPHARM", "TEXMOPIPES", "DMART", "SWANCORP", "RESPONIND",
+  "AEQUS", "EMBDL", "INFY", "ECLERX", "JMFINANCIL", "DIAMONDYD", "BAJAJFINSV",
+  "NAZARA",
 ];
 
 // Red down-triangle marker for insider SELLS (recharts has no built-in one).
@@ -40,6 +47,9 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
+  const ml = useMomentumPoints(symbol);
+  const liveScores = useMomentumScores();
+  const liveEntry = liveScores.scoreFor(symbol);
 
   useEffect(() => {
     let cancelled = false;
@@ -57,6 +67,11 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
       cancelled = true;
     };
   }, [symbol, range]);
+
+  const mlByDate = useMemo(
+    () => new Map((ml.points || []).map((point) => [point.date, point])),
+    [ml.points],
+  );
 
   const { rows, buyRows, sellRows } = useMemo(() => {
     if (!data) return { rows: [], buyRows: [], sellRows: [] };
@@ -102,6 +117,7 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
       const purchase = purchaseByDate.get(date);
       const sale = saleByDate.get(date);
       const disclosure = disclosureByDate.get(date);
+      const mlPoint = mlByDate.get(date);
       const estimatedPurchasePrice = purchase?.qty > 0
         ? purchase.value / purchase.qty
         : null;
@@ -123,10 +139,16 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
         publicDisclosure: disclosure ? data.close[i] : null,
         disclosureValue: disclosure?.value || null,
         disclosureNames: disclosure ? disclosure.names.join("; ") : null,
+        mlBuy: mlPoint?.direction === "long" ? data.close[i] : null,
+        mlSell: mlPoint?.direction === "short" ? data.close[i] : null,
+        mlPoint,
       };
     });
     return { rows, buyRows: data.buys || [], sellRows: data.sells || [] };
-  }, [data]);
+  }, [data, mlByDate]);
+
+  const mlBuyCount = (ml.points || []).filter((point) => point.direction === "long").length;
+  const mlSellCount = (ml.points || []).filter((point) => point.direction === "short").length;
 
   const nBuys = buyRows.length;
   const nSells = sellRows.length;
@@ -159,6 +181,18 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
         <span className="badge">{nBuys} buys</span>
         <span className="badge">{nSells} sells</span>
         <span className="badge">net {inr(netValue)}</span>
+        <span className="badge" title="walk-forward ML points, not insider disclosures">
+          ML {mlBuyCount} buy / {mlSellCount} sell
+        </span>
+        {liveEntry && (
+          <span
+            className="badge"
+            title={`live ML score as of ${liveEntry.date}: L ${Math.round((liveEntry.p_up ?? liveEntry.score ?? 0) * 100)}% / S ${Math.round((liveEntry.p_down ?? liveEntry.score_down ?? 0) * 100)}%`}
+            style={{ color: mlDirection(liveEntry) === "long" ? "#f2c14e" : mlDirection(liveEntry) === "short" ? "#b084f5" : undefined }}
+          >
+            ML now {mlText(liveEntry)}
+          </span>
+        )}
         {data?.price_source && <span className="sourceBadge">prices: {data.price_source}{data.price_cache_hit ? " · cached" : ""}</span>}
         {loading && <span className="sub">loading…</span>}
         {err && <span className="err">error: {err}</span>}
@@ -199,6 +233,12 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
                         PUBLIC DISCLOSURE: {p.disclosureNames} · {inr(p.disclosureValue || 0)}
                       </div>
                     )}
+                    {p.mlPoint && (
+                      <div style={{ color: p.mlPoint.direction === "long" ? "#f2c14e" : "#b084f5" }}>
+                        ML {p.mlPoint.direction.toUpperCase()} {Math.round(p.mlPoint.strength * 100)}%
+                        {p.mlPoint.fwd20 != null && ` · 20d ${(p.mlPoint.fwd20 * 100).toFixed(1)}%`}
+                      </div>
+                    )}
                   </div>
                 );
               }}
@@ -210,13 +250,18 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
             <Scatter yAxisId="price" dataKey="insiderPurchase" fill="#1a9850" name="insider buy (est. avg)" shape="triangle" />
             <Scatter yAxisId="price" dataKey="publicDisclosure" fill="#4d9fe0" name="public disclosure" shape="circle" />
             <Scatter yAxisId="price" dataKey="insiderSale" fill="#d73027" name="insider sell (est. avg)" shape={<DownTriangle />} />
+            <Scatter yAxisId="price" dataKey="mlBuy" fill="#f2c14e" name="ML buy (walk-forward)" shape="diamond" />
+            <Scatter yAxisId="price" dataKey="mlSell" fill="#b084f5" name="ML sell (walk-forward)" shape="diamond" />
           </ComposedChart>
         </ResponsiveContainer>
         <div className="sub">
           Green ▲ = major insider market purchase; blue ● = the later public disclosure
           (the first point the strategy could know about it); red ▼ = major insider
           market sale. Buy/sell markers sit at disclosed value ÷ quantity (estimated
-          batch-average price) on the reported trade date.
+          batch-average price) on the reported trade date. Gold ◆ / purple ◆ are
+          walk-forward ML price points (not insider trades); tooltip shows the
+          next-20-session return for historical reference.
+          {ml.error && <span className="err"> ML history unavailable: {ml.error}</span>}
         </div>
       </div>
 
