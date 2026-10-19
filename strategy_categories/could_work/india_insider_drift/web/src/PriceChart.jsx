@@ -263,6 +263,10 @@ export default function PriceChart({ symbol, setSymbol, range, setRange }) {
           next-20-session return for historical reference.
           {ml.error && <span className="err"> ML history unavailable: {ml.error}</span>}
         </div>
+        <div className="sub" style={{ marginTop: 4 }}>
+          Walk-forward ML reference: buy hit 28.9% (mean +2.22%), sell 29.8%
+          (mean -0.17%) before costs — not a recommendation.
+        </div>
       </div>
 
       <div className="card">
