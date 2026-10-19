@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { pct } from "./util.js";
 import { useMounts } from "./mounts.js";
+import { useMomentumScores } from "./momentumScores.js";
 import { usePersistentState } from "./persist.js";
 import MountedCharts from "./MountedCharts.jsx";
 
@@ -11,9 +12,11 @@ export default function Scan({ onPick }) {
   const [recent, setRecent] = usePersistentState("scan_recent", 60);
   // Cluster filter: minimum distinct insiders buying within 30 days.
   const [clusterMin, setClusterMin] = usePersistentState("scan_cluster_min", 0);
+  const [mlMin, setMlMin] = usePersistentState("scan_ml_min", 0);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
+  const ml = useMomentumScores();
   const { has, toggle, list, clear } = useMounts();
 
   useEffect(() => {
@@ -34,7 +37,9 @@ export default function Scan({ onPick }) {
   }, [recent]);
 
   const rows = (data?.rows || []).filter(
-    (r) => clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin
+    (r) =>
+      (clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin) &&
+      (mlMin === 0 || (ml.scoreFor(r.symbol)?.score || 0) >= mlMin)
   );
 
   return (
@@ -49,12 +54,20 @@ export default function Scan({ onPick }) {
           </select>
         </label>
         <label>
-          recent cluster (1 month):{" "}
+          insider buyers (min):{" "}
           <select value={clusterMin} onChange={(e) => setClusterMin(Number(e.target.value))}>
             <option value={0}>any</option>
             <option value={2}>≥2 insiders / 30d</option>
             <option value={3}>≥3 insiders / 30d</option>
             <option value={5}>≥5 insiders / 30d</option>
+          </select>
+        </label>
+        <label>
+          ML momentum:{" "}
+          <select value={mlMin} onChange={(e) => setMlMin(Number(e.target.value))}>
+            <option value={0}>any</option>
+            <option value={0.4}>≥40%</option>
+            <option value={0.5}>≥50%</option>
           </select>
         </label>
         <span className="badge">
@@ -81,6 +94,7 @@ export default function Scan({ onPick }) {
               <th>RSI</th>
               <th>trend</th>
               <th>momentum</th>
+              <th title="panel ML score for a +8% 20-session move">ML</th>
               <th></th>
             </tr>
           </thead>
@@ -117,6 +131,12 @@ export default function Scan({ onPick }) {
                 <td>{r.rsi != null ? Number(r.rsi).toFixed(0) : "—"}</td>
                 <td>{r.trend_ok ? "EMA ✓" : "no"}</td>
                 <td>{r.momentum ? "YES" : ""}</td>
+                <td
+                  className={(ml.scoreFor(r.symbol)?.score || 0) >= 0.5 ? "positive" : ""}
+                  title={ml.scoreFor(r.symbol) ? `as of ${ml.scoreFor(r.symbol).date}` : "no score"}
+                >
+                  {ml.scoreFor(r.symbol) ? `${Math.round(ml.scoreFor(r.symbol).score * 100)}%` : "—"}
+                </td>
                 <td>
                   <button onClick={() => onPick?.(r.symbol)}>chart</button>
                 </td>
@@ -124,7 +144,7 @@ export default function Scan({ onPick }) {
             ))}
             {!loading && rows.length === 0 && (
               <tr>
-                <td colSpan={13} className="sub">
+                <td colSpan={14} className="sub">
                   No recent buyers in this window.
                 </td>
               </tr>
@@ -137,6 +157,11 @@ export default function Scan({ onPick }) {
         This is the standalone <b>insider_momentum</b> output, served by the Rust API.
         Momentum = close &gt; EMA50 &gt; EMA200 and 3-month return &gt; 0. Click ☆ to
         <b> mount</b> a stock; its chart renders below (fetched per symbol).
+        {ml.data?.oos_auc != null && (
+          <> ML is a separate panel model (20-session +8% target, 2025+ mean daily OOS AUC {ml.data.oos_cs_auc ?? ml.data.oos_auc});
+          it is a research filter, not a trade signal.</>
+        )}
+        {ml.error && <span className="err"> ML scores unavailable: {ml.error}</span>}
       </div>
 
       <h2 style={{ fontSize: 15, marginTop: 18, display: "flex", alignItems: "center", gap: 12 }}>
