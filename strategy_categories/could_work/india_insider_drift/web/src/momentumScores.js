@@ -50,14 +50,6 @@ export function mlDirection(entry) {
   return "neutral";
 }
 
-export function mlStrength(entry) {
-  if (!entry) return 0;
-  return entry.strength ?? Math.max(
-    entry.p_up ?? entry.score ?? 0,
-    entry.p_down ?? entry.score_down ?? 0,
-  );
-}
-
 export function mlText(entry) {
   const direction = mlDirection(entry);
   if (direction === "neutral") return "—";

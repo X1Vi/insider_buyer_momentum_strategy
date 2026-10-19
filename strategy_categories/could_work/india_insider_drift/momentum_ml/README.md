@@ -101,22 +101,21 @@ cp ../web/public/momentum_ml_history.json \
 The script prints both OOS AUCs, daily cross-sectional AUCs, top-decile hit rates,
 direction counts, and the top latest names.
 
-## UI filters
+## UI
 
-Both apps expose:
-
-- ML signal: `long + short`, `long only`, `short only`, `neutral`
-- ML strength: `any`, `>= 40%`, `>= 50%`
+The ML signal/strength filters have been removed from the strategy tables. The
+live score is still available as the `ML now` badge on a stock chart, and the
+chart markers remain available for reference.
 
 Charts show gold diamonds for historical ML buy points and purple diamonds for
 historical ML sell points. These are walk-forward signals, not insider
 disclosures; the tooltip shows the realized next-20-session move.
 
-The insider app also exposes:
+The insider app tables still expose:
 
 - minimum distinct insider buyers in the trailing 30 days (2/3/5)
 - minimum insider purchase value divided by 20-day median traded value (0.5x/1x/2x)
 
 `scores.json` is not point-in-time for the *latest* row; it uses the most recent
-bar available per symbol. That is deliberate for a live filter, but it means the
-file must not be used to reconstruct historical backtests.
+bar available per symbol. That is deliberate for the live chart badge, but it
+means the file must not be used to reconstruct historical backtests.

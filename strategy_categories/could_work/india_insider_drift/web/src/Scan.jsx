@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { pct } from "./util.js";
 import { useMounts } from "./mounts.js";
-import MlCell from "./MlCell.jsx";
-import { mlDirection, mlStrength, useMomentumScores } from "./momentumScores.js";
 import { usePersistentState } from "./persist.js";
 import MountedCharts from "./MountedCharts.jsx";
 
@@ -13,12 +11,9 @@ export default function Scan({ onPick }) {
   const [recent, setRecent] = usePersistentState("scan_recent", 60);
   // Cluster filter: minimum distinct insiders buying within 30 days.
   const [clusterMin, setClusterMin] = usePersistentState("scan_cluster_min", 0);
-  const [mlMin, setMlMin] = usePersistentState("scan_ml_min", 0);
-  const [mlDir, setMlDir] = usePersistentState("scan_ml_dir", "all");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
-  const ml = useMomentumScores();
   const { has, toggle, list, clear } = useMounts();
 
   useEffect(() => {
@@ -39,10 +34,7 @@ export default function Scan({ onPick }) {
   }, [recent]);
 
   const rows = (data?.rows || []).filter(
-    (r) =>
-      (clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin) &&
-      (mlDir === "all" || mlDirection(ml.scoreFor(r.symbol)) === mlDir) &&
-      (mlMin === 0 || mlStrength(ml.scoreFor(r.symbol)) >= mlMin)
+    (r) => clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin
   );
 
   return (
@@ -63,23 +55,6 @@ export default function Scan({ onPick }) {
             <option value={2}>≥2 insiders / 30d</option>
             <option value={3}>≥3 insiders / 30d</option>
             <option value={5}>≥5 insiders / 30d</option>
-          </select>
-        </label>
-        <label>
-          ML signal:{" "}
-          <select value={mlDir} onChange={(e) => setMlDir(e.target.value)}>
-            <option value="all">long + short</option>
-            <option value="long">long only</option>
-            <option value="short">short only</option>
-            <option value="neutral">neutral</option>
-          </select>
-        </label>
-        <label>
-          ML strength:{" "}
-          <select value={mlMin} onChange={(e) => setMlMin(Number(e.target.value))}>
-            <option value={0}>any</option>
-            <option value={0.4}>≥40%</option>
-            <option value={0.5}>≥50%</option>
           </select>
         </label>
         <span className="badge">
@@ -106,8 +81,7 @@ export default function Scan({ onPick }) {
               <th>RSI</th>
               <th>trend</th>
               <th>momentum</th>
-              <th title="L = P(+8% in 20 sessions), S = P(-8% in 20 sessions)">ML</th>
-              <th></th>
+                            <th></th>
             </tr>
           </thead>
           <tbody>
@@ -143,7 +117,6 @@ export default function Scan({ onPick }) {
                 <td>{r.rsi != null ? Number(r.rsi).toFixed(0) : "—"}</td>
                 <td>{r.trend_ok ? "EMA ✓" : "no"}</td>
                 <td>{r.momentum ? "YES" : ""}</td>
-                <MlCell entry={ml.scoreFor(r.symbol)} />
                 <td>
                   <button onClick={() => onPick?.(r.symbol)}>chart</button>
                 </td>
@@ -151,7 +124,7 @@ export default function Scan({ onPick }) {
             ))}
             {!loading && rows.length === 0 && (
               <tr>
-                <td colSpan={14} className="sub">
+                <td colSpan={13} className="sub">
                   No recent buyers in this window.
                 </td>
               </tr>
@@ -164,12 +137,6 @@ export default function Scan({ onPick }) {
         This is the standalone <b>insider_momentum</b> output, served by the Rust API.
         Momentum = close &gt; EMA50 &gt; EMA200 and 3-month return &gt; 0. Click ☆ to
         <b> mount</b> a stock; its chart renders below (fetched per symbol).
-        {ml.data?.oos_auc != null && (
-          <> ML is a separate long/short panel model. Up: +8% in 20 sessions (OOS daily AUC {ml.data.oos_cs_auc_up ?? ml.data.oos_cs_auc});
-          down: -8% (OOS daily AUC {ml.data.oos_cs_auc_down ?? "n/a"}). It is a research filter, not a trade signal;
-          short scores are informational because overnight cash shorting needs futures or a hedge.</>
-        )}
-        {ml.error && <span className="err"> ML scores unavailable: {ml.error}</span>}
       </div>
 
       <h2 style={{ fontSize: 15, marginTop: 18, display: "flex", alignItems: "center", gap: 12 }}>
