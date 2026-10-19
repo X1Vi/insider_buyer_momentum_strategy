@@ -8,7 +8,7 @@ let sharedPromise = null;
 function loadScores() {
   if (shared) return Promise.resolve(shared);
   if (!sharedPromise) {
-    sharedPromise = fetch("/momentum_ml_scores.json")
+    sharedPromise = fetch("/momentum_ml_scores.json", { cache: "no-store" })
       .then((response) => {
         if (!response.ok) throw new Error(`ML scores ${response.status}`);
         return response.json();
