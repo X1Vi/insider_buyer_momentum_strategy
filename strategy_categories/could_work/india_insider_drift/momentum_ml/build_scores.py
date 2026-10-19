@@ -122,7 +122,7 @@ def main():
     payload={'generated_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),
              'target':'20-session forward return >= +8% from next open',
              'model':'HistGradientBoostingClassifier; cross-sectional panel; price/volume/market features',
-             'symbols':len(used),'rows':int(len(P)),'oos_auc':round(float(auc),3),
+             'symbols':len(used),'rows':int(len(P)),'oos_auc':round(float(auc),3),'oos_cs_auc':round(cs_auc,3),
              'oos_rows':int(len(test)),'oos_base_rate':round(float(test.y.mean()),4),
              'oos_top10_hit':round(float(test.y.iloc[idx].mean()),4),
              'scores':out}
