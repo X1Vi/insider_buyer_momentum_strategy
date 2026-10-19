@@ -27,7 +27,7 @@ APP=Path(__file__).resolve().parents[1]
 CACHE=APP/'data/app_cache'
 NIFTY=Path(__file__).resolve().parent/'data/nifty.csv'
 PUB=APP/'web/public/momentum_ml_scores.json'
-TARGET=0.08; H=20; SEED=42
+TARGET=0.08; H=20; SEED=42; DIR_THRESHOLD=0.40
 
 def longest_price(sym):
     fs=glob.glob(str(CACHE/f'price_{sym}_*y.json'))
@@ -85,53 +85,92 @@ def main():
         for i in range(len(df)-H-1):
             entry=o.iloc[i+1]; fwd[i]=c.iloc[i+H]/entry-1
             fwd2[i]=c.iloc[i+1:i+1+H].max()/entry-1
-        F['fwd20']=fwd; F['fwd_max20']=fwd2; F['y']=(fwd>=TARGET).astype(float); F.loc[~np.isfinite(fwd),'y']=np.nan
+        F['fwd20']=fwd; F['fwd_max20']=fwd2
+        F['y']=(fwd>=TARGET).astype(float); F['y_down']=(fwd<=-TARGET).astype(float)
+        F.loc[~np.isfinite(fwd),['y','y_down']]=np.nan
         F['symbol']=sym; F['date']=F.index
         frames.append(F.reset_index(drop=True)); used.append(sym)
     P=pd.concat(frames,ignore_index=True)
     # Cross-sectional percentile ranks (the model can learn relative strength).
     for col in ['r20','r60','vol20','dist_hi250']:
         P[f'xs_{col}']=P.groupby('date')[col].rank(pct=True)
-    base=[c for c in P.columns if c not in ('symbol','date','close','fwd20','fwd_max20','y')]
-    print('symbols',len(used),'rows',len(P),'base',round(P.y.mean()*100,2))
+    feature_cols=[c for c in P.columns if c not in ('symbol','date','close','fwd20','fwd_max20','y','y_down')]
+    print('symbols',len(used),'rows',len(P),
+          'up base',round(P.y.mean()*100,2),'down base',round(P.y_down.mean()*100,2))
     def make(): return Pipeline([('imp',SimpleImputer(strategy='median')),('m',HistGradientBoostingClassifier(max_iter=350,learning_rate=.05,max_leaf_nodes=31,min_samples_leaf=100,l2_regularization=1.0,random_state=SEED))])
-    train=P[P.date<'2025-01-01'].dropna(subset=['y']); test=P[P.date>='2025-01-01'].dropna(subset=['y'])
-    m=make().fit(train[base],train.y); p=m.predict_proba(test[base])[:,1]
-    auc=roc_auc_score(test.y,p); print('OOS 2025+ rows',len(test),'base',round(test.y.mean()*100,2),'AUC',round(auc,3))
-    test=test.assign(pred=p)
-    daily=[]
-    for _,g in test.groupby('date'):
-        if len(g)>=5 and g.y.nunique()==2:
-            daily.append(roc_auc_score(g.y,g.pred))
-    cs_auc=float(np.mean(daily)) if daily else float('nan')
-    print('OOS mean daily cross-sectional AUC',round(cs_auc,3),'days',len(daily))
-    # top-decile hit
-    k=max(1,int(len(test)*.10)); idx=np.argsort(p)[-k:]; print('OOS top10 hit',round(test.y.iloc[idx].mean()*100,2),'lift',round(test.y.iloc[idx].mean()/test.y.mean(),2))
-    # Refit on all labeled data for latest scores.
-    full=P.dropna(subset=['y']); model=make().fit(full[base],full.y)
+    train=P[P.date<'2025-01-01'].dropna(subset=['y','y_down'])
+    test=P[P.date>='2025-01-01'].dropna(subset=['y','y_down']).copy()
+    metrics={}
+    for label,col in [('up','y'),('down','y_down')]:
+        m=make().fit(train[feature_cols],train[col])
+        pred=m.predict_proba(test[feature_cols])[:,1]
+        auc=roc_auc_score(test[col],pred)
+        test[f'pred_{label}']=pred
+        daily=[]
+        for _,g in test.groupby('date'):
+            if len(g)>=5 and g[col].nunique()==2:
+                daily.append(roc_auc_score(g[col],g[f'pred_{label}']))
+        cs_auc=float(np.mean(daily)) if daily else float('nan')
+        k=max(1,int(len(test)*.10)); idx=np.argsort(pred)[-k:]
+        hit=float(test[col].iloc[idx].mean()); base_rate=float(test[col].mean())
+        metrics[label]={'auc':float(auc),'cs_auc':cs_auc,'hit':hit,'base':base_rate,
+                        'rows':len(test),'days':len(daily)}
+        print(f'OOS {label}: rows {len(test)} base {base_rate*100:.2f}% AUC {auc:.3f} '
+              f'daily-CS {cs_auc:.3f} ({len(daily)}d) top10 {hit*100:.2f}% '
+              f'lift {hit/base_rate:.2f}')
+    # Refit on all labelled rows for the latest cross-section.
+    full=P.dropna(subset=['y','y_down'])
+    model_up=make().fit(full[feature_cols],full.y)
+    model_down=make().fit(full[feature_cols],full.y_down)
     latest=P.sort_values('date').groupby('symbol').tail(1).copy()
-    latest['score']=model.predict_proba(latest[base])[:,1]
+    latest['p_up']=model_up.predict_proba(latest[feature_cols])[:,1]
+    latest['p_down']=model_down.predict_proba(latest[feature_cols])[:,1]
+    latest['score']=latest.p_up
+    latest['score_down']=latest.p_down
+    latest['strength']=latest[['p_up','p_down']].max(axis=1)
+    latest['direction']=np.select(
+        [(latest.p_up>=DIR_THRESHOLD)&(latest.p_up>=latest.p_down),
+         (latest.p_down>=DIR_THRESHOLD)&(latest.p_down>latest.p_up)],
+        ['long','short'],default='neutral')
     out={}
     for _,r in latest.iterrows():
         out[r.symbol]={
-            'symbol':r.symbol,'date':str(pd.Timestamp(r.date).date()),'score':round(float(r.score),4),
+            'symbol':r.symbol,'date':str(pd.Timestamp(r.date).date()),
+            'direction':r.direction,'strength':round(float(r.strength),4),
+            'p_up':round(float(r.p_up),4),'p_down':round(float(r.p_down),4),
+            'score':round(float(r.p_up),4),'score_down':round(float(r.p_down),4),
             'close':round(float(r.close),3),'ret20':round(float(r.r20),4) if pd.notna(r.r20) else None,
             'ret60':round(float(r.r60),4) if pd.notna(r.r60) else None,
             'dist52w':round(float(r.dist_hi250),4) if pd.notna(r.dist_hi250) else None,
         }
+    up,down=metrics['up'],metrics['down']
     payload={'generated_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),
-             'target':'20-session forward return >= +8% from next open',
-             'model':'HistGradientBoostingClassifier; cross-sectional panel; price/volume/market features',
-             'symbols':len(used),'rows':int(len(P)),'oos_auc':round(float(auc),3),'oos_cs_auc':round(cs_auc,3),
-             'oos_rows':int(len(test)),'oos_base_rate':round(float(test.y.mean()),4),
-             'oos_top10_hit':round(float(test.y.iloc[idx].mean()),4),
+             'target':'20-session forward return >= +8% (long) or <= -8% (short) from next open',
+             'target_up':'20-session forward return >= +8% from next open',
+             'target_down':'20-session forward return <= -8% from next open',
+             'model':'two HistGradientBoosting classifiers; cross-sectional panel; price/volume/market features',
+             'direction_threshold':DIR_THRESHOLD,
+             'symbols':len(used),'rows':int(len(P)),
+             'oos_rows':int(up['rows']),'oos_days':int(up['days']),
+             'oos_auc':round(up['auc'],3),'oos_cs_auc':round(up['cs_auc'],3),
+             'oos_base_rate':round(up['base'],4),'oos_top10_hit':round(up['hit'],4),
+             'oos_auc_up':round(up['auc'],3),'oos_cs_auc_up':round(up['cs_auc'],3),
+             'oos_base_rate_up':round(up['base'],4),'oos_top10_hit_up':round(up['hit'],4),
+             'oos_auc_down':round(down['auc'],3),'oos_cs_auc_down':round(down['cs_auc'],3),
+             'oos_base_rate_down':round(down['base'],4),'oos_top10_hit_down':round(down['hit'],4),
+             'direction_counts':latest.direction.value_counts().to_dict(),
              'scores':out}
     PUB.parent.mkdir(parents=True,exist_ok=True)
     PUB.write_text(json.dumps(payload,indent=2,sort_keys=True))
-    pd.DataFrame(out.values()).sort_values('score',ascending=False).to_csv(Path(__file__).resolve().parent/'scores.csv',index=False)
-    with open(Path(__file__).resolve().parent/'model.pkl','wb') as f: pickle.dump({'model':model,'features':base,'target':TARGET},f)
+    frame=pd.DataFrame(out.values()).sort_values('strength',ascending=False)
+    frame.to_csv(Path(__file__).resolve().parent/'scores.csv',index=False)
+    with open(Path(__file__).resolve().parent/'model.pkl','wb') as f:
+        pickle.dump({'model_up':model_up,'model_down':model_down,'features':feature_cols,
+                     'target_up':TARGET,'target_down':-TARGET,
+                     'direction_threshold':DIR_THRESHOLD},f)
     print('wrote',PUB)
-    print(pd.DataFrame(out.values()).sort_values('score',ascending=False).head(20).to_string(index=False))
+    print('directions',payload['direction_counts'])
+    print(frame.head(15).to_string(index=False))
     print('latest date counts',latest.date.dt.date.value_counts().head().to_dict())
 
 if __name__=='__main__': main()

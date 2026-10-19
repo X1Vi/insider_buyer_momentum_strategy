@@ -40,3 +40,29 @@ export function useMomentumScores() {
   return { data, error, scoreFor: (symbol) => data?.scores?.[symbol] || null };
 }
 
+export function mlDirection(entry) {
+  if (!entry) return "neutral";
+  if (entry.direction) return entry.direction;
+  const up = entry.p_up ?? entry.score ?? 0;
+  const down = entry.p_down ?? entry.score_down ?? 0;
+  if (up >= 0.4 && up >= down) return "long";
+  if (down >= 0.4 && down > up) return "short";
+  return "neutral";
+}
+
+export function mlStrength(entry) {
+  if (!entry) return 0;
+  return entry.strength ?? Math.max(
+    entry.p_up ?? entry.score ?? 0,
+    entry.p_down ?? entry.score_down ?? 0,
+  );
+}
+
+export function mlText(entry) {
+  const direction = mlDirection(entry);
+  if (direction === "neutral") return "—";
+  const probability = direction === "long"
+    ? (entry.p_up ?? entry.score ?? 0)
+    : (entry.p_down ?? entry.score_down ?? 0);
+  return `${direction === "long" ? "L" : "S"} ${Math.round(probability * 100)}%`;
+}

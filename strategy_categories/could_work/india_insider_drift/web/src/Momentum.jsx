@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { inr, pct } from "./util.js";
 import Star from "./Star.jsx";
 import { useBookmarks } from "./bookmarks.js";
-import { useMomentumScores } from "./momentumScores.js";
+import MlCell from "./MlCell.jsx";
+import { mlDirection, mlStrength, useMomentumScores } from "./momentumScores.js";
 import { usePersistentState } from "./persist.js";
 
 const STATUS_LABEL = {
@@ -26,6 +27,7 @@ export default function Momentum({ onPick }) {
   const [clusterMin, setClusterMin] = usePersistentState("momentum_cluster_min", 0);
   const [flowMin, setFlowMin] = usePersistentState("momentum_flow_min", 0);
   const [mlMin, setMlMin] = usePersistentState("momentum_ml_min", 0);
+  const [mlDir, setMlDir] = usePersistentState("momentum_ml_dir", "all");
   const ml = useMomentumScores();
 
   useEffect(() => {
@@ -51,15 +53,18 @@ export default function Momentum({ onPick }) {
     if (flowMin > 0) {
       values = values.filter((r) => (r.purchase_to_median_traded_value_20d || 0) >= flowMin);
     }
+    if (mlDir !== "all") {
+      values = values.filter((r) => mlDirection(ml.scoreFor(r.symbol)) === mlDir);
+    }
     if (mlMin > 0) {
-      values = values.filter((r) => (ml.scoreFor(r.symbol)?.score || 0) >= mlMin);
+      values = values.filter((r) => mlStrength(ml.scoreFor(r.symbol)) >= mlMin);
     }
     if (!filter) return values;
     const q = filter.toLowerCase();
     return values.filter((r) => r.symbol.toLowerCase().includes(q)
       || r.buyer.toLowerCase().includes(q)
       || (r.buyer_names_30d || []).some((name) => name.toLowerCase().includes(q)));
-  }, [data, filter, clusterMin, flowMin, ml, mlMin]);
+  }, [data, filter, clusterMin, flowMin, ml, mlDir, mlMin]);
 
   return (
     <div>
@@ -96,7 +101,16 @@ export default function Momentum({ onPick }) {
           </select>
         </label>
         <label>
-          ML momentum:{" "}
+          ML signal:{" "}
+          <select value={mlDir} onChange={(e) => setMlDir(e.target.value)}>
+            <option value="all">long + short</option>
+            <option value="long">long only</option>
+            <option value="short">short only</option>
+            <option value="neutral">neutral</option>
+          </select>
+        </label>
+        <label>
+          ML strength:{" "}
           <select value={mlMin} onChange={(e) => setMlMin(Number(e.target.value))}>
             <option value={0}>any</option>
             <option value={0.4}>≥40%</option>
@@ -122,7 +136,7 @@ export default function Momentum({ onPick }) {
             <tr>
               <th>Status</th><th>Symbol</th><th>Disclosure</th><th>Buyer</th>
               <th>30d buyers</th><th>30d purchases</th><th>Buy / 20d value</th>
-              <th>Rise</th><th>52w high</th><th>Trend</th><th title="panel ML score for a +8% 20-session move">ML</th><th>Score*</th><th>★</th><th></th>
+              <th>Rise</th><th>52w high</th><th>Trend</th><th title="L = P(+8% in 20 sessions), S = P(-8% in 20 sessions)">ML</th><th>Score*</th><th>★</th><th></th>
             </tr>
           </thead>
           <tbody>
@@ -150,12 +164,7 @@ export default function Momentum({ onPick }) {
                 <td className={r.rise_from_disclosure >= 0.1 ? "positive" : ""}>{pct(r.rise_from_disclosure)}</td>
                 <td>{pct(r.dist52w)}</td>
                 <td title={`price source: ${r.price_source}`}>{r.trend_ok ? "EMA ✓" : "no"}</td>
-                <td
-                  className={(ml.scoreFor(r.symbol)?.score || 0) >= 0.5 ? "positive" : ""}
-                  title={ml.scoreFor(r.symbol) ? `as of ${ml.scoreFor(r.symbol).date}` : "no score"}
-                >
-                  {ml.scoreFor(r.symbol) ? `${Math.round(ml.scoreFor(r.symbol).score * 100)}%` : "—"}
-                </td>
+                <MlCell entry={ml.scoreFor(r.symbol)} />
                 <td>{r.osint_score_partial}/2</td>
                 <td><Star symbol={r.symbol} /></td>
                 <td><button onClick={() => onPick?.(r.symbol)}>chart</button></td>
@@ -170,8 +179,9 @@ export default function Momentum({ onPick }) {
         Prices are requested only for these buyer-triggered stocks and cached for 24 hours.
         READY means +10%, true 52-week-high breakout, and close &gt; EMA50 &gt; EMA200. Read-only; no order is placed.
         {ml.data?.oos_auc != null && (
-          <> ML is a separate panel model (20-session +8% target, 2025+ mean daily OOS AUC {ml.data.oos_cs_auc ?? ml.data.oos_auc}); it is a
-          research filter, not a trade signal.</>
+          <> ML is a separate long/short panel model. Up: +8% in 20 sessions (OOS daily AUC {ml.data.oos_cs_auc_up ?? ml.data.oos_cs_auc});
+          down: -8% (OOS daily AUC {ml.data.oos_cs_auc_down ?? "n/a"}). It is a research filter, not a trade signal;
+          short scores are informational because overnight cash shorting needs futures or a hedge.</>
         )}
         {ml.error && <span className="err"> ML scores unavailable: {ml.error}</span>}
       </div>

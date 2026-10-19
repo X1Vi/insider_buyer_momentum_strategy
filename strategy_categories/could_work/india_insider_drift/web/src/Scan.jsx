@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { pct } from "./util.js";
 import { useMounts } from "./mounts.js";
-import { useMomentumScores } from "./momentumScores.js";
+import MlCell from "./MlCell.jsx";
+import { mlDirection, mlStrength, useMomentumScores } from "./momentumScores.js";
 import { usePersistentState } from "./persist.js";
 import MountedCharts from "./MountedCharts.jsx";
 
@@ -13,6 +14,7 @@ export default function Scan({ onPick }) {
   // Cluster filter: minimum distinct insiders buying within 30 days.
   const [clusterMin, setClusterMin] = usePersistentState("scan_cluster_min", 0);
   const [mlMin, setMlMin] = usePersistentState("scan_ml_min", 0);
+  const [mlDir, setMlDir] = usePersistentState("scan_ml_dir", "all");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
@@ -39,7 +41,8 @@ export default function Scan({ onPick }) {
   const rows = (data?.rows || []).filter(
     (r) =>
       (clusterMin === 0 || (r.distinct_buyers_30d || 0) >= clusterMin) &&
-      (mlMin === 0 || (ml.scoreFor(r.symbol)?.score || 0) >= mlMin)
+      (mlDir === "all" || mlDirection(ml.scoreFor(r.symbol)) === mlDir) &&
+      (mlMin === 0 || mlStrength(ml.scoreFor(r.symbol)) >= mlMin)
   );
 
   return (
@@ -63,7 +66,16 @@ export default function Scan({ onPick }) {
           </select>
         </label>
         <label>
-          ML momentum:{" "}
+          ML signal:{" "}
+          <select value={mlDir} onChange={(e) => setMlDir(e.target.value)}>
+            <option value="all">long + short</option>
+            <option value="long">long only</option>
+            <option value="short">short only</option>
+            <option value="neutral">neutral</option>
+          </select>
+        </label>
+        <label>
+          ML strength:{" "}
           <select value={mlMin} onChange={(e) => setMlMin(Number(e.target.value))}>
             <option value={0}>any</option>
             <option value={0.4}>≥40%</option>
@@ -94,7 +106,7 @@ export default function Scan({ onPick }) {
               <th>RSI</th>
               <th>trend</th>
               <th>momentum</th>
-              <th title="panel ML score for a +8% 20-session move">ML</th>
+              <th title="L = P(+8% in 20 sessions), S = P(-8% in 20 sessions)">ML</th>
               <th></th>
             </tr>
           </thead>
@@ -131,12 +143,7 @@ export default function Scan({ onPick }) {
                 <td>{r.rsi != null ? Number(r.rsi).toFixed(0) : "—"}</td>
                 <td>{r.trend_ok ? "EMA ✓" : "no"}</td>
                 <td>{r.momentum ? "YES" : ""}</td>
-                <td
-                  className={(ml.scoreFor(r.symbol)?.score || 0) >= 0.5 ? "positive" : ""}
-                  title={ml.scoreFor(r.symbol) ? `as of ${ml.scoreFor(r.symbol).date}` : "no score"}
-                >
-                  {ml.scoreFor(r.symbol) ? `${Math.round(ml.scoreFor(r.symbol).score * 100)}%` : "—"}
-                </td>
+                <MlCell entry={ml.scoreFor(r.symbol)} />
                 <td>
                   <button onClick={() => onPick?.(r.symbol)}>chart</button>
                 </td>
@@ -158,8 +165,9 @@ export default function Scan({ onPick }) {
         Momentum = close &gt; EMA50 &gt; EMA200 and 3-month return &gt; 0. Click ☆ to
         <b> mount</b> a stock; its chart renders below (fetched per symbol).
         {ml.data?.oos_auc != null && (
-          <> ML is a separate panel model (20-session +8% target, 2025+ mean daily OOS AUC {ml.data.oos_cs_auc ?? ml.data.oos_auc});
-          it is a research filter, not a trade signal.</>
+          <> ML is a separate long/short panel model. Up: +8% in 20 sessions (OOS daily AUC {ml.data.oos_cs_auc_up ?? ml.data.oos_cs_auc});
+          down: -8% (OOS daily AUC {ml.data.oos_cs_auc_down ?? "n/a"}). It is a research filter, not a trade signal;
+          short scores are informational because overnight cash shorting needs futures or a hedge.</>
         )}
         {ml.error && <span className="err"> ML scores unavailable: {ml.error}</span>}
       </div>
